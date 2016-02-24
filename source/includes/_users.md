@@ -11,7 +11,7 @@ Authorization: token YOUR_ACCESS_TOKEN
 > The above command returns JSON structured like this:
 
 ```http
-HTTP/1.1 206 OK
+HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
 
@@ -58,7 +58,7 @@ Authorization: token YOUR_ACCESS_TOKEN
 > The above command returns JSON structured like this:
 
 ```http
-HTTP/1.1 206 OK
+HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
 
@@ -90,3 +90,17 @@ This endpoint retrieves all user's activities.
 <aside class="notice">
 This action is paginated. See the pagination documentation for details.
 </aside>
+
+## List all projects the user enrolled in.
+
+```http
+GET /users/<user-id>/enrolled-projects HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Authorization: token YOUR_ACCESS_TOKEN
+```
+> The above command returns JSON structured like this:
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+```

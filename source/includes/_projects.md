@@ -11,7 +11,7 @@ Authorization: token YOUR_ACCESS_TOKEN
 > The above command returns JSON structured like this:
 
 ```http
-HTTP/1.1 206 OK
+HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
 
@@ -152,7 +152,7 @@ Authorization: token YOUR_ACCESS_TOKEN
 > The above command returns JSON structured like this:
 
 ```http
-HTTP/1.1 206 OK
+HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
 
