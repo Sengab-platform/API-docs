@@ -1,0 +1,856 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Lockscreen API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #151515;
+  background-color: #ac4142;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #505050;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #d0d0d0;
+}
+.highlight .p, .highlight .pi {
+  color: #d0d0d0;
+}
+.highlight .gi {
+  color: #90a959;
+}
+.highlight .gd {
+  color: #ac4142;
+}
+.highlight .gh {
+  color: #6a9fb5;
+  background-color: #151515;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #aa759f;
+}
+.highlight .kc {
+  color: #d28445;
+}
+.highlight .kt {
+  color: #d28445;
+}
+.highlight .kd {
+  color: #d28445;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #90a959;
+}
+.highlight .sr {
+  color: #75b5aa;
+}
+.highlight .si {
+  color: #8f5536;
+}
+.highlight .se {
+  color: #8f5536;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #6a9fb5;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #90a959;
+}
+.highlight .ss {
+  color: #90a959;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;http&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="http">HTTP</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="introduction">Introduction</h1>
+
+<p>Welcome to the Lockscreen API!</p>
+
+          <h1 id="projects">Projects</h1>
+
+<h2 id="list-all-projects">List All Projects</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Say what you see"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/1.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">510</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Show me a pet"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/7.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/41"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1730</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1542</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"goal"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">38.55</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"next_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all projects.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects</code></p>
+
+<h3 id="optional-parameters">Optional Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>string</td>
+<td><code class="prettyprint">popular</code> / <code class="prettyprint">latest</code></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+<h2 id="get-a-specific-project">Get a Specific Project</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/:id</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Show me a pet"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/7.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/41"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1730</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1542</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Take a photo for any pet you"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All over the world"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7/results"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"stats"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7/stats"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a specific project.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects/&lt;ID&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the project to retrieve</td>
+</tr>
+</tbody></table>
+
+<h2 id="add-project">Add project</h2>
+<pre class="highlight http"><code><span class="nf">PUT</span> <span class="nn">/projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>TODO</p>
+</blockquote>
+
+<h2 id="search-in-projects">Search in projects</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects?search="pet"</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Show me a pet"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/7.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/41"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1730</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1542</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"next_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves projects that has the value of the <code class="prettyprint">search</code> parameter in its title.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects/search?&lt;word&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>word</td>
+<td>The word that you search for in projects titles.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+<h2 id="list-results-of-a-project">List results of a project</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/&lt;ID&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns various JSON structured, based on the project type
+e.g if the project collects images the like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+
+<blockquote>
+<p>TODO</p>
+</blockquote>
+
+<p>This endpoint retrieves the contributions in a project.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects/&lt;ID&gt;/results</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>ID of the project</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+<h2 id="list-projects-created-by-a-specific-user">List projects created by a specific user</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;user-id&gt;/created-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Say what you see"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/1.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">510</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves projects created by a specific user.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /users/&lt;user-id&gt;/created-projects</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user-id</td>
+<td>The ID of the user you want to retrieve the project he created</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+          <h1 id="users">Users</h1>
+
+<h2 id="get-user-profile">Get user profile</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;ID&gt;/activities</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/users/1411414"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4545445</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ali Allam"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.lookscreen.com/profiles_images/1411414.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Egypt"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ali@allam.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"interests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"art"</span><span class="p">,</span><span class="w"> </span><span class="s2">"social"</span><span class="p">,</span><span class="w"> </span><span class="s2">"science"</span><span class="p">],</span><span class="w">
+        </span><span class="nt">"bio"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"profile_owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/users/1411414/created_projects"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"contributions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/users/1411414/contributions"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves user&rsquo;s profile.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/users/&lt;ID&gt;/</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>ID of the user</td>
+</tr>
+</tbody></table>
+
+<h2 id="list-user-39-s-activity">List User&rsquo;s Activity</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;ID&gt;/activities</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"activities"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56565</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lookscreen.com/projects_thumbnails/15454545.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recognize"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/projects/156445"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-12T03:21:55Z"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"next_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all user&rsquo;s activities.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/users/&lt;ID&gt;/activities</code></p>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+<h2 id="list-all-projects-that-the-user-enrolled-in">List all projects that the user enrolled in</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;user-id&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Say what you see"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/1.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">510</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/categories/4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"next_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all projects that the user enrolled in.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/users/&lt;user-id&gt;/enrolled-projects/</code></p>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+          <h1 id="categories">Categories</h1>
+
+<h2 id="list-all-categories">List All Categories</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/categtories</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">458</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"health"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.lookscreen.com/category_images/458.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/categories/458"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">584</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"science"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.lookscreen.com/category_images/584.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.lookscreen.com/v1/categories/584"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nt">"next_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all categories.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/categories</code></p>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+<h2 id="list-projects-of-a-category">List Projects of a Category</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/categtories/13</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"458"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"health"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.lookscreen.com/category_images/458_bg.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Show me a pet"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"thumbnail_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_thumbnails/7.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/41"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"enrollment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1730</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1542</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"goal"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">38.55</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/categories/&lt;ID&gt;</code></p>
+
+<aside class="notice">
+This action is paginated. See the pagination documentation for details.
+</aside>
+
+          <h1 id="contributions">Contributions</h1>
+
+<h2 id="add-a-contribution-in-a-project">Add a contribution in a project</h2>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/projects/&lt;project-id&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"href"</span><span class="p">:</span><span class="s2">"api.lookscreen.com/v1/projects/&lt;project-id&gt;/results/&lt;contribution-id&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint add a contribution to a project.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.lockscreen.com/v1/projects/&lt;project-id&gt;/results/</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>YES</td>
+<td>TEMP; SHOULD BE DELETED</td>
+</tr>
+<tr>
+<td>project_id</td>
+<td>YES</td>
+<td>The ID of the project</td>
+</tr>
+<tr>
+<td>contribution</td>
+<td>YES</td>
+<td>Object of contribution (see below)</td>
+</tr>
+<tr>
+<td>contribution.created_at</td>
+<td>YES</td>
+<td>Date of contribution</td>
+</tr>
+<tr>
+<td>contribution.data</td>
+<td>YES</td>
+<td>Content of data will be different based on the project</td>
+</tr>
+<tr>
+<td>contribution.data.first_name</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>contribution.data.last_name</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+          <h1 id="pagination">Pagination</h1>
+
+<p>Nearly all methods in the API accept the offset and limit parameters for fetching specific pages of results from the API.
+Offset starts at and defaults to 1, limit can be any value between 0 and 100 and defaults to 10.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>offset</td>
+<td>Integer</td>
+<td>No</td>
+<td>The offset of the first record returned. Default is 0.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Integer</td>
+<td>No</td>
+<td>The number of records returned. Default is 10</td>
+</tr>
+</tbody></table>
+
+<p>The API response will include the total number of records that match this query as well as the ID of the next record.</p>
+
+<h3 id="response-fields">Response Fields</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>total</td>
+<td>Integer</td>
+<td>The total number of records available.</td>
+</tr>
+<tr>
+<td>next_id</td>
+<td>Double</td>
+<td>The id of the next record that match this query, if there is no next record, this will be -1.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="errors">Errors</h1>
+
+<p>Our API responses indicating an error or warning are represented by a proper response HTTP status code (403, 404, etc) along with a response body containing the following information:</p>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>int</td>
+<td>The corresponding HTTP status code.</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Double</td>
+<td>A specific error code that can be used to obtain more information.</td>
+</tr>
+<tr>
+<td>message</td>
+<td>String</td>
+<td>A simple, easy to understand message that you can show directly to your application’s end-user.</td>
+</tr>
+</tbody></table>
+
+<p>Our API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request &ndash; Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Authentication credentials are required to access the resource. All requests must be authenticated.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden &ndash;The supplied authentication credentials are not sufficient to access the resource.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found &ndash; We could not locate the resource based on the specified URL.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed &ndash; This request is not supported for the resource.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t JSON</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="http">HTTP</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
