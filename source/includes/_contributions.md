@@ -11,14 +11,14 @@ Authorization: token YOUR_ACCESS_TOKEN
 > The above command returns JSON structured like this:
 
 ```http
-HTTP/1.1 201 OK
+HTTP/1.1 201 Created
 Content-Type: application/json
 ```
 
 ```json
-	{
-		"href":"api.lookscreen.com/v1/projects/<project-id>/results/<contribution-id>"
-	}
+{
+	"href":"api.lookscreen.com/v1/projects/<project-id>/results/<contribution-id>"
+}
 ```
 
 This endpoint add a contribution to a project.
@@ -29,7 +29,7 @@ This endpoint add a contribution to a project.
 
 Parameter | Required | Description
 --------- | -------- | ------------
-temp_user_id | YES | TEMP; SHOULD BE DELETED
+user_id | YES | TEMP; SHOULD BE DELETED
 project_id | YES | The ID of the project
 contribution | YES | Object of contribution (see below)
 contribution.created_at | YES | Date of contribution

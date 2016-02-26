@@ -1,20 +1,22 @@
 # Errors
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+Our API responses indicating an error or warning are represented by a proper response HTTP status code (403, 404, etc) along with a response body containing the following information:
 
-The Kittn API uses the following error codes:
+Attribute	| Type | Description
+--------- | ---- | ------------
+status |	int | The corresponding HTTP status code.
+code |	Double | A specific error code that can be used to obtain more information.
+message	| String | A simple, easy to understand message that you can show directly to your application’s end-user.
 
+Our API uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------
 400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
-406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers
-418 | I'm a teapot
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
+401 | Unauthorized -- Authentication credentials are required to access the resource. All requests must be authenticated.
+403 | Forbidden --The supplied authentication credentials are not sufficient to access the resource.
+404 | Not Found -- We could not locate the resource based on the specified URL.
+405 | Method Not Allowed -- This request is not supported for the resource.
+406 | Not Acceptable -- You requested a format that isn't JSON
 500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
+503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.

@@ -16,8 +16,8 @@ Content-Type: application/json
 
 ```json
 {
-  "href":"api.lookscreen.com/v1/projects/156445",
-  "projectID":156445
+	"href": "api.lookscreen.com/v1/projects/156445",
+	"projectID": 156445
 }
 ```
 
@@ -48,7 +48,7 @@ Content-Type: application/json
 
 ```json
 {
-  "project_id":454545
+	"project_id": 454545
 }
 ```
 This endpoint enrolls a user in a project.
