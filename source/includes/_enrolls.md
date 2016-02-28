@@ -31,7 +31,7 @@ Parameter | Required
 --------- | --------
 project_id | YES
 
-## Disroll user from a project
+## Withdraw from a project
 
 ```http
 DELETE /users/<user-id>/enrolled-projects HTTP/1.1

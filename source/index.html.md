@@ -7,6 +7,7 @@ language_tabs:
 includes:
   - projects
   - users
+  - enrolls
   - categories
   - contributions
   - pagination
