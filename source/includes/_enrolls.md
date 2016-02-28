@@ -16,7 +16,7 @@ Content-Type: application/json
 
 ```json
 {
-	"href": "api.lookscreen.com/v1/projects/156445",
+	"url": "api.lookscreen.com/v1/projects/156445",
 	"projectID": 156445
 }
 ```

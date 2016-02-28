@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ```json
 {
-	"href": "api.lookscreen.com/v1/users/1411414",
+	"url": "api.lookscreen.com/v1/users/1411414",
 	"id": 4545445,
 	"name": "Ali Allam",
 	"avatar": "www.lookscreen.com/profiles_images/1411414.jpg",
@@ -31,10 +31,10 @@ Content-Type: application/json
 		"contributions": 5
 	},
 	"projects": {
-		"href": "api.lookscreen.com/v1/users/1411414/created_projects"
+		"url": "api.lookscreen.com/v1/users/1411414/created_projects"
 	},
 	"contributions": {
-		"href": "api.lookscreen.com/v1/users/1411414/contributions"
+		"url": "api.lookscreen.com/v1/users/1411414/contributions"
 	}
 }
 ```
@@ -74,7 +74,7 @@ Content-Type: application/json
 			"id": 56565,
 			"thumbnail": "http://www.lookscreen.com/projects_thumbnails/15454545.jpg",
 			"name": "Recognize",
-			"href": "api.lookscreen.com/v1/projects/156445"
+			"url": "api.lookscreen.com/v1/projects/156445"
 		},
 		"created_at": "2016-02-12T03:21:55Z"
 	}],

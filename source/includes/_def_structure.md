@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ```json
 {
-    "href": "api.lookscreen.com/v1/users/1411414",
+    "url": "api.lookscreen.com/v1/users/1411414",
     "id": 4545445,
     "name": "Ali Allam",
     "avatar": "www.lookscreen.com/profiles_images/1411414.jpg"
