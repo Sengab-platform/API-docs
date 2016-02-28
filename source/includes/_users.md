@@ -162,6 +162,11 @@ Content-Type: application/json
 			"name": "Visual",
 			"url": "http://api.lockscreen.com/v1/categories/4"
 		}
+		"owner": {
+			"id": 41,
+			"name": "Albert Einstein",
+			"url": "http://api.lockscreen.com/v1/users/41"
+		}
 	}]
 }
 ```
