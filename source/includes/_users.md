@@ -119,8 +119,11 @@ Content-Type: application/json
 			"url": "http://api.lockscreen.com/v1/users/11"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
+		"brief_description": "This a brief description about this project",
 		"enrollment_count": 700,
 		"contributions_count": 510,
+		"isFeatured": false,
+		"type": "photos",
 		"category": {
 			"id": 210,
 			"name": "Visual",
@@ -154,14 +157,17 @@ Content-Type: application/json
 		"name": "Say what you see",
 		"url": "http://api.lockscreen.com/v1/projects/1",
 		"thumbnail_url": "http://www.lockscreen.com/projects_thumbnails/1.jpg",
+		"brief_description": "This a brief description about this project",
 		"created_at": "2008-01-14T04:33:35Z",
 		"enrollment_count": 700,
 		"contributions_count": 510,
+		"isFeatured": true,
+		"type": "photos",
 		"category": {
 			"id": 210,
 			"name": "Visual",
 			"url": "http://api.lockscreen.com/v1/categories/4"
-		}
+		},
 		"owner": {
 			"id": 41,
 			"name": "Albert Einstein",

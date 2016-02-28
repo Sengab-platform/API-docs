@@ -28,8 +28,11 @@ Content-Type: application/json
 			"url": "http://api.lockscreen.com/v1/users/11"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
+		"brief_description": "This a brief description about this project",
 		"enrollment_count": 700,
 		"contributions_count": 510,
+		"isFeatured": true,
+		"type": "photos",
 		"category": {
 			"id": 210,
 			"name": "Visual",
@@ -46,10 +49,13 @@ Content-Type: application/json
 			"url": "http://api.lockscreen.com/v1/users/41"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
+		"brief_description": "This a brief description about this project",
 		"enrollment_count": 1730,
 		"contributions_count": 1542,
 		"goal": 4000,
 		"progress": 38.55,
+		"isFeatured": true,
+		"type": "photos",
 		"category": {
 			"id": 210,
 			"name": "Visual",
@@ -101,11 +107,16 @@ Content-Type: application/json
 	"owner": {
 		"id": 41,
 		"name": "Albert Einstein",
-		"url": "http://api.lockscreen.com/v1/users/41"
+		"url": "http://api.lockscreen.com/v1/users/41",
+		"avatar": "http://www.lookscreen.com/profiles_images/41.jpg"
 	},
 	"created_at": "2008-01-14T04:33:35Z",
+	"brief_description": "This a brief description about this project",
+	"detailed_description": "This is a detailed description about this project",
 	"enrollment_count": 1730,
 	"contributions_count": 1542,
+	"isFeatured": true,
+	"type": "photos",
 	"category": {
 		"id": 210,
 		"name": "Visual",
@@ -165,8 +176,11 @@ Content-Type: application/json
 			"url": "http://api.lockscreen.com/v1/users/41"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
+		"brief_description": "This a brief description about this project",
 		"enrollment_count": 1730,
 		"contributions_count": 1542,
+		"isFeatured": true,
+		"type": "photos",
 		"category": {
 			"id": 210,
 			"name": "Visual",
