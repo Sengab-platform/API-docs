@@ -1,4 +1,4 @@
-# Strucure
+# Structure
 
 ## Request 1
 

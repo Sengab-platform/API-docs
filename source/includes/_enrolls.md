@@ -31,7 +31,7 @@ Parameter | Required
 --------- | --------
 project_id | YES
 
-## Withdraw from a project
+## Withdraw from project
 
 ```http
 DELETE /users/<user-id>/enrolled-projects HTTP/1.1
