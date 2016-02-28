@@ -11,6 +11,7 @@ includes:
   - contributions
   - pagination
   - errors
+  - def_structure
 
 search: true
 ---
