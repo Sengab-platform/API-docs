@@ -21,12 +21,15 @@ Content-Type: application/json
 		"id": 458,
 		"name": "health",
 		"img": "www.lookscreen.com/category_images/458.jpg",
-		"url": "api.lookscreen.com/v1/categories/458"
+		"url": "api.lookscreen.com/v1/categories/458",
+		"desc": "This category contains all projects that related to heath"
 	}, {
 		"id": 584,
 		"name": "science",
 		"img": "www.lookscreen.com/category_images/584.jpg",
-		"url": "api.lookscreen.com/v1/categories/584"
+		"url": "api.lookscreen.com/v1/categories/584",
+		"desc": "This category contains all projects that related to heath"
+
 	}],
 	"next_id": -1,
 	"total": 2
