@@ -228,39 +228,7 @@ ID |ID of the project
 This action is paginated. See the pagination documentation for details.
 </aside>
 
-## List projects created by a specific user
 
-```http
-GET /users/<user-id>/created-projects HTTP/1.1
-Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
-```
-
-> The above command returns JSON structured like this:
-
-```http
-HTTP/1.1 206 Partial Content
-Content-Type: application/json
-```
-
-```json
-{
-	"projects": [{
-		"id": 1,
-		"name": "Say what you see",
-		"url": "http://api.lockscreen.com/v1/projects/1",
-		"thumbnail_url": "http://www.lockscreen.com/projects_thumbnails/1.jpg",
-		"created_at": "2008-01-14T04:33:35Z",
-		"enrollment_count": 700,
-		"contributions_count": 510,
-		"category": {
-			"id": 210,
-			"name": "Visual",
-			"url": "http://api.lockscreen.com/v1/categories/4"
-		}
-	}]
-}
-```
 
 This endpoint retrieves projects created by a specific user.
 
