@@ -26,7 +26,6 @@ Content-Type: application/json
 		"Email": "ali@allam.com",
 		"bio": null
 	},
-	"profile_owner": true,
 	"stats": {
 		"projects": 0,
 		"contributions": 5
