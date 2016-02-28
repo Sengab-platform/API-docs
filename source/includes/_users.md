@@ -24,7 +24,6 @@ Content-Type: application/json
 	"about": {
 		"location": "Egypt",
 		"Email": "ali@allam.com",
-		"interests": ["art", "social", "science"],
 		"bio": null
 	},
 	"profile_owner": true,
