@@ -112,7 +112,6 @@ Content-Type: application/json
 		"url": "http://api.lockscreen.com/v1/categories/4"
 	},
 	"description": "Take a photo for any pet you",
-	"location": "All over the world",
 	"results": "http://api.lockscreen.com/v1/projects/7/results",
 	"stats": "http://api.lockscreen.com/v1/projects/7/stats"
 }
