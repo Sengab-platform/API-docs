@@ -143,11 +143,89 @@ ID | The ID of the project to retrieve
 ## Add project
 
 ```http
-PUT /projects HTTP/1.1
+POST /projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: token YOUR_ACCESS_TOKEN
 ```
-> TODO
+
+```json
+{
+	"name" : "Recognize image",
+	"briefDescription" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+	"detailedDescription":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+	"goal":5000,
+	"contributionType":
+		{
+			"audioInputs":
+				{
+					"available":false,
+					"audioInputsNumber":null,
+					"audioInputsText":null	
+				},
+			"textInputs":
+				{
+					"available":true,
+					"textInputsNumber":2,
+					"textInputsText":
+						[
+							{
+								"key":"firstName",
+								"value":"Enter your first name"
+							},
+							{
+								"key":"secondName",
+								"value":"Enter your second name"
+							}
+						]
+				},
+			"imageInputs":
+				{
+					"available":false,
+					"textInputsNumber":false,
+					"textInputsText":false
+				}							
+		}
+}
+```
+
+> The above command returns JSON structured like this:
+
+```http
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+```
+
+```json
+{
+	"id" : 4545454,
+	"url" : "http://www.lookscreen.com/projects/45454",
+	"name": "Recognize",
+	"createdAt" : "2016-02-12T03:21:55Z",
+	"thumbnail": "http://www.lookscreen.com/projects_thumbnails/15454545.jpg",
+
+}
+```
+
+
+
+This endpoint adds a new project.
+
+### HTTP Request
+
+`POST http://api.lockscreen.com/v1/projects`
+
+### Request body
+
+Parameter | Description
+--------- | -----------
+name |project name
+briefDescription |short project description
+detailedDescription |detailed project description
+goal |project contributions count goal
+contributionType |defines the type of contribution for a project
+
+
+
 
 ## Search in projects
 
