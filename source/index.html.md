@@ -1,9 +1,6 @@
 ---
 title: Lockscreen API Reference
 
-language_tabs:
-  - http: HTTP
-
 includes:
   - projects
   - users
@@ -19,4 +16,5 @@ search: true
 
 # Introduction
 
-Welcome to the Lockscreen API!
+Welcome to the Lockscreen API !
+<br>Currently, we use only HTTP illustrating examples for the documentation.

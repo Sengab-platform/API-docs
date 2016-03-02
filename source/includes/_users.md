@@ -16,26 +16,22 @@ Content-Type: application/json
 ```
 
 ```json
-{
-	"url": "api.lookscreen.com/v1/users/1411414",
-	"id": 4545445,
-	"name": "Ali Allam",
-	"avatar": "www.lookscreen.com/profiles_images/1411414.jpg",
-	"about": {
-		"location": "Egypt",
-		"Email": "ali@allam.com",
-		"bio": null
-	},
-	"stats": {
-		"projects": 0,
-		"contributions": 5
-	},
-	"projects": {
-		"url": "api.lookscreen.com/v1/users/1411414/created_projects"
-	},
-	"contributions": {
-		"url": "api.lookscreen.com/v1/users/1411414/contributions"
-	}
+{  
+  "id":4545445,
+  "url":"http://api.lockscreen.com/v1/users/1411414",
+  "name":"Ali Allam",
+  "image":"http://www.lockscreen.com/profiles_images/1411414.jpg",
+  "about":{  
+    "location":"Egypt",
+    "Email":"ali@allam.com",
+    "bio":null
+  },
+  "stats":{  
+    "projects":0,
+    "contributions":5
+  },
+  "projects":"http://api.lockscreen.com/v1/users/1411414/created_projects",
+  "contributions":"http://api.lockscreen.com/v1/users/1411414/contributions"
 }
 ```
 
@@ -43,18 +39,12 @@ This endpoint retrieves user's profile.
 
 ### HTTP Request
 
-`GET http://api.lockscreen.com/v1/users/<ID>/`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID |ID of the user
+`GET http://api.lockscreen.com/v1/users/<USER_ID>`
 
 ## List User's Activity
 
 ```http
-GET /users/<ID>/activities HTTP/1.1
+GET /users/<USER_ID>/activities HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: token YOUR_ACCESS_TOKEN
 ```
@@ -72,13 +62,13 @@ Content-Type: application/json
 		"id": "125",
 		"project": {
 			"id": 56565,
-			"thumbnail": "http://www.lookscreen.com/projects_thumbnails/15454545.jpg",
+			"image": "http://www.lockscreen.com/projects_thumbnails/15454545.jpg",
 			"name": "Recognize",
-			"url": "api.lookscreen.com/v1/projects/156445"
+			"url": "http://api.lockscreen.com/v1/projects/56565"
 		},
-		"created_at": "2016-02-12T03:21:55Z"
+		"createdAt": "2016-02-12T03:21:55Z"
 	}],
-	"next_id": -1,
+	"nextId": -1,
 	"total": 1
 }
 ```
@@ -130,7 +120,7 @@ Content-Type: application/json
 			"url": "http://api.lockscreen.com/v1/categories/4"
 		}
 	}],
-	"next_id": -1,
+	"nextId": -1,
 	"total": 1
 }
 ```

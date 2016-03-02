@@ -3,7 +3,7 @@
 ## Enroll in a project
 
 ```http
-POST /users/<user-id>/enrolled-projects HTTP/1.1
+POST /users/<USER_ID>/enrolled-projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: token YOUR_ACCESS_TOKEN
 ```
@@ -16,8 +16,8 @@ Content-Type: application/json
 
 ```json
 {
-	"url": "api.lookscreen.com/v1/projects/156445",
-	"projectID": 156445
+	"url": "http://api.lockscreen.com/v1/projects/156445",
+	"projectId": 156445
 }
 ```
 
@@ -25,16 +25,16 @@ This endpoint enrolls a user in a project.
 
 ### HTTP Request
 
-`GET http://api.lockscreen.com/v1/projects`
+`POST http://api.lockscreen.com/v1/projects`
 
 Parameter | Required
 --------- | --------
-project_id | YES
+projectId | YES
 
 ## Withdraw from project
 
 ```http
-DELETE /users/<user-id>/enrolled-projects HTTP/1.1
+DELETE /users/<USER_ID>/enrolled-projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: token YOUR_ACCESS_TOKEN
 ```
@@ -48,15 +48,15 @@ Content-Type: application/json
 
 ```json
 {
-	"project_id": 454545
+	"projectId": 454545
 }
 ```
-This endpoint enrolls a user in a project.
+This endpoint withdraws a user from a project.
 
 ### HTTP Request
 
-`DELETE http://api.lockscreen.com/v1/users/<user-id>/enrolled-projects`
+`DELETE http://api.lockscreen.com/v1/users/<USER_ID>/enrolled_projects`
 
 Parameter | Description
 --------- | -----------
-project_id | The id of the project to be deleted.
+projectId | The id of the project the user wants to withdraw from.
