@@ -296,10 +296,10 @@ Content-Type: application/json
 			"url":"http://api.lockscreen.com/v1/contributions/47878",
 			"project":{
 				"projectID":7898789,
-				"url":"http://api.lockscreen.com/v1/projects/787844",
+				"url":"http://api.lockscreen.com/v1/projects/7898789",
 				"name":"Say what you see",
 	    		"image":"http://www.lockscreen.com/projects_images/1.jpg"
-			}
+			},
 			"contributor":{  
         		"id":11,
         		"url":"http://api.lockscreen.com/v1/users/11",
