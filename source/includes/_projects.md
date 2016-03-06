@@ -288,8 +288,28 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
-> TODO
-
+```json
+{
+	"contributions" : [
+		{
+			"ID":47878,
+			"url":"http://api.lockscreen.com/v1/contributions/47878",
+			"projectID":7898789,
+			"contributor":{  
+        		"id":11,
+        		"url":"http://api.lockscreen.com/v1/users/11",
+        		"name":"Galileo Galilei",
+        		"image":"http://www.lockscreen.com/profiles_images/41.jpg"
+        		},
+      		"createdAt":19-2-2012,
+			"data": {
+				"firstName":"Galileo",
+				"age":50
+			}
+		}
+	]
+}
+```
 This endpoint retrieves the contributions in a project.
 
 ### HTTP Request
