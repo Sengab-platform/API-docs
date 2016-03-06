@@ -27,6 +27,8 @@ This endpoint add a contribution to a project.
 
 `POST http://api.lockscreen.com/v1/projects/<project_id>/results`
 
+### Request body:
+
 Parameter | Required | Description
 --------- | -------- | ------------
 userId | YES | TEMP; SHOULD BE DELETED
