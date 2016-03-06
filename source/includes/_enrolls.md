@@ -1,4 +1,4 @@
-# Enrollment
+# - Enrollment
 
 ## Enroll in a project
 

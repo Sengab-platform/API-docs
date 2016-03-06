@@ -1,4 +1,4 @@
-# Categories
+# - Categories
 
 ## List all categories
 

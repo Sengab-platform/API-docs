@@ -1,4 +1,4 @@
-# Contributions
+# - Contributions
 
 ## Add a contribution in a project
 

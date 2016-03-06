@@ -1,4 +1,4 @@
-# Projects
+# - Projects
 
 ## List all projects
 
@@ -307,11 +307,18 @@ Content-Type: application/json
         		"image":"http://www.lockscreen.com/profiles_images/41.jpg"
         		},
       		"createdAt":19-2-2012,
-			"data": {
+			"data": [
+			{
 				"firstName":"Galileo",
-				"age":50
+				"type":"string"
+
+			},
+			{
+				"age":50,
+				"type":"int"
 			}
-		}
+			]
+		}و
 	]
 }
 ```

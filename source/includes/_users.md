@@ -1,4 +1,4 @@
-# Users
+# - Users
 
 ## Get user profile
 
