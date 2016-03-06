@@ -294,7 +294,12 @@ Content-Type: application/json
 		{
 			"ID":47878,
 			"url":"http://api.lockscreen.com/v1/contributions/47878",
-			"projectID":7898789,
+			"project":{
+				"projectID":7898789,
+				"url":"http://api.lockscreen.com/v1/projects/787844",
+				"name":"Say what you see",
+	    		"image":"http://www.lockscreen.com/projects_images/1.jpg"
+			}
 			"contributor":{  
         		"id":11,
         		"url":"http://api.lockscreen.com/v1/users/11",
