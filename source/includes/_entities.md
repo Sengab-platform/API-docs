@@ -45,10 +45,10 @@ stats | | |
 Parameter | Type | Value | Notes
 --------- | ---- | ----- | -----
 id | int | todo | to do
-url | | | 
-name | | | 
-image | | | 
-description | | | 
+url | String | url for Category object | 
+name | String |  category name | 
+image | String | category photo | 
+description | String | description of the category  | 
 
 
 
