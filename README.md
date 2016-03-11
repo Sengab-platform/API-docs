@@ -11,3 +11,4 @@ bundle exec middleman server
 # deploy 
 /deploy.sh
 ```
+- We Used [Slate](https://github.com/tripit/slate) for building this doc.
