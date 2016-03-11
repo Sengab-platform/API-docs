@@ -5,7 +5,6 @@
 ```http
 GET /users/<ID>/activities HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
@@ -46,7 +45,6 @@ This endpoint retrieves user's profile.
 ```http
 GET /users/<USER_ID>/activities HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
@@ -88,7 +86,6 @@ This action is paginated. See the pagination documentation for details.
 ```http
 GET /users/<user-id>/enrolled-projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 > The above command returns JSON structured like this:
 
@@ -130,7 +127,6 @@ Content-Type: application/json
 ```http
 GET /users/<user-id>/created-projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:

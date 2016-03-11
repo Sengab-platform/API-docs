@@ -5,7 +5,6 @@
 ```http
 GET /projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
@@ -91,7 +90,6 @@ This action is paginated. See the pagination documentation for details.
 ```http
 GET /projects/:id HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
@@ -198,7 +196,6 @@ Content-Type: application/json
 ```http
 GET /projects?search="pet" HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 > The above command returns JSON structured like this:
 
@@ -260,7 +257,6 @@ This action is paginated. See the pagination documentation for details.
 ```http
 GET /projects/<ID>/results HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns various JSON structured, based on the project type
@@ -273,27 +269,29 @@ Content-Type: application/json
 
 ```json
 {
-	"contributions": [{
-		"ID": 47878,
-		"url": "http://api.lockscreen.com/v1/contributions/47878",
-		"project": {
-			"projectID": 7898789,
-			"url": "http://api.lockscreen.com/v1/projects/7898789",
-			"name": "Say what you see",
-			"templateID": 3,
-			"image": "http://www.lockscreen.com/projects_images/1.jpg"
-		},
-		"contributor": {
-			"id": 11,
-			"url": "http://api.lockscreen.com/v1/users/11",
-			"name": "Galileo Galilei",
-			"image": "http://www.lockscreen.com/profiles_images/41.jpg"
-		},
-		"createdAt": "2008-01-14T04:33:35Z",
-		"data": {
-			"text1": "A bird"
+	"contributions" : [
+		{
+			"ID":47878,
+			"url":"http://api.lockscreen.com/v1/contributions/47878",
+			"project":{
+				"projectID":7898789,
+				"url":"http://api.lockscreen.com/v1/projects/7898789",
+				"name":"Say what you see",
+        "templateID": 1,
+	    	"image":"http://www.lockscreen.com/projects_images/1.jpg"
+			},
+			"contributor":{  
+        		"id":11,
+        		"url":"http://api.lockscreen.com/v1/users/11",
+        		"name":"Galileo Galilei",
+        		"image":"http://www.lockscreen.com/profiles_images/41.jpg"
+        		},
+      	"createdAt":19-2-2012,
+			"data":{
+				"text1":"A bird",
+			}
 		}
-	}]
+	]
 }
 ```
 This endpoint retrieves the contributions in a project.

@@ -5,7 +5,6 @@
 ```http
 GET /categtories HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
@@ -52,7 +51,6 @@ This action is paginated. See the pagination documentation for details.
 ```http
 GET /categtories/458 HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:
