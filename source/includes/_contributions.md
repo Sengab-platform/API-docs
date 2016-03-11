@@ -5,7 +5,7 @@
 ```http
 POST /projects/<project-id>/results HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
+Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
 
 > The above command returns JSON structured like this:

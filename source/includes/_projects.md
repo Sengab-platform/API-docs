@@ -140,7 +140,7 @@ This endpoint retrieves a specific project.
 ```http
 POST /projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
-Authorization: token YOUR_ACCESS_TOKEN
+Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
 
 ```json
