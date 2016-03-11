@@ -81,7 +81,7 @@ Content-Type: application/json
       },
       "createdAt":"2008-01-14T04:33:35Z",
       "briefDescription":"This a brief description about this project",
-      "type":"photos",
+      "templateID": 3,
       "isFeatured":true,
       "enrollmentsCount":1730,
       "contributionsCount":1542,

@@ -113,7 +113,7 @@ Content-Type: application/json
 		"enrollment_count": 700,
 		"contributions_count": 510,
 		"isFeatured": false,
-		"type": "photos",
+    "templateID": 3,
 		"category": {
 			"id": 210,
 			"name": "Visual",
@@ -152,7 +152,7 @@ Content-Type: application/json
 		"enrollment_count": 700,
 		"contributions_count": 510,
 		"isFeatured": true,
-		"type": "photos",
+    "templateID": 3,
 		"category": {
 			"id": 210,
 			"name": "Visual",
