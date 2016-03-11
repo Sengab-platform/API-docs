@@ -15,22 +15,22 @@ Content-Type: application/json
 ```
 
 ```json
-{  
-  "id":4545445,
-  "url":"http://api.lockscreen.com/v1/users/1411414",
-  "name":"Ali Allam",
-  "image":"http://www.lockscreen.com/profiles_images/1411414.jpg",
-  "about":{  
-    "location":"Egypt",
-    "Email":"ali@allam.com",
-    "bio":null
-  },
-  "stats":{  
-    "projects":0,
-    "contributions":5
-  },
-  "projects":"http://api.lockscreen.com/v1/users/1411414/created_projects",
-  "contributions":"http://api.lockscreen.com/v1/users/1411414/contributions"
+{
+	"id": 4545445,
+	"url": "http://api.lockscreen.com/v1/users/1411414",
+	"name": "Ali Allam",
+	"image": "http://www.lockscreen.com/profiles_images/1411414.jpg",
+	"about": {
+		"location": "Egypt",
+		"Email": "ali@allam.com",
+		"bio": null
+	},
+	"stats": {
+		"projects": 0,
+		"contributions": 5
+	},
+	"projects": "http://api.lockscreen.com/v1/users/1411414/created_projects",
+	"contributions": "http://api.lockscreen.com/v1/users/1411414/contributions"
 }
 ```
 

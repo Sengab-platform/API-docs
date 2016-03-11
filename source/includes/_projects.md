@@ -15,57 +15,54 @@ Content-Type: application/json
 ```
 
 ```json
-{  
-  "projects":[  
-    {  
-      "id":1,
-      "url":"http://api.lockscreen.com/v1/projects/1",
-      "name":"Say what you see",
-      "image":"http://www.lockscreen.com/projects_images/1.jpg",
-      "owner":{  
-        "id":11,
-        "url":"http://api.lockscreen.com/v1/users/11",
-        "name":"Galileo Galilei"
-      },
-      "createdAt":"2008-01-14T04:33:35Z",
-      "briefDescription":"This a brief description about this project",
-      "enrollmentsCount":700,
-      "contributionsCount":510,
-      "isFeatured":true,
-      "templateID": 1,
-      "category":{  
-        "id":210,
-        "url":"http://api.lockscreen.com/v1/categories/210",
-        "name":"social"
-      }
-    },
-    {  
-      "id":7,
-      "name":"Show me a pet",
-      "url":"http://api.lockscreen.com/v1/projects/7",
-      "image":"http://www.lockscreen.com/projects_images/7.jpg",
-      "owner":{  
-        "id":41,
-        "url":"http://api.lockscreen.com/v1/users/41",
-        "name":"Albert Einstein"
-      },
-      "createdAt":"2008-01-14T04:33:35Z",
-      "briefDescription":"This a brief description about this project",
-      "enrollmentsCount":1730,
-      "contributionsCount":1542,
-      "goal":4000,
-      "progress":38.55,
-      "isFeatured":true,
-      "templateID": 2,
-      "category":{  
-        "id":584,
-        "url":"http://api.lockscreen.com/v1/categories/584",
-        "name":"science"
-      }
-    }
-  ],
-  "nextId":-1,
-  "total":2
+{
+	"projects": [{
+		"id": 1,
+		"url": "http://api.lockscreen.com/v1/projects/1",
+		"name": "Say what you see",
+		"image": "http://www.lockscreen.com/projects_images/1.jpg",
+		"owner": {
+			"id": 11,
+			"url": "http://api.lockscreen.com/v1/users/11",
+			"name": "Galileo Galilei"
+		},
+		"createdAt": "2008-01-14T04:33:35Z",
+		"briefDescription": "This a brief description about this project",
+		"enrollmentsCount": 700,
+		"contributionsCount": 510,
+		"isFeatured": true,
+		"templateID": 1,
+		"category": {
+			"id": 210,
+			"url": "http://api.lockscreen.com/v1/categories/210",
+			"name": "social"
+		}
+	}, {
+		"id": 7,
+		"name": "Show me a pet",
+		"url": "http://api.lockscreen.com/v1/projects/7",
+		"image": "http://www.lockscreen.com/projects_images/7.jpg",
+		"owner": {
+			"id": 41,
+			"url": "http://api.lockscreen.com/v1/users/41",
+			"name": "Albert Einstein"
+		},
+		"createdAt": "2008-01-14T04:33:35Z",
+		"briefDescription": "This a brief description about this project",
+		"enrollmentsCount": 1730,
+		"contributionsCount": 1542,
+		"goal": 4000,
+		"progress": 38.55,
+		"isFeatured": true,
+		"templateID": 2,
+		"category": {
+			"id": 584,
+			"url": "http://api.lockscreen.com/v1/categories/584",
+			"name": "science"
+		}
+	}],
+	"nextId": -1,
+	"total": 2
 }
 ```
 
@@ -100,32 +97,32 @@ Content-Type: application/json
 ```
 
 ```json
-{  
-  "id":7,
-  "url":"http://api.lockscreen.com/v1/projects/7",
-  "name":"Show me a pet",
-  "image":"http://www.lockscreen.com/projects_images/7.jpg",
-  "owner":{  
-    "id":41,
-    "url":"http://api.lockscreen.com/v1/users/41",
-    "name":"Albert Einstein",
-    "image":"http://www.lockscreen.com/profiles_images/41.jpg"
-  },
-  "createdAt":"2008-01-14T04:33:35Z",
-  "briefDescription":"This a brief description about this project",
-  "detailedDescription":"This is a detailed description about this project",
-  "enrollmentsCount":1730,
-  "contributionsCount":1542,
-  "isFeatured":true,
-  "templateID": 1,
-  "category":{  
-    "id":584,
-    "url":"http://api.lockscreen.com/v1/categories/584",
-    "name":"science"
-  },
-  "description":"Take a photo for any pet you",
-  "results":"http://api.lockscreen.com/v1/projects/7/results",
-  "stats":"http://api.lockscreen.com/v1/projects/7/stats"
+{
+	"id": 7,
+	"url": "http://api.lockscreen.com/v1/projects/7",
+	"name": "Show me a pet",
+	"image": "http://www.lockscreen.com/projects_images/7.jpg",
+	"owner": {
+		"id": 41,
+		"url": "http://api.lockscreen.com/v1/users/41",
+		"name": "Albert Einstein",
+		"image": "http://www.lockscreen.com/profiles_images/41.jpg"
+	},
+	"createdAt": "2008-01-14T04:33:35Z",
+	"briefDescription": "This a brief description about this project",
+	"detailedDescription": "This is a detailed description about this project",
+	"enrollmentsCount": 1730,
+	"contributionsCount": 1542,
+	"isFeatured": true,
+	"templateID": 1,
+	"category": {
+		"id": 584,
+		"url": "http://api.lockscreen.com/v1/categories/584",
+		"name": "science"
+	},
+	"description": "Take a photo for any pet you",
+	"results": "http://api.lockscreen.com/v1/projects/7/results",
+	"stats": "http://api.lockscreen.com/v1/projects/7/stats"
 }
 ```
 
@@ -144,16 +141,16 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
 
 ```json
-{  
-  "name":"Recognize image",
-  "briefDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-  "detailedDescription":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  "templateID": 1,
-  "questions":{
-    "text1": "Where are you from ?",
-    "image1":"Add a photo of your city"
-  },
-  "goal":5000,
+{
+	"name": "Recognize image",
+	"briefDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+	"detailedDescription": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+	"templateID": 1,
+	"questions": {
+		"text1": "Where are you from ?",
+		"image1": "Add a photo of your city"
+	},
+	"goal": 5000
 }
 ```
 
@@ -182,12 +179,12 @@ Content-Type: application/json
 ```
 
 ```json
-{  
-  "id":4545454,
-  "url":"http://www.lockscreen.com/projects/45454",
-  "name":"Recognize Image",
-	"image":"http://www.lockscreen.com/projects_thumbnails/15454545.jpg",
-  "createdAt":"2016-02-12T03:21:55Z"
+{
+	"id": 4545454,
+	"url": "http://www.lockscreen.com/projects/45454",
+	"name": "Recognize Image",
+	"image": "http://www.lockscreen.com/projects_thumbnails/15454545.jpg",
+	"createdAt": "2016-02-12T03:21:55Z"
 }
 ```
 
@@ -205,33 +202,31 @@ Content-Type: application/json
 ```
 
 ```json
-{  
-  "projects":[  
-    {  
-      "id":7,
-      "url":"http://api.lockscreen.com/v1/projects/7",
-      "name":"Show me a pet",
-      "image":"http://www.lockscreen.com/projects_imags/7.jpg",
-      "owner":{  
-        "id":41,
-        "url":"http://api.lockscreen.com/v1/users/41",
-        "name":"Albert Einstein"
-      },
-      "createdAt":"2008-01-14T04:33:35Z",
-      "briefDescription":"This a brief description about this project",
-      "enrollmentsCount":1730,
-      "contributionsCount":1542,
-      "isFeatured":true,
-      "templateID": 1,
-      "category":{  
-        "id":584,
-        "url":"http://api.lockscreen.com/v1/categories/584",
-        "name":"science"
-      }
-    }
-  ],
-  "nextId":-1,
-  "total":1
+{
+	"projects": [{
+		"id": 7,
+		"url": "http://api.lockscreen.com/v1/projects/7",
+		"name": "Show me a pet",
+		"image": "http://www.lockscreen.com/projects_imags/7.jpg",
+		"owner": {
+			"id": 41,
+			"url": "http://api.lockscreen.com/v1/users/41",
+			"name": "Albert Einstein"
+		},
+		"createdAt": "2008-01-14T04:33:35Z",
+		"briefDescription": "This a brief description about this project",
+		"enrollmentsCount": 1730,
+		"contributionsCount": 1542,
+		"isFeatured": true,
+		"templateID": 1,
+		"category": {
+			"id": 584,
+			"url": "http://api.lockscreen.com/v1/categories/584",
+			"name": "science"
+		}
+	}],
+	"nextId": -1,
+	"total": 1
 }
 ```
 
@@ -269,29 +264,27 @@ Content-Type: application/json
 
 ```json
 {
-	"contributions" : [
-		{
-			"ID":47878,
-			"url":"http://api.lockscreen.com/v1/contributions/47878",
-			"project":{
-				"projectID":7898789,
-				"url":"http://api.lockscreen.com/v1/projects/7898789",
-				"name":"Say what you see",
-        "templateID": 1,
-	    	"image":"http://www.lockscreen.com/projects_images/1.jpg"
-			},
-			"contributor":{  
-        		"id":11,
-        		"url":"http://api.lockscreen.com/v1/users/11",
-        		"name":"Galileo Galilei",
-        		"image":"http://www.lockscreen.com/profiles_images/41.jpg"
-        		},
-      	"createdAt":19-2-2012,
-			"data":{
-				"text1":"A bird",
-			}
+	"contributions": [{
+		"ID": 47878,
+		"url": "http://api.lockscreen.com/v1/contributions/47878",
+		"project": {
+			"projectID": 7898789,
+			"url": "http://api.lockscreen.com/v1/projects/7898789",
+			"name": "Say what you see",
+			"templateID": 1,
+			"image": "http://www.lockscreen.com/projects_images/1.jpg"
+		},
+		"contributor": {
+			"id": 11,
+			"url": "http://api.lockscreen.com/v1/users/11",
+			"name": "Galileo Galilei",
+			"image": "http://www.lockscreen.com/profiles_images/41.jpg"
+		},
+		"createdAt": "2016-02-12T03:21:55Z",
+		"data": {
+			"text1": "A bird"
 		}
-	]
+	}]
 }
 ```
 This endpoint retrieves the contributions in a project.
