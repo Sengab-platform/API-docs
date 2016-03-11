@@ -384,7 +384,6 @@
 <h2 id="list-all-projects">List all projects</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -476,7 +475,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="get-a-specific-project">Get a specific project</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/:id</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -523,7 +521,7 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="add-project">Add project</h2>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">  
   </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Recognize image"</span><span class="p">,</span><span class="w">
@@ -592,7 +590,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="search-in-projects">Search in projects</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects?search="pet"</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -658,7 +655,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-results-of-a-project">List results of a project</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/&lt;ID&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -669,27 +665,29 @@ e.g if the project collects images the like this:</p>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"contributions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">47878</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/contributions/47878"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"projectID"</span><span class="p">:</span><span class="w"> </span><span class="mi">7898789</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/projects/7898789"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Say what you see"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/1.jpg"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"contributor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/profiles_images/41.jpg"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"text1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A bird"</span><span class="w">
+    </span><span class="nt">"contributions"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"ID"</span><span class="p">:</span><span class="mi">47878</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://api.lockscreen.com/v1/contributions/47878"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"project"</span><span class="p">:{</span><span class="w">
+                </span><span class="nt">"projectID"</span><span class="p">:</span><span class="mi">7898789</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://api.lockscreen.com/v1/projects/7898789"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Say what you see"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"image"</span><span class="p">:</span><span class="s2">"http://www.lockscreen.com/projects_images/1.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"contributor"</span><span class="p">:{</span><span class="w">  
+                </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"image"</span><span class="p">:</span><span class="s2">"http://www.lockscreen.com/profiles_images/41.jpg"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="mi">19-2-2012</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"data"</span><span class="p">:{</span><span class="w">
+                </span><span class="nt">"text1"</span><span class="p">:</span><span class="s2">"A bird"</span><span class="p">,</span><span class="w">
+            </span><span class="err">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">}]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -708,7 +706,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="get-user-profile">Get user profile</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;ID&gt;/activities</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -745,7 +742,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-user-39-s-activity">List User&rsquo;s Activity</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;USER_ID&gt;/activities</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -783,7 +779,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-all-projects-that-the-user-enrolled-in">List all projects that the user enrolled in</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;user-id&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -823,7 +818,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-projects-created-by-a-specific-user">List projects created by a specific user</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;user-id&gt;/created-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -873,7 +867,7 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="enroll-in-a-project">Enroll in a project</h2>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/users/&lt;USER_ID&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -909,7 +903,7 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="withdraw-from-project">Withdraw from project</h2>
 <pre class="highlight http"><code><span class="nf">DELETE</span> <span class="nn">/users/&lt;USER_ID&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -946,7 +940,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-all-categories">List all categories</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/categtories</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -990,7 +983,6 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="list-projects-of-a-category">List projects of a category</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/categtories/458</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
@@ -1045,7 +1037,7 @@ This action is paginated. See the pagination documentation for details.
 <h2 id="add-a-contribution-in-a-project">Add a contribution in a project</h2>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/projects/&lt;project-id&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
 
 <blockquote>
