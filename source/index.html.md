@@ -17,5 +17,5 @@ search: true
 
 # Introduction
 
-Welcome to the Lockscreen API !
+Welcome to the Sengab API !
 <br>Currently, we use only HTTP illustrating examples for the documentation.
