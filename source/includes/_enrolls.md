@@ -17,8 +17,14 @@ Content-Type: application/json
 ```json
 {
 	"url": "http://api.lockscreen.com/v1/projects/156445",
-	"projectId": 156445
+	"projectId": 156445,
+    "templateID":2,
+    "templateBody": ""     
 }
+```
+
+```java
+ // templateBody differs according to the project template type
 ```
 
 This endpoint enrolls a user in a project.

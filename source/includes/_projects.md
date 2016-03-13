@@ -146,10 +146,7 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 	"briefDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 	"detailedDescription": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 	"templateID": 1,
-	"questions": {
-		"text1": "Where are you from ?",
-		"image1": "Add a photo of your city"
-	},
+	"templateBody": {},
 	"goal": 5000
 }
 ```
@@ -168,7 +165,8 @@ name |project name
 briefDescription | short project description
 detailedDescription | detailed project description
 goal | project contributions count goal
-contributionType | defines the type of contribution for a project
+templateID | defines the template which the project belong to (for more check Templates section)
+templateBody | defines the template body for a project differs according to templateID (for more check Templates section)
 
 
 > The above command returns JSON structured like this:
@@ -264,28 +262,12 @@ Content-Type: application/json
 
 ```json
 {
-	"contributions": [{
-		"ID": 47878,
-		"url": "http://api.lockscreen.com/v1/contributions/47878",
-		"project": {
-			"projectID": 7898789,
-			"url": "http://api.lockscreen.com/v1/projects/7898789",
-			"name": "Say what you see",
-			"templateID": 1,
-			"image": "http://www.lockscreen.com/projects_images/1.jpg"
-		},
-		"contributor": {
-			"id": 11,
-			"url": "http://api.lockscreen.com/v1/users/11",
-			"name": "Galileo Galilei",
-			"image": "http://www.lockscreen.com/profiles_images/41.jpg"
-		},
-		"createdAt": "2016-02-12T03:21:55Z",
-		"data": {
-			"text1": "A bird"
-		}
-	}]
+	"results":""
 }
+```
+
+```text
+ // results field differs according to the project template type
 ```
 This endpoint retrieves the contributions in a project.
 

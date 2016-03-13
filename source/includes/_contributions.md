@@ -35,6 +35,5 @@ userId | YES | TEMP; SHOULD BE DELETED
 projectId | YES | The ID of the project
 contribution | YES | Object of contribution (see below)
 contribution.createdAt | YES | Date of contribution
-contribution.data | YES | Content of data will be different based on the project template
-contribution.data.text1 | - | -
-contribution.data.image1 | - | -
+contribution.data | YES | Content of data will be different based on the project template (for more check Templates section)
+
