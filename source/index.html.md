@@ -4,6 +4,7 @@ title: Lockscreen API Reference
 includes:
   - entities
   - projects
+  - templates
   - users
   - enrolls
   - categories
