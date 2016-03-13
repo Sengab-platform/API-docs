@@ -114,7 +114,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Lockscreen API !
+<p>Welcome to the Sengab API !
 <br>Currently, we use only HTTP illustrating examples for the documentation.</p>
 
           <h1 id="entities">Entities</h1>
@@ -693,6 +693,160 @@ e.g if the project collects images the like this:</p>
 <aside class="notice">
 This action is paginated. See the pagination documentation for details.
 </aside>
+
+          <h1 id="templates">Templates</h1>
+
+<p>At this moment, we provide 6 static templates for projects, in this doc we will illustrate them and their structure while the process of add project and view the results.</p>
+
+<h2 id="template-1">Template 1</h2>
+
+<table><thead>
+<tr>
+<th>Question Type</th>
+<th>Question Field</th>
+<th>Response Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Yes/No</td>
+<td>polarQuestion</td>
+<td>polarResponse</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>-</td>
+<td>locationResponse</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+
+<p>In this template the <code class="prettyprint">Location</code> will not be shown to the user in the project as a question, but it will be sent along side his response to the yes/no question implicitly.</p>
+
+<p>The result of this project will be shown as a map with to types of markers indication the response of the question in this location. So we will need to return the all submissions as a one result. e.g</p>
+
+<table><thead>
+<tr>
+<th>Response</th>
+<th>List of locations</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Yes</td>
+<td>[&ldquo;31.205205,31.624552&rdquo;, &ldquo;31.047634, 31.376812&rdquo;]</td>
+</tr>
+<tr>
+<td>No</td>
+<td>[&ldquo;51.5154907,-0.1922661,12&rdquo;]</td>
+</tr>
+</tbody></table>
+
+<h2 id="template-2">Template 2</h2>
+
+<table><thead>
+<tr>
+<th>Question Type</th>
+<th>Question Field</th>
+<th>Response Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Image</td>
+<td>imageQuestion</td>
+<td>imageResponse</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Caption</td>
+<td>-</td>
+<td>captionResponse</td>
+<td>No</td>
+</tr>
+</tbody></table>
+
+<p>The result of this project will be shown as a photo grid with captions. So we will need to return the all submissions as a one result. e.g</p>
+
+<table><thead>
+<tr>
+<th>List of images</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&ldquo;http://www.lockscreen.com/submissions_images/41.jpg&rdquo;, &ldquo;http://www.lockscreen.com/submissions_images/42.jpg&rdquo;</td>
+</tr>
+</tbody></table>
+
+<h2 id="template-3">Template 3</h2>
+
+<table><thead>
+<tr>
+<th>Question Type</th>
+<th>Question Field</th>
+<th>Response Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Yes/No</td>
+<td>polarQuestion1</td>
+<td>polarResponse1</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Yes/No</td>
+<td>polarQuestion2</td>
+<td>polarResponse2</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+
+<p>In this template there is undefined number of yes/no questions.</p>
+
+<p>The result of this project will be a chart for every question showing the percentage of yes/no responses for every question.</p>
+
+<table><thead>
+<tr>
+<th>Question #</th>
+<th>Yes Percentage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>&ldquo;42.5&rdquo;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&ldquo;73.1&rdquo;</td>
+</tr>
+</tbody></table>
+
+<h2 id="template-4">Template 4</h2>
+
+<table><thead>
+<tr>
+<th>Question Type</th>
+<th>Question Field</th>
+<th>Response Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Location</td>
+<td>locationQuestion</td>
+<td>locationResponse</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>imageQuestion</td>
+<td>imageResponse</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+
+<p>The result of this project will be a combination of the responses that have a map with a marker of the user location and an image.</p>
 
           <h1 id="users">- Users</h1>
 
