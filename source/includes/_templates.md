@@ -28,7 +28,7 @@ The result of this project will be shown as a photo grid with captions. So we wi
 
 List of images |
 -------------- |
-"http://www.lockscreen.com/submissions_images/41.jpg", "http://www.lockscreen.com/submissions_images/42.jpg"
+"http://www.lockscreen.com/submissions_images/41.jpg", "http://www.lockscreen.com/submissions_images/42.jpg" |
 
 
 ## Template 3
