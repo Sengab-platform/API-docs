@@ -21,7 +21,7 @@ At this moment, we provide 6 static templates for projects, in this doc we will 
 ```json
 {
     "data": {
-        "location" : ["31.205205,31.624552", "31.047634, 31.376812"],
+        "location" : ["31.205205", "31.047634"],
         "answer" : true
     }
 }
@@ -33,8 +33,8 @@ At this moment, we provide 6 static templates for projects, in this doc we will 
 ```json
 {
     "results": {
-        "yes":[["31.205205","31.205205"],["31.205205","31.205205"]] ,
-        "no": [["31.205205","31.205205"],["31.205205","31.205205"]] 
+        "yes":[["31.205205","31.047634"],["31.047634","31.205205"]] ,
+        "no": [["31.047634","31.205205"],["31.205205","31.047634"]] 
        }
 }
 ```
@@ -52,8 +52,8 @@ The result of this project will be shown as a map with to types of markers indic
 Parameter | Type | Desc 
 ------------- | ------------- | -------------- 
 templateID | Number | defines the template type 
-templatedBody | obj | defines the template body 
-templatedBody.questionTitle | String | defines the question which will appear to this project enrolled users 
+templateBody | obj | defines the template body 
+templateBody.questionTitle | String | defines the question which will appear to this project enrolled users 
 
 
 ### Add Contribution :
@@ -103,6 +103,7 @@ The result of this project will be shown as a photo grid with captions. So we wi
 ```
 
 > List Results for porject :
+
 ```json
 {
     "results": {
