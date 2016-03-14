@@ -280,7 +280,7 @@ location.lng | Number  | Holds the value of longitude.                          
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter      | Type         | Description
 ---------------|--------------|----------------------------------------------------
@@ -373,7 +373,7 @@ answer       | Boolean | User's answer to the question                          
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter | Type   | Description
 ----------|--------|-------------
@@ -410,10 +410,6 @@ percentage | Number  | The percentage of the positive answer that the photo had 
     {
       "imageID": 1,
       "text": "Sengab is just awesome!!"
-    },
-    {
-      "imageID": 2,
-      "text": "GitHub is how people build software."
     }
   ]
 }
@@ -468,7 +464,7 @@ text         | String  | User's recognition to the text in the photo            
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter      | Type         | Description
 ---------------|--------------|-------------
