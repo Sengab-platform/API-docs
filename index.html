@@ -687,10 +687,10 @@ This action is paginated. See the pagination documentation for details.
 <p>Add project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"questionTitle"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Are you happy today?"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Are you happy today?"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -698,13 +698,13 @@ This action is paginated. See the pagination documentation for details.
 <p>Submit contribution</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"location"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.8709434</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.1903114</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.8709434</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.1903114</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -712,22 +712,28 @@ This action is paginated. See the pagination documentation for details.
 <p>List results of project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"yes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
-        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
-        </span><span class="p">}],</span><span class="w">
-        </span><span class="nt">"no"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
-        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"yes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"no"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -830,10 +836,10 @@ This action is paginated. See the pagination documentation for details.
 <p>Add project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"imgTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Take a photo of your pet."</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"imageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Take a photo of your pet."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -841,10 +847,10 @@ This action is paginated. See the pagination documentation for details.
 <p>Submit contribution</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"imgString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My cat lily"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"imgString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My cat lily"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1019,14 +1025,14 @@ This action is paginated. See the pagination documentation for details.
 
 <h2 id="template-4">Template 4</h2>
 
-<h3 id="description">Description :</h3>
-
 <blockquote>
 <p>Add Project :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"imageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Take a photo of road accidents you witness"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1034,7 +1040,14 @@ This action is paginated. See the pagination documentation for details.
 <p>Add Contribution :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accident in Tahrir Square"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mi">4545754</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">4546486</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1042,33 +1055,132 @@ This action is paginated. See the pagination documentation for details.
 <p>List Results for project :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/projects_submissions/31.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accident in Tahrir Square"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mi">5568</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">5775</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
+<h3 id="description">DESCRIPTION</h3>
+
+<p>In this template the contributor is asked to take a photo, briefly describe it and his location will be implicitly sent alongside with them.</p>
+
+<p>The results will be a combination of the contributions, a map with a marker of the user location and his submitted image including the caption.</p>
+
+<h3 id="add-project">ADD PROJECT</h3>
+
 <table><thead>
 <tr>
-<th>Question Type</th>
-<th>Question Field</th>
-<th>Response Field</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>templateID</td>
+<td>Number</td>
+<td>Defines the template type.</td>
+</tr>
+<tr>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>templateBody.imageTitle</td>
+<td>String</td>
+<td>Defines the description of required image.</td>
+</tr>
+</tbody></table>
+
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 <th>Required</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>Location</td>
-<td>locationQuestion</td>
-<td>locationResponse</td>
+<td>image</td>
+<td>String</td>
+<td>Base64 value of the image.</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Image</td>
-<td>imageQuestion</td>
-<td>imageResponse</td>
+<td>caption</td>
+<td>String</td>
+<td>Contributor&rsquo;s description of his image.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Object</td>
+<td>Holds the value of the location (longitude/latitude).</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>location.lat</td>
+<td>Number</td>
+<td>Holds the value of latitude.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>location.lng</td>
+<td>Number</td>
+<td>Holds the value of longitude.</td>
 <td>Yes</td>
 </tr>
 </tbody></table>
 
-<p>The result of this project will be a combination of the responses that have a map with a marker of the user location and an image.</p>
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
+
+<p><code class="prettyprint">result</code> array, holds processed location data.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>imageUrl</td>
+<td>String</td>
+<td>The URL of the photo.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>Contributor&rsquo;s description of his image.</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Object</td>
+<td>Holds the value of the location (longitude/latitude).</td>
+</tr>
+<tr>
+<td>location.lat</td>
+<td>Number</td>
+<td>Holds the value of latitude.</td>
+</tr>
+<tr>
+<td>location.lng</td>
+<td>Number</td>
+<td>Holds the value of longitude.</td>
+</tr>
+</tbody></table>
 
 <h2 id="template-5">Template 5</h2>
 
@@ -1097,10 +1209,10 @@ This action is paginated. See the pagination documentation for details.
 <p>Submit contribution</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1108,18 +1220,20 @@ This action is paginated. See the pagination documentation for details.
 <p>List results of project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="w">
-        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
-        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1198,7 +1312,7 @@ This action is paginated. See the pagination documentation for details.
 
 <h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
 
-<p><code class="prettyprint">result</code> object, holds processed location data.</p>
+<p><code class="prettyprint">result</code> array, holds processed location data.</p>
 
 <table><thead>
 <tr>
@@ -1208,17 +1322,12 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>images</td>
-<td>Array</td>
-<td>Holds all the images IDs and their percentage of confirmation.</td>
-</tr>
-<tr>
-<td>images.imageID</td>
+<td>imageID</td>
 <td>Number</td>
 <td>The ID of the photo.</td>
 </tr>
 <tr>
-<td>images.percentage</td>
+<td>percentage</td>
 <td>Number</td>
 <td>The percentage of the positive answer that the photo had received.</td>
 </tr>
@@ -1250,13 +1359,16 @@ This action is paginated. See the pagination documentation for details.
 <p>Submit contribution</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Sengab is just awesome!!"</span><span class="w">
-    </span><span class="p">},{</span><span class="w">
-            </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GitHub is how people build software."</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sengab is just awesome!!"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GitHub is how people build software."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1264,23 +1376,21 @@ This action is paginated. See the pagination documentation for details.
 <p>List results of project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"Sengab is just awesome!!"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"sengab is just awesome"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"GitHub is how people build software."</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Sengab is just awesome!!"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sengab is just awesome"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"GitHub is how people build software."</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1354,7 +1464,7 @@ This action is paginated. See the pagination documentation for details.
 
 <h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
 
-<p><code class="prettyprint">result</code> object, holds processed location data.</p>
+<p><code class="prettyprint">result</code> array, holds processed location data.</p>
 
 <table><thead>
 <tr>
@@ -1364,17 +1474,12 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>images</td>
-<td>Array</td>
-<td>Holds all the images IDs and their percentage of confirmation.</td>
-</tr>
-<tr>
-<td>images.imageID</td>
+<td>imageID</td>
 <td>Number</td>
 <td>The ID of the photo.</td>
 </tr>
 <tr>
-<td>images.text</td>
+<td>text</td>
 <td>List[String]</td>
 <td>A list holds all the text provided from the user for this photo.</td>
 </tr>
