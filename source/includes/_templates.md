@@ -1,10 +1,9 @@
 # Templates
-At this moment, we provide 6 static templates for projects, in this doc we will illustrate them and their structure while the process of add project and view the results.
+Currently, we provide 6 static templates for projects, we will illustrate their structure through the following examples.
 
 ## Template 1
 
-
-> Add Project :
+> Add project
 
 ```json
 {
@@ -15,67 +14,76 @@ At this moment, we provide 6 static templates for projects, in this doc we will 
 }
 ```
 
-
-> Add Contribution : 
+> Submit contribution
 
 ```json
 {
     "data": {
-        "location" : ["31.205205", "31.047634"],
-        "answer" : true
+        "location" : {
+          "lat": -33.8709434,
+          "lng": 151.1903114
+        },
+        "answer" : "yes"
     }
 }
 ```
 
-
-> List Results for porject :
+> List results of project
 
 ```json
 {
-    "results": {
-        "yes":[["31.205205","31.047634"],["31.047634","31.205205"]] ,
-        "no": [["31.047634","31.205205"],["31.205205","31.047634"]] 
-       }
+	"results": {
+		"yes": [{
+			"lat": -33.86755700000001,
+			"lng": 151.201527
+		}, {
+			"lat": -33.86755700000001,
+			"lng": 151.201527
+		}],
+		"no": [{
+			"lat": -33.86755700000001,
+			"lng": 151.201527
+		}, {
+			"lat": -33.86755700000001,
+			"lng": 151.201527
+		}]
+	}
 }
 ```
 
+### DESCRIPTION
+
+In this template the `Location` will not be shown to the user in the project as a question, but it will be sent implicitly alongside his response to the yes/no question.
+
+The result of this project will be shown as a map with two types of markers indicating the answer to the question in this location. So we will need to return all location contributions as a single result.
+
+### ADD PROJECT
+
+Parameter                  | Type   | Description
+---------------------------|------- | --------------
+templateID                 | Number | Defines the template type.
+templateBody               | Object | Defines the template body.
+templateBody.questionTitle | String | Defines the question.
 
 
-### Description :
+### SUBMIT CONTRIBUTION
+`data` object, holds contribution data (response).
 
-In this template the `Location` will not be shown to the user in the project as a question, but it will be sent along side his response to the yes/no question implicitly.
-
-The result of this project will be shown as a map with to types of markers indication the response of the question in this location. So we will need to return the all submissions as a one result. e.g
-
-### Add project :
-
-Parameter | Type | Desc 
-------------- | ------------- | -------------- 
-templateID | Number | defines the template type 
-templateBody | obj | defines the template body 
-templateBody.questionTitle | String | defines the question which will appear to this project enrolled users 
+Parameter    | Type    | Description                                          | Required
+-------------|---------| -----------------------------------------------------|---------
+location     | Object  | Holds the value of the location (longitude/latitude).| yes
+location.lat | Number  | Holds the value of latitude.                         | yes
+location.lng | Number  | Holds the value of longitude.                        | yes
+answer       | String  | User's answer to the question                        | yes
 
 
-### Add Contribution :
+### LIST RESULTS OF PROJECT
+`result` object, holds processed location data.
 
-Parameter | Type | Desc | Required
-------------- | ------------- | -------------- | --------
-data | obj | contains the contribution data | yes
-data.location | Array | contains x and y coordinates | yes
-data.answer | Boolean | the User's answer for the question | yes
-
-
-
-### List Results for project :
-
-
-Parameter | Type | Desc 
---------- | ---- | -----
-results | obj | contains the contribution data 
-results.yes | Array | List of all x and y coordinates for contributors answered with Yes 
-results.no | Array | List of all x and y coordinates for contributors answered with No
-
-
+Parameter | Type   | Description
+----------|--------|-------------
+yes       | Array  | List all location contributions with answer `yes`
+no        | Array  | List all location contributions with answer `no`
 
 
 ## Template 2
@@ -94,7 +102,7 @@ The result of this project will be shown as a photo grid with captions. So we wi
 }
 ```
 
-> Add Contribution : 
+> Add Contribution :
 
 ```json
 {
@@ -154,7 +162,7 @@ List of images |
 }
 ```
 
-> Add Contribution : 
+> Add Contribution :
 
 ```json
 {
@@ -201,7 +209,7 @@ Question # | Yes Percentage
 }
 ```
 
-> Add Contribution : 
+> Add Contribution :
 
 ```json
 {
