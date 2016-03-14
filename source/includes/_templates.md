@@ -7,10 +7,10 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 
 ```json
 {
-    "templateID": 1,
-    "templateBody": {
-        "questionTitle" : "Are you happy today?"
-    }
+  "templateID": 1,
+  "templateBody": {
+    "questionTitle": "Are you happy today?"
+  }
 }
 ```
 
@@ -18,13 +18,13 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 
 ```json
 {
-    "data": {
-        "location" : {
-          "lat": -33.8709434,
-          "lng": 151.1903114
-        },
-        "answer" : "yes"
-    }
+  "data": {
+    "location": {
+      "lat": -33.8709434,
+      "lng": 151.1903114
+    },
+    "answer": "yes"
+  }
 }
 ```
 
@@ -32,22 +32,28 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 
 ```json
 {
-	"results": {
-		"yes": [{
-			"lat": -33.86755700000001,
-			"lng": 151.201527
-		}, {
-			"lat": -33.86755700000001,
-			"lng": 151.201527
-		}],
-		"no": [{
-			"lat": -33.86755700000001,
-			"lng": 151.201527
-		}, {
-			"lat": -33.86755700000001,
-			"lng": 151.201527
-		}]
-	}
+  "results": {
+    "yes": [
+      {
+        "lat": -33.86755700000001,
+        "lng": 151.201527
+      },
+      {
+        "lat": -33.86755700000001,
+        "lng": 151.201527
+      }
+    ],
+    "no": [
+      {
+        "lat": -33.86755700000001,
+        "lng": 151.201527
+      },
+      {
+        "lat": -33.86755700000001,
+        "lng": 151.201527
+      }
+    ]
+  }
 }
 ```
 
@@ -90,10 +96,10 @@ no        | Array  | Lists all location contributions with answer `no`
 
 ```json
 {
-    "templateID": 2,
-    "templateBody": {
-      "imgTitle": "Take a photo of your pet."
-    }
+  "templateID": 2,
+  "templateBody": {
+    "imageTitle": "Take a photo of your pet."
+  }
 }
 ```
 
@@ -101,10 +107,10 @@ no        | Array  | Lists all location contributions with answer `no`
 
 ```json
 {
-    "data": {
-      "imgString": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-      "caption": "My cat lily"
-    }
+  "data": {
+    "imgString": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "caption": "My cat lily"
+  }
 }
 ```
 
@@ -209,24 +215,24 @@ Question # | Yes Percentage
 
 ```json
 {
-    "templateID": 4,
-    "templateBody": {
-      "imageTitle" : "Take a photo of road accidents you witness"
-    }
+  "templateID": 4,
+  "templateBody": {
+    "imageTitle": "Take a photo of road accidents you witness"
+  }
 }
 ```
 > Add Contribution :
 
 ```json
 {
-    "data": {
-      "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-      "caption" : "Accident in Tahrir Square",
-      "location": {
-        "lat" : 4545754,
-        "lng" : 4546486
-      }
+  "data": {
+    "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "caption": "Accident in Tahrir Square",
+    "location": {
+      "lat": 4545754,
+      "lng": 4546486
     }
+  }
 }
 ```
 
@@ -311,10 +317,10 @@ location.lng   | Number       | Holds the value of longitude.
 
 ```json
 {
-    "data": {
-        "imageID": 1,
-        "answer" : true
-    }
+  "data": {
+    "imageID": 1,
+    "answer": true
+  }
 }
 ```
 
@@ -322,18 +328,20 @@ location.lng   | Number       | Holds the value of longitude.
 
 ```json
 {
-	"results": {
-		"images": [{
-			"id": 32,
-			"percentage": 65
-		}, {
-			"id": 2,
-			"percentage": 5
-		}, {
-			"id": 3,
-			"percentage": 0
-		}]
-	}
+  "results": [
+    {
+      "id": 32,
+      "percentage": 65
+    },
+    {
+      "id": 2,
+      "percentage": 5
+    },
+    {
+      "id": 3,
+      "percentage": 0
+    }
+  ]
 }
 ```
 
@@ -369,9 +377,8 @@ answer       | Boolean | User's answer to the question                          
 
 Parameter | Type   | Description
 ----------|--------|-------------
-images    | Array | Holds all the images IDs and their percentage of confirmation.
-images.imageID    | Number  | The ID of the photo.
-images.percentage | Number  | The percentage of the positive answer that the photo had received.
+imageID    | Number  | The ID of the photo.
+percentage | Number  | The percentage of the positive answer that the photo had received.
 
 ## Template 6
 
@@ -399,13 +406,16 @@ images.percentage | Number  | The percentage of the positive answer that the pho
 
 ```json
 {
-    "data": [{
-        "imageID": 1,
-        "text" : "Sengab is just awesome!!"
-    },{
-			"imageID": 2,
-			"text": "GitHub is how people build software."
-		}]
+  "data": [
+    {
+      "imageID": 1,
+      "text": "Sengab is just awesome!!"
+    },
+    {
+      "imageID": 2,
+      "text": "GitHub is how people build software."
+    }
+  ]
 }
 ```
 
@@ -413,23 +423,21 @@ images.percentage | Number  | The percentage of the positive answer that the pho
 
 ```json
 {
-  "results": {
-    "images": [
-      {
-        "id": 1,
-        "text": [
-          "Sengab is just awesome!!",
-          "sengab is just awesome"
-        ]
-      },
-      {
-        "id": 2,
-        "text": [
-          "GitHub is how people build software."
-        ]
-      }
-    ]
-  }
+  "results": [
+    {
+      "id": 1,
+      "text": [
+        "Sengab is just awesome!!",
+        "sengab is just awesome"
+      ]
+    },
+    {
+      "id": 2,
+      "text": [
+        "GitHub is how people build software."
+      ]
+    }
+  ]
 }
 ```
 
@@ -464,6 +472,5 @@ text         | String  | User's recognition to the text in the photo            
 
 Parameter      | Type         | Description
 ---------------|--------------|-------------
-images         | Array        | Holds all the images IDs and their percentage of confirmation.
-images.imageID | Number       | The ID of the photo.
-images.text    | List[String] | A list holds all the text provided from the user for this photo.
+imageID        | Number       | The ID of the photo.
+text           | List[String] | A list holds all the text provided from the user for this photo.
