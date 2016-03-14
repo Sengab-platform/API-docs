@@ -164,50 +164,100 @@ caption   | String | Contributor's description of his submitted image.
 
 ## Template 3
 
-
-### Description :
-
-
-
-> Add Project :
+> Add Project
 
 ```json
-{
-    "templateID": 1,
-    "templateBody": {}
+{  
+  "templateID":3,
+  "templateBody":{  
+    "questionsCount":2,
+    "questions":[  
+      {  
+        "id":1,
+        "title":"You are a teenager ?"
+      },
+      {  
+        "id":2,
+        "title":"Do you think you are social ?"
+      }
+    ]
+  }
 }
 ```
 
-> Add Contribution :
+> Submit contribution
 
 ```json
-{
-    "data": {}
+{  
+  "data":{  
+    "answers":[  
+      {  
+        "id":1,
+        "ans":"yes"
+      },
+      {  
+        "id":2,
+        "ans":"no"
+      }
+    ]
+  }
 }
 ```
 
-> List Results for project :
+> List results for project
 
 ```json
-{
-    "data": {}
+{  
+  "data":{  
+    "answers":[  
+      {  
+        "id":1,
+        "yesPercent":45.6
+      },
+      {  
+        "id":2,
+        "yesPercent":68
+      }
+    ]
+  }
 }
 ```
 
+### DESCRIPTION
 
-Question Type | Question Field | Response Field | Required
-------------- | ------------- | -------------- | --------
-Yes/No | polarQuestion1 | polarResponse1 | Yes
-Yes/No | polarQuestion2 | polarResponse2 | Yes
+In this template, the project owner wants to conduct a survey about a specific topic.
 
-In this template there is undefined number of yes/no questions.
+The results of this project will be displayed as a chart for each question showing the percentage of yes and no answers to the question.
 
-The result of this project will be a chart for every question showing the percentage of yes/no responses for every question.
+### ADD PROJECT
+Parameter                    | Type          | Description
+-----------------------------| --------------| --------------
+templateID                   | Number        | Defines the template type.
+templateBody                 | Object        | Defines the template body.
+templateBody.questionsCount  | Number        | Defines the number of questions in the survey (MAX = 10).
+templateBody.questions       | Array[Object] | Defines the questions of the survey.
+templateBody.questions.id    | Number        | ID of the question.
+templateBody.questions.title | String        | Title of the question.
 
-Question # | Yes Percentage
----------- | --------------
-1 | "42.5"
-2 | "73.1"
+
+### SUBMIT CONTRIBUTION
+`data` object, holds contribution data (response).
+
+Parameter    | Type             | Description                                                 | Required
+------------ | ---------------- | ----------------------------------------------------------- | --------
+answers      | Array            | Holds IDs of questions and values of their answers(yes/no). | yes
+answers.id   | Number           | ID of the question.                                         | yes
+answers.ans  | String           | Answer of the question.                                     | yes
+
+
+### LIST RESULTS OF PROJECT
+`results` array, holds `id`s of questions and `yes` answers percentage for each one.
+
+Parameter    | Type     | Description                                  | Required
+------------ | -------- | -------------------------------------------- | --------
+id           | Number   | ID of question.                              | yes
+yesPercent   | Number   | holds `yes` answers percentage of question.  | yes
+
 
 ## Template 4
 
