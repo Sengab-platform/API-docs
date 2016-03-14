@@ -205,25 +205,28 @@ Question # | Yes Percentage
 
 ## Template 4
 
-
-### Description :
-
-
-
 > Add Project :
 
 ```json
 {
-    "templateID": 1,
-    "templateBody": {}
+    "templateID": 4,
+    "templateBody": {
+      "imageTitle" : "Take a photo of road accidents you witness"
+    }
 }
 ```
-
 > Add Contribution :
 
 ```json
 {
-    "data": {}
+    "data": {
+      "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "caption" : "Accident in Tahrir Square",
+      "location": {
+        "lat" : 4545754,
+        "lng" : 4546486
+      }
+    }
 }
 ```
 
@@ -231,17 +234,55 @@ Question # | Yes Percentage
 
 ```json
 {
-    "data": {}
+  "results": [
+    {
+      "imageUrl": "http://www.sengab.com/projects_submissions/31.jpg",
+      "caption": "Accident in Tahrir Square",
+      "location": {
+        "lat": 5568,
+        "lng": 5775
+      }
+    }
+  ]
 }
 ```
 
+###DESCRIPTION
+In this template the contributor is asked to take a photo, briefly describe it and his location will be implicitly sent alongside with them.
 
-Question Type | Question Field | Response Field | Required
-------------- | ------------ | -------------- | --------
-Location | locationQuestion | locationResponse | Yes
-Image | imageQuestion | imageResponse | Yes
+The results will be a combination of the contributions, a map with a marker of the user location and his submitted image including the caption.
 
-The result of this project will be a combination of the responses that have a map with a marker of the user location and an image.
+### ADD PROJECT
+
+Parameter                  | Type         | Description
+---------------------------|--------------|-------------
+templateID                 | Number       | Defines the template type.
+templateBody               | Object       | Defines the template body.
+templateBody.imageTitle    | String       | Defines the description of required image.
+
+
+### SUBMIT CONTRIBUTION
+`data` object, holds contribution data (response).
+
+Parameter    | Type    | Description                                            | Required
+-------------|---------|--------------------------------------------------------|---------
+image        | String  | Base64 value of the image.                             | Yes
+caption      | String  | Contributor's description of his image.                | Yes
+location     | Object  | Holds the value of the location (longitude/latitude).  | Yes
+location.lat | Number  | Holds the value of latitude.                           | Yes
+location.lng | Number  | Holds the value of longitude.                          | Yes
+
+
+### LIST RESULTS OF PROJECT
+`result` object, holds processed location data.
+
+Parameter      | Type         | Description
+---------------|--------------|----------------------------------------------------
+imageUrl       | String       | The URL of the photo.
+caption        | String       | Contributor's description of his image.
+location       | Object       | Holds the value of the location (longitude/latitude).
+location.lat   | Number       | Holds the value of latitude.
+location.lng   | Number       | Holds the value of longitude.
 
 ## Template 5
 
