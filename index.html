@@ -1070,6 +1070,150 @@ This action is paginated. See the pagination documentation for details.
 
 <p>The result of this project will be a combination of the responses that have a map with a marker of the user location and an image.</p>
 
+<h2 id="template-5">Template 5</h2>
+
+<blockquote>
+<p>Add project</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Submit contribution</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"answer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>List results of project</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="description">DESCRIPTION</h3>
+
+<p>In this template the project has a large number of photos and we want to know if they are photos of a particular thing or not. e.g you have a 10K photos of some animals and you want to know which photos are photos of cat.</p>
+
+<p>The result of this project will be every photo beside the the percentage of the people says it the thing you want.</p>
+
+<h3 id="add-project">ADD PROJECT</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>templateID</td>
+<td>Number</td>
+<td>Defines the template type.</td>
+</tr>
+<tr>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>templateBody.questionTitle</td>
+<td>String</td>
+<td>The question that will be shown with the photos, must be a y/n question.</td>
+</tr>
+<tr>
+<td>templateBody.images</td>
+<td>String</td>
+<td>A list of the base64 of the images.</td>
+</tr>
+</tbody></table>
+
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>imageID</td>
+<td>Number</td>
+<td>The image ID of the photo that the user had recognized.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>Boolean</td>
+<td>User&rsquo;s answer to the question</td>
+<td>yes</td>
+</tr>
+</tbody></table>
+
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
+
+<p><code class="prettyprint">result</code> object, holds processed location data.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>images</td>
+<td>Array</td>
+<td>Holds all the images IDs and their percentage of confirmation.</td>
+</tr>
+<tr>
+<td>images.imageID</td>
+<td>Number</td>
+<td>The ID of the photo.</td>
+</tr>
+<tr>
+<td>images.percentage</td>
+<td>Number</td>
+<td>The percentage of the positive answer that the photo had received.</td>
+</tr>
+</tbody></table>
+
           <h1 id="users">- Users</h1>
 
 <h2 id="get-user-profile">Get user profile</h2>
