@@ -330,16 +330,12 @@ location.lng   | Number       | Holds the value of longitude.
 {
   "results": [
     {
-      "id": 32,
-      "percentage": 65
+      "id": 1,
+      "percentage": 54
     },
     {
       "id": 2,
-      "percentage": 5
-    },
-    {
-      "id": 3,
-      "percentage": 0
+      "percentage": 12
     }
   ]
 }
@@ -469,4 +465,4 @@ text         | String  | User's recognition to the text in the photo            
 Parameter      | Type         | Description
 ---------------|--------------|-------------
 imageID        | Number       | The ID of the photo.
-text           | List[String] | A list holds all the text provided from the user for this photo.
+text           | Array[String] | A list holds all the text provided from the user for this photo.
