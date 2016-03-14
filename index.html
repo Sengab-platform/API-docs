@@ -1155,8 +1155,18 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 <tr>
 <td>templateBody.images</td>
+<td>Array</td>
+<td>An array of objects containing images in Base64 and their IDs.</td>
+</tr>
+<tr>
+<td>templateBody.images.id</td>
+<td>Number</td>
+<td>ID of the image.</td>
+</tr>
+<tr>
+<td>templateBody.images.image</td>
 <td>String</td>
-<td>A list of the base64 of the images.</td>
+<td>The image represented in Base64.</td>
 </tr>
 </tbody></table>
 
@@ -1211,6 +1221,162 @@ This action is paginated. See the pagination documentation for details.
 <td>images.percentage</td>
 <td>Number</td>
 <td>The percentage of the positive answer that the photo had received.</td>
+</tr>
+</tbody></table>
+
+<h2 id="template-6">Template 6</h2>
+
+<blockquote>
+<p>Add project</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Submit contribution</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Sengab is just awesome!!"</span><span class="w">
+    </span><span class="p">},{</span><span class="w">
+            </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GitHub is how people build software."</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>List results of project</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Sengab is just awesome!!"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"sengab is just awesome"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"GitHub is how people build software."</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="description">DESCRIPTION</h3>
+
+<p>In this template the project has a large number of scanned photos that contain text and we want to extract the text written from them. e.g you have a very old scanned book with hundreds of photos, and you want to convert it to a digital book, you will split it into a large number of photos and upload them to the project, then see the magic.</p>
+
+<p>The result of this project will be every photo beside the all the text provided by the users for it.</p>
+
+<h3 id="add-project">ADD PROJECT</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>templateID</td>
+<td>Number</td>
+<td>Defines the template type.</td>
+</tr>
+<tr>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>templateBody.images</td>
+<td>Array</td>
+<td>An array of objects containing images in Base64 and their IDs.</td>
+</tr>
+<tr>
+<td>templateBody.images.id</td>
+<td>Number</td>
+<td>ID of the image.</td>
+</tr>
+<tr>
+<td>templateBody.images.image</td>
+<td>String</td>
+<td>The image represented in Base64.</td>
+</tr>
+</tbody></table>
+
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>imageID</td>
+<td>Number</td>
+<td>The image ID of the photo that the user had recognized.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>User&rsquo;s recognition to the text in the photo</td>
+<td>yes</td>
+</tr>
+</tbody></table>
+
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
+
+<p><code class="prettyprint">result</code> object, holds processed location data.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>images</td>
+<td>Array</td>
+<td>Holds all the images IDs and their percentage of confirmation.</td>
+</tr>
+<tr>
+<td>images.imageID</td>
+<td>Number</td>
+<td>The ID of the photo.</td>
+</tr>
+<tr>
+<td>images.text</td>
+<td>List[String]</td>
+<td>A list holds all the text provided from the user for this photo.</td>
 </tr>
 </tbody></table>
 
