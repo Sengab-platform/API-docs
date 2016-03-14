@@ -679,12 +679,12 @@ This action is paginated. See the pagination documentation for details.
 
           <h1 id="templates">Templates</h1>
 
-<p>At this moment, we provide 6 static templates for projects, in this doc we will illustrate them and their structure while the process of add project and view the results.</p>
+<p>Currently, we provide 6 static templates for projects, we will illustrate their structure through the following examples.</p>
 
 <h2 id="template-1">Template 1</h2>
 
 <blockquote>
-<p>Add Project :</p>
+<p>Add project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -695,112 +695,132 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>Add Contribution : </p>
+<p>Submit contribution</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"location"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"31.205205,31.624552"</span><span class="p">,</span><span class="w"> </span><span class="s2">"31.047634, 31.376812"</span><span class="p">],</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="nt">"location"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.8709434</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.1903114</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"answer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <blockquote>
-<p>List Results for porject :</p>
+<p>List results of project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"yes"</span><span class="p">:[[</span><span class="s2">"31.205205"</span><span class="p">,</span><span class="s2">"31.205205"</span><span class="p">],[</span><span class="s2">"31.205205"</span><span class="p">,</span><span class="s2">"31.205205"</span><span class="p">]]</span><span class="w"> </span><span class="p">,</span><span class="w">
-        </span><span class="nt">"no"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="s2">"31.205205"</span><span class="p">,</span><span class="s2">"31.205205"</span><span class="p">],[</span><span class="s2">"31.205205"</span><span class="p">,</span><span class="s2">"31.205205"</span><span class="p">]]</span><span class="w"> 
-       </span><span class="p">}</span><span class="w">
+        </span><span class="nt">"yes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="nt">"no"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-33.86755700000001</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">151.201527</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<h3 id="description">Description :</h3>
+<h3 id="description">DESCRIPTION</h3>
 
-<p>In this template the <code class="prettyprint">Location</code> will not be shown to the user in the project as a question, but it will be sent along side his response to the yes/no question implicitly.</p>
+<p>In this template the <code class="prettyprint">Location</code> will not be shown to the user in the project as a question, but it will be sent implicitly alongside his response to the yes/no question.</p>
 
-<p>The result of this project will be shown as a map with to types of markers indication the response of the question in this location. So we will need to return the all submissions as a one result. e.g</p>
+<p>The result of this project will be shown as a map with two types of markers indicating the answer to the question in this location. So we will need to return all location contributions as a single result.</p>
 
-<h3 id="add-project">Add project :</h3>
+<h3 id="add-project">ADD PROJECT</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Desc</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>templateID</td>
 <td>Number</td>
-<td>defines the template type</td>
+<td>Defines the template type.</td>
 </tr>
 <tr>
-<td>templatedBody</td>
-<td>obj</td>
-<td>defines the template body</td>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
 </tr>
 <tr>
-<td>templatedBody.questionTitle</td>
+<td>templateBody.questionTitle</td>
 <td>String</td>
-<td>defines the question which will appear to this project enrolled users</td>
+<td>Defines the question.</td>
 </tr>
 </tbody></table>
 
-<h3 id="add-contribution">Add Contribution :</h3>
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Desc</th>
+<th>Description</th>
 <th>Required</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>data</td>
-<td>obj</td>
-<td>contains the contribution data</td>
+<td>location</td>
+<td>Object</td>
+<td>Holds the value of the location (longitude/latitude).</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>data.location</td>
-<td>Array</td>
-<td>contains x and y coordinates</td>
+<td>location.lat</td>
+<td>Number</td>
+<td>Holds the value of latitude.</td>
 <td>yes</td>
 </tr>
 <tr>
-<td>data.answer</td>
-<td>Boolean</td>
-<td>the User&rsquo;s answer for the question</td>
+<td>location.lng</td>
+<td>Number</td>
+<td>Holds the value of longitude.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>String</td>
+<td>User&rsquo;s answer to the question</td>
 <td>yes</td>
 </tr>
 </tbody></table>
 
-<h3 id="list-results-for-project">List Results for project :</h3>
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
+
+<p><code class="prettyprint">result</code> object, holds processed location data.</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Desc</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>results</td>
-<td>obj</td>
-<td>contains the contribution data</td>
+<td>yes</td>
+<td>Array</td>
+<td>List all location contributions with answer <code class="prettyprint">yes</code></td>
 </tr>
 <tr>
-<td>results.yes</td>
+<td>no</td>
 <td>Array</td>
-<td>List of all x and y coordinates for contributors answered with Yes</td>
-</tr>
-<tr>
-<td>results.no</td>
-<td>Array</td>
-<td>List of all x and y coordinates for contributors answered with No</td>
+<td>List all location contributions with answer <code class="prettyprint">no</code></td>
 </tr>
 </tbody></table>
 
@@ -820,7 +840,7 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>Add Contribution : </p>
+<p>Add Contribution :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
@@ -828,26 +848,25 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>List Results for porject :
-<code class="prettyprint">json
-{
-    &quot;results&quot;: {
-        &quot;contributions&quot;: [{
-        &quot;ID&quot;: 47878,
-        &quot;url&quot;: &quot;http://api.lockscreen.com/v1/contributions/47878&quot;,
-        &quot;contributor&quot;: {
-            &quot;id&quot;: 11,
-            &quot;url&quot;: &quot;http://api.lockscreen.com/v1/users/11&quot;,
-            &quot;name&quot;: &quot;Galileo Galilei&quot;,
-            &quot;image&quot;: &quot;http://www.lockscreen.com/profiles_images/41.jpg&quot;
-        },
-        &quot;createdAt&quot;: &quot;2016-02-12T03:21:55Z&quot;,
-        &quot;data&quot;: {}
-    }]
-    }
-}
-</code></p>
+<p>List Results for porject :</p>
 </blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"contributions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">47878</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/contributions/47878"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/profiles_images/41.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-12T03:21:55Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <table><thead>
 <tr>
@@ -895,7 +914,7 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>Add Contribution : </p>
+<p>Add Contribution :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
@@ -966,7 +985,7 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>Add Contribution : </p>
+<p>Add Contribution :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
