@@ -406,16 +406,10 @@ percentage | Number  | The percentage of the positive answer that the photo had 
 
 ```json
 {
-  "data": [
-    {
-      "imageID": 1,
-      "text": "Sengab is just awesome!!"
-    },
-    {
-      "imageID": 2,
-      "text": "GitHub is how people build software."
-    }
-  ]
+  "data": {
+    "imageID": 1,
+    "text": "Sengab is just awesome!!"
+  }
 }
 ```
 
