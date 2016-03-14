@@ -796,14 +796,14 @@ This action is paginated. See the pagination documentation for details.
 <tr>
 <td>answer</td>
 <td>String</td>
-<td>User&rsquo;s answer to the question</td>
+<td>Holds contributor&rsquo;s answer to the question</td>
 <td>yes</td>
 </tr>
 </tbody></table>
 
 <h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
 
-<p><code class="prettyprint">result</code> object, holds processed location data.</p>
+<p><code class="prettyprint">results</code> object, holds processed location data.</p>
 
 <table><thead>
 <tr>
@@ -815,88 +815,134 @@ This action is paginated. See the pagination documentation for details.
 <tr>
 <td>yes</td>
 <td>Array</td>
-<td>List all location contributions with answer <code class="prettyprint">yes</code></td>
+<td>Lists all location contributions with answer <code class="prettyprint">yes</code></td>
 </tr>
 <tr>
 <td>no</td>
 <td>Array</td>
-<td>List all location contributions with answer <code class="prettyprint">no</code></td>
+<td>Lists all location contributions with answer <code class="prettyprint">no</code></td>
 </tr>
 </tbody></table>
 
 <h2 id="template-2">Template 2</h2>
 
-<h3 id="description">Description :</h3>
-
-<p>The result of this project will be shown as a photo grid with captions. So we will need to return the all submissions as a one result. e.g</p>
-
 <blockquote>
-<p>Add Project :</p>
+<p>Add project</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<blockquote>
-<p>Add Contribution :</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<blockquote>
-<p>List Results for porject :</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"contributions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="mi">47878</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/contributions/47878"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"contributor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.lockscreen.com/v1/users/11"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/profiles_images/41.jpg"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-12T03:21:55Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}]</span><span class="w">
+    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imgTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Take a photo of your pet."</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
+<blockquote>
+<p>Submit contribution</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imgString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My cat lily"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>List results of project</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imgUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/uploads/56842.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My cat lily"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"imgUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/uploads/41242.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dory, my fish"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="description">DESCRIPTION</h3>
+
+<p>In this template, the project owner wants to collect images with a specific description.</p>
+
+<p>The result of this project will be shown as a photo grid with the caption of each photo.</p>
+
+<h3 id="add-project">ADD PROJECT</h3>
+
 <table><thead>
 <tr>
-<th>Question Type</th>
-<th>Question Field</th>
-<th>Response Field</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>templateID</td>
+<td>Number</td>
+<td>Defines the template type.</td>
+</tr>
+<tr>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>templateBody.imgTitle</td>
+<td>String</td>
+<td>Defines the description of required image.</td>
+</tr>
+</tbody></table>
+
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 <th>Required</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>Image</td>
-<td>imageQuestion</td>
-<td>imageResponse</td>
-<td>Yes</td>
+<td>imgString</td>
+<td>String (Base64)</td>
+<td>Base64 value of the image.</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>Caption</td>
-<td>-</td>
-<td>captionResponse</td>
-<td>No</td>
+<td>caption</td>
+<td>String</td>
+<td>Contributor&rsquo;s description of his image.</td>
+<td>yes</td>
 </tr>
 </tbody></table>
 
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
+
+<p><code class="prettyprint">results</code> array, holds images&rsquo; urls and captions.</p>
+
 <table><thead>
 <tr>
-<th>List of images</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>&ldquo;http://www.lockscreen.com/submissions_images/41.jpg&rdquo;, &ldquo;http://www.lockscreen.com/submissions_images/42.jpg&rdquo;</td>
+<td>imgUrl</td>
+<td>String</td>
+<td>Contribution image url.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>Contributor&rsquo;s description of his submitted image.</td>
 </tr>
 </tbody></table>
 
@@ -922,7 +968,7 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>List Results for porject :</p>
+<p>List Results for project :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
@@ -993,7 +1039,7 @@ This action is paginated. See the pagination documentation for details.
 </span></code></pre>
 
 <blockquote>
-<p>List Results for porject :</p>
+<p>List Results for project :</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
