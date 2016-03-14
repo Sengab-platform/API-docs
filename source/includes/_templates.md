@@ -280,7 +280,7 @@ location.lng | Number  | Holds the value of longitude.                          
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter      | Type         | Description
 ---------------|--------------|----------------------------------------------------
@@ -373,7 +373,7 @@ answer       | Boolean | User's answer to the question                          
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter | Type   | Description
 ----------|--------|-------------
@@ -468,7 +468,7 @@ text         | String  | User's recognition to the text in the photo            
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`result` array, holds processed location data.
 
 Parameter      | Type         | Description
 ---------------|--------------|-------------
