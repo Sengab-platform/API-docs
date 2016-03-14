@@ -305,20 +305,22 @@ The result of this project will be every photo beside the the percentage of the 
 ### ADD PROJECT
 
 Parameter                  | Type   | Description
-----------------------------|------- | --------------
+---------------------------|-------| --------------
 templateID                 | Number | Defines the template type.
 templateBody               | Object | Defines the template body.
 templateBody.questionTitle | String | The question that will be shown with the photos, must be a y/n question.
-templateBody.images        | String | A list of the base64 of the images.
+templateBody.images        | Array  | An array of objects containing images in Base64 and their IDs.
+templateBody.images.id     | Number | ID of the image.
+templateBody.images.image  | String | The image represented in Base64.
 
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
 
-Parameter    | Type    | Description                                        | Required
--------------|---------| ---------------------------------------------------|---------
+Parameter    | Type    | Description                                            | Required
+-------------|---------| -------------------------------------------------------|---------
 imageID      | Number  | The image ID of the photo that the user had recognized.| yes
-answer       | Boolean  | User's answer to the question                         | yes
+answer       | Boolean | User's answer to the question                          | yes
 
 
 ### LIST RESULTS OF PROJECT
@@ -329,3 +331,98 @@ Parameter | Type   | Description
 images    | Array | Holds all the images IDs and their percentage of confirmation.
 images.imageID    | Number  | The ID of the photo.
 images.percentage | Number  | The percentage of the positive answer that the photo had received.
+
+## Template 6
+
+> Add project
+
+```json
+{
+  "templateID": 6,
+  "templateBody": {
+    "images": [
+      {
+        "id": 1,
+        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      },
+      {
+        "id": 2,
+        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      }
+    ]
+  }
+}
+```
+
+> Submit contribution
+
+```json
+{
+    "data": [{
+        "imageID": 1,
+        "text" : "Sengab is just awesome!!"
+    },{
+			"imageID": 2,
+			"text": "GitHub is how people build software."
+		}]
+}
+```
+
+> List results of project
+
+```json
+{
+  "results": {
+    "images": [
+      {
+        "id": 1,
+        "text": [
+          "Sengab is just awesome!!",
+          "sengab is just awesome"
+        ]
+      },
+      {
+        "id": 2,
+        "text": [
+          "GitHub is how people build software."
+        ]
+      }
+    ]
+  }
+}
+```
+
+### DESCRIPTION
+
+In this template the project has a large number of scanned photos that contain text and we want to extract the text written from them. e.g you have a very old scanned book with hundreds of photos, and you want to convert it to a digital book, you will split it into a large number of photos and upload them to the project, then see the magic.
+
+The result of this project will be every photo beside the all the text provided by the users for it.
+
+### ADD PROJECT
+
+Parameter                  | Type         | Description
+---------------------------|------------- | ------------
+templateID                 | Number       | Defines the template type.
+templateBody               | Object       | Defines the template body.
+templateBody.images        | Array        | An array of objects containing images in Base64 and their IDs.
+templateBody.images.id     | Number       | ID of the image.
+templateBody.images.image  | String       | The image represented in Base64.
+
+
+### SUBMIT CONTRIBUTION
+`data` object, holds contribution data (response).
+
+Parameter    | Type    | Description                                            | Required
+-------------|---------| -------------------------------------------------------|---------
+imageID      | Number  | The image ID of the photo that the user had recognized.| yes
+text         | String  | User's recognition to the text in the photo            | yes
+
+
+### LIST RESULTS OF PROJECT
+`result` object, holds processed location data.
+
+Parameter      | Type         | Description
+---------------|--------------|-------------
+images         | Array        | Holds all the images IDs and their percentage of confirmation.
+images.imageID | Number       | The ID of the photo.
+images.text    | List[String] | A list holds all the text provided from the user for this photo.
