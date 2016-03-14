@@ -954,72 +954,167 @@ This action is paginated. See the pagination documentation for details.
 
 <h2 id="template-3">Template 3</h2>
 
-<h3 id="description">Description :</h3>
-
 <blockquote>
-<p>Add Project :</p>
+<p>Add Project</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">  
+  </span><span class="nt">"templateID"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:{</span><span class="w">  
+    </span><span class="nt">"questionsCount"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"questions"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="s2">"You are a teenager ?"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="s2">"Do you think you are social ?"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <blockquote>
-<p>Add Contribution :</p>
+<p>Submit contribution</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">  
+  </span><span class="nt">"data"</span><span class="p">:{</span><span class="w">  
+    </span><span class="nt">"answers"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ans"</span><span class="p">:</span><span class="s2">"yes"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ans"</span><span class="p">:</span><span class="s2">"no"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <blockquote>
-<p>List Results for project :</p>
+<p>List results for project</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">  
+  </span><span class="nt">"data"</span><span class="p">:{</span><span class="w">  
+    </span><span class="nt">"answers"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"yesPercent"</span><span class="p">:</span><span class="mf">45.6</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"yesPercent"</span><span class="p">:</span><span class="mi">68</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
+
+<h3 id="description">DESCRIPTION</h3>
+
+<p>In this template, the project owner wants to conduct a survey about a specific topic.</p>
+
+<p>The results of this project will be displayed as a chart for each question showing the percentage of yes and no answers to the question.</p>
+
+<h3 id="add-project">ADD PROJECT</h3>
 
 <table><thead>
 <tr>
-<th>Question Type</th>
-<th>Question Field</th>
-<th>Response Field</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>templateID</td>
+<td>Number</td>
+<td>Defines the template type.</td>
+</tr>
+<tr>
+<td>templateBody</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>templateBody.questionsCount</td>
+<td>Number</td>
+<td>Defines the number of questions in the survey (MAX = 10).</td>
+</tr>
+<tr>
+<td>templateBody.questions</td>
+<td>Array[Object]</td>
+<td>Defines the questions of the survey.</td>
+</tr>
+<tr>
+<td>templateBody.questions.id</td>
+<td>Number</td>
+<td>ID of the question.</td>
+</tr>
+<tr>
+<td>templateBody.questions.title</td>
+<td>String</td>
+<td>Title of the question.</td>
+</tr>
+</tbody></table>
+
+<h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
+
+<p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 <th>Required</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>Yes/No</td>
-<td>polarQuestion1</td>
-<td>polarResponse1</td>
-<td>Yes</td>
+<td>answers</td>
+<td>Array</td>
+<td>Holds IDs of questions and values of their answers(yes/no).</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>Yes/No</td>
-<td>polarQuestion2</td>
-<td>polarResponse2</td>
-<td>Yes</td>
+<td>answers.id</td>
+<td>Number</td>
+<td>ID of the question.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>answers.ans</td>
+<td>String</td>
+<td>Answer of the question.</td>
+<td>yes</td>
 </tr>
 </tbody></table>
 
-<p>In this template there is undefined number of yes/no questions.</p>
+<h3 id="list-results-of-project">LIST RESULTS OF PROJECT</h3>
 
-<p>The result of this project will be a chart for every question showing the percentage of yes/no responses for every question.</p>
+<p><code class="prettyprint">results</code> array, holds <code class="prettyprint">id</code>s of questions and <code class="prettyprint">yes</code> answers percentage for each one.</p>
 
 <table><thead>
 <tr>
-<th>Question #</th>
-<th>Yes Percentage</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>1</td>
-<td>&ldquo;42.5&rdquo;</td>
+<td>id</td>
+<td>Number</td>
+<td>ID of question.</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>2</td>
-<td>&ldquo;73.1&rdquo;</td>
+<td>yesPercent</td>
+<td>Number</td>
+<td>holds <code class="prettyprint">yes</code> answers percentage of question.</td>
+<td>yes</td>
 </tr>
 </tbody></table>
 
