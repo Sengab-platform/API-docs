@@ -52,13 +52,11 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 ```
 
 ### DESCRIPTION
-
 In this template the `Location` will not be shown to the user in the project as a question, but it will be sent implicitly alongside his response to the yes/no question.
 
 The result of this project will be shown as a map with two types of markers indicating the answer to the question in this location. So we will need to return all location contributions as a single result.
 
 ### ADD PROJECT
-
 Parameter                  | Type   | Description
 ---------------------------|------- | --------------
 templateID                 | Number | Defines the template type.
@@ -74,77 +72,89 @@ Parameter    | Type    | Description                                          | 
 location     | Object  | Holds the value of the location (longitude/latitude).| yes
 location.lat | Number  | Holds the value of latitude.                         | yes
 location.lng | Number  | Holds the value of longitude.                        | yes
-answer       | String  | User's answer to the question                        | yes
+answer       | String  | Holds contributor's answer to the question           | yes
 
 
 ### LIST RESULTS OF PROJECT
-`result` object, holds processed location data.
+`results` object, holds processed location data.
 
 Parameter | Type   | Description
 ----------|--------|-------------
-yes       | Array  | List all location contributions with answer `yes`
-no        | Array  | List all location contributions with answer `no`
+yes       | Array  | Lists all location contributions with answer `yes`
+no        | Array  | Lists all location contributions with answer `no`
 
 
 ## Template 2
 
-### Description :
-
-The result of this project will be shown as a photo grid with captions. So we will need to return the all submissions as a one result. e.g
-
-
-> Add Project :
+> Add project
 
 ```json
 {
-    "templateID": 1,
-    "templateBody": {}
-}
-```
-
-> Add Contribution :
-
-```json
-{
-    "data": {}
-}
-```
-
-> List Results for porject :
-
-```json
-{
-    "results": {
-        "contributions": [{
-        "ID": 47878,
-        "url": "http://api.lockscreen.com/v1/contributions/47878",
-        "contributor": {
-            "id": 11,
-            "url": "http://api.lockscreen.com/v1/users/11",
-            "name": "Galileo Galilei",
-            "image": "http://www.lockscreen.com/profiles_images/41.jpg"
-        },
-        "createdAt": "2016-02-12T03:21:55Z",
-        "data": {}
-    }]
+    "templateID": 2,
+    "templateBody": {
+      "imgTitle": "Take a photo of your pet."
     }
 }
 ```
 
+> Submit contribution
+
+```json
+{
+    "data": {
+      "imgString": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "caption": "My cat lily"
+    }
+}
+```
+
+> List results of project
+
+```json
+{
+  "results": [
+    {
+      "imgUrl": "http://www.sengab.com/uploads/56842.jpg",
+      "caption": "My cat lily"
+    },
+    {
+      "imgUrl": "http://www.sengab.com/uploads/41242.jpg",
+      "caption": "Dory, my fish"
+    }
+  ]
+}
+```
+
+### DESCRIPTION
+
+In this template, the project owner wants to collect images with a specific description.
+
+The result of this project will be shown as a photo grid with the caption of each photo.
+
+### ADD PROJECT
+Parameter                  | Type   | Description
+---------------------------|------- | --------------
+templateID                 | Number | Defines the template type.
+templateBody               | Object | Defines the template body.
+templateBody.imgTitle      | String | Defines the description of required image.
 
 
+### SUBMIT CONTRIBUTION
+`data` object, holds contribution data (response).
+
+Parameter    | Type             | Description                                   | Required
+-------------|------------------|-----------------------------------------------|---------
+imgString    | String (Base64)  | Base64 value of the image.                    | yes
+caption      | String           | Contributor's description of his image.       | yes
 
 
-Question Type | Question Field | Response Field | Required
-------------- | ------------- | -------------- | --------
-Image | imageQuestion | imageResponse | Yes
-Caption  | - | captionResponse | No
+### LIST RESULTS OF PROJECT
+`results` array, holds images' urls and captions.
 
-
-List of images |
--------------- |
-"http://www.lockscreen.com/submissions_images/41.jpg", "http://www.lockscreen.com/submissions_images/42.jpg" |
-
+Parameter | Type   | Description
+----------|--------|-------------
+imgUrl    | String | Contribution image url.
+caption   | String | Contributor's description of his submitted image.
 
 ## Template 3
 
@@ -170,7 +180,7 @@ List of images |
 }
 ```
 
-> List Results for porject :
+> List Results for project :
 
 ```json
 {
@@ -217,7 +227,7 @@ Question # | Yes Percentage
 }
 ```
 
-> List Results for porject :
+> List Results for project :
 
 ```json
 {
