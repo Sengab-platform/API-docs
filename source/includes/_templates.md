@@ -393,12 +393,14 @@ location.lng   | Number       | Holds the value of longitude.
 {
   "results": [
     {
-      "id": 1,
+      "image_id": 1,
+      "image_url": "http://www.lockscreen.com/projects_images/3/1.jpg",
       "yes_percentage": 54,
       "no_percentage": 46
     },
     {
-      "id": 2,
+      "image_id": 2,
+      "image_url": "http://www.lockscreen.com/projects_images/3/2.jpg",
       "yes_percentage": 30,
       "no_percentage": 70
     }
@@ -446,6 +448,7 @@ answer       | Boolean | User's answer to the question                          
 Parameter      | Type    | Description
 ---------------|---------|-------------
 image_id       | Number  | The ID of the photo.
+image_url      | String | URL of the image.
 yes_percentage | Number  | The percentage of the positive answer that the photo had received.
 no_percentage  | Number  | The percentage of the negative answer that the photo had received.
 
@@ -494,6 +497,7 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
   "data": [
     {
       "image_id": 1,
+      "image_url":"http://www.lockscreen.com/projects_imags/4/1.jpg",
       "text": "Sengab is just awesome!!"
     }
   ]
@@ -506,7 +510,8 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
 {
   "results": [
     {
-      "id": 1,
+      "image_id": 1,
+      "image_url": "http://www.lockscreen.com/projects_imags/3/1.jpg",
       "text": [
         "Sengab is just awesome!!",
         "sengab is just awesome"
@@ -514,6 +519,7 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
     },
     {
       "id": 2,
+      "image_url": "http://www.lockscreen.com/projects_imags/3/2.jpg",
       "text": [
         "GitHub is how people build software."
       ]
@@ -561,4 +567,5 @@ text         | String  | User's recognition to the text in the photo            
 Parameter      | Type          | Description
 ---------------|---------------|-------------
 image_id       | Number        | The ID of the photo.
+image_url      | String        | URL of the image.
 text           | Array[String] | A list holds all the text provided from the user for this photo.
