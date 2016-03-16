@@ -11,12 +11,11 @@ includes:
   - contributions
   - pagination
   - errors
-  - def_structure
 
 search: true
 ---
 
 # Introduction
 
-Welcome to the Sengab API !
+Welcome to Sengab API !
 <br>Currently, we use only HTTP illustrating examples for the documentation.

@@ -7,9 +7,9 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 
 ```json
 {
-  "templateID": 1,
-  "templateBody": {
-    "questionTitle": "Are you happy today?"
+  "template_id":1,
+  "template_body":{
+    "question_title":"_are you happy today?"
   }
 }
 ```
@@ -17,13 +17,13 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 > Submit contribution
 
 ```json
-{
-  "data": {
-    "location": {
-      "lat": -33.8709434,
-      "lng": 151.1903114
+{  
+  "data":{  
+    "location":{  
+      "lat":-33.8709434,
+      "lng":151.1903114
     },
-    "answer": "yes"
+    "answer":"yes"
   }
 }
 ```
@@ -31,26 +31,26 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 > List results of project
 
 ```json
-{
-  "results": {
-    "yes": [
-      {
-        "lat": -33.86755700000001,
-        "lng": 151.201527
+{  
+  "results":{  
+    "yes":[  
+      {  
+        "lat":-33.86755700000001,
+        "lng":151.201527
       },
-      {
-        "lat": -33.86755700000001,
-        "lng": 151.201527
+      {  
+        "lat":-33.86755700000001,
+        "lng":151.201527
       }
     ],
-    "no": [
-      {
-        "lat": -33.86755700000001,
-        "lng": 151.201527
+    "no":[  
+      {  
+        "lat":-33.86755700000001,
+        "lng":151.201527
       },
-      {
-        "lat": -33.86755700000001,
-        "lng": 151.201527
+      {  
+        "lat":-33.86755700000001,
+        "lng":151.201527
       }
     ]
   }
@@ -65,9 +65,9 @@ The result of this project will be shown as a map with two types of markers indi
 ### ADD PROJECT
 Parameter                  | Type   | Description
 ---------------------------|------- | --------------
-templateID                 | Number | Defines the template type.
-templateBody               | Object | Defines the template body.
-templateBody.questionTitle | String | Defines the question.
+template_id                 | Number | Defines the template type.
+template_body               | Object | Defines the template body.
+template_body.question_title | String | Defines the question.
 
 
 ### SUBMIT CONTRIBUTION
@@ -75,10 +75,10 @@ templateBody.questionTitle | String | Defines the question.
 
 Parameter    | Type    | Description                                          | Required
 -------------|---------| -----------------------------------------------------|---------
-location     | Object  | Holds the value of the location (longitude/latitude).| yes
-location.lat | Number  | Holds the value of latitude.                         | yes
-location.lng | Number  | Holds the value of longitude.                        | yes
-answer       | String  | Holds contributor's answer to the question           | yes
+location     | Object  | Holds the value of the location (longitude/latitude).| YES
+location.lat | Number  | Holds the value of latitude.                         | YES
+location.lng | Number  | Holds the value of longitude.                        | YES
+answer       | String  | Holds contributor's answer to the question           | YES
 
 
 ### LIST RESULTS OF PROJECT
@@ -95,10 +95,10 @@ no        | Array  | Lists all location contributions with answer `no`
 > Add project
 
 ```json
-{
-  "templateID": 2,
-  "templateBody": {
-    "imageTitle": "Take a photo of your pet."
+{  
+  "template_id":2,
+  "template_body":{  
+    "image_title":"_take a photo of your pet."
   }
 }
 ```
@@ -106,11 +106,10 @@ no        | Array  | Lists all location contributions with answer `no`
 > Submit contribution
 
 ```json
-{
-  "data": {
-    "image": "R0lGODlhAQABAIAAAAAAAP///
-              yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    "caption": "My cat lily"
+{  
+  "data":{  
+    "image":"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "caption":"My cat lily"
   }
 }
 ```
@@ -118,15 +117,15 @@ no        | Array  | Lists all location contributions with answer `no`
 > List results of project
 
 ```json
-{
-  "results": [
-    {
-      "image_url": "http://www.sengab.com/uploads/56842.jpg",
-      "caption": "My cat lily"
+{  
+  "results":[  
+    {  
+      "image_url":"http://www.sengab.com/projects_uploads/56842.jpg",
+      "caption":"My cat lily"
     },
-    {
-      "image_url": "http://www.sengab.com/uploads/41242.jpg",
-      "caption": "Dory, my fish"
+    {  
+      "image_url":"http://www.sengab.com/projects_uploads/41242.jpg",
+      "caption":"Dory, my fish"
     }
   ]
 }
@@ -141,9 +140,9 @@ The result of this project will be shown as a photo grid with the caption of eac
 ### ADD PROJECT
 Parameter                  | Type   | Description
 ---------------------------|------- | --------------
-templateID                 | Number | Defines the template type.
-templateBody               | Object | Defines the template body.
-templateBody.imgTitle      | String | Defines the description of required image.
+template_id                 | Number | Defines the template type.
+template_body               | Object | Defines the template body.
+template_body.imageTitle      | String | Defines the description of required image.
 
 
 ### SUBMIT CONTRIBUTION
@@ -151,16 +150,16 @@ templateBody.imgTitle      | String | Defines the description of required image.
 
 Parameter    | Type   | Description                             | Required
 -------------|--------|-----------------------------------------|---------
-image        | String | Base64 value of the image.              | yes
-caption      | String | Contributor's description of his image. | yes
+image        | String | Base64 value of the image.              | YES
+caption      | String | Contributor's description of his image. | YES
 
 
 ### LIST RESULTS OF PROJECT
-`results` array, holds images' urls and captions.
+`results` array, holds images' URLs and captions.
 
 Parameter | Type   | Description
 ----------|--------|-------------
-image_url | String | Contribution image url.
+image_url | String | Contribution image URL.
 caption   | String | Contributor's description of his submitted image.
 
 ## Template 3
@@ -169,9 +168,9 @@ caption   | String | Contributor's description of his submitted image.
 
 ```json
 {  
-  "templateID":3,
-  "templateBody":{  
-    "questionsCount":2,
+  "template_id":3,
+  "template_body":{  
+    "questions_count":2,
     "questions":[  
       {  
         "title":"You are a teenager ?"
@@ -184,19 +183,19 @@ caption   | String | Contributor's description of his submitted image.
 }
 ```
 
->Enroll
+> Enroll
 
 ```json
 {  
-  "templateBody":{  
-    "questionsCount":2,
+  "template_body":{  
+    "questions_count":2,
     "questions":[  
       {  
-        "id": 1,
+        "id":1,
         "title":"You are a teenager ?"
       },
       {  
-        "id": 2,
+        "id":2,
         "title":"Do you think you are social ?"
       }
     ]
@@ -227,24 +226,22 @@ caption   | String | Contributor's description of his submitted image.
 
 ```json
 {  
-  "data":{  
-    "answers":[  
-      {  
-        "id":1,
-        "title":"You are a teenager ?",
-        "contributionsCount":454,
-        "yes_percent":45.6,
-        "no_percentage":55.4
-      },
-      {  
-        "id":2,
-        "title":"Do you think you are social ?",
-        "contributionsCount":454,
-        "yes_percent":68,
-        "no_percentage":32
-      }
-    ]
-  }
+  "results":[  
+    {  
+      "id":1,
+      "title":"You are a teenager ?",
+      "contributions_count":454,
+      "yes_percent":45.6,
+      "no_percent":55.4
+    },
+    {  
+      "id":2,
+      "title":"Do you think you are social ?",
+      "contributions_count":454,
+      "yes_percent":68,
+      "no_percent":32
+    }
+  ]
 }
 ```
 
@@ -257,19 +254,19 @@ The results of this project will be displayed as a chart for each question showi
 ### ADD PROJECT
 Parameter                    | Type          | Description
 -----------------------------| --------------| --------------
-templateID                   | Number        | Defines the template type.
-templateBody                 | Object        | Defines the template body.
-templateBody.questionsCount  | Number        | Defines the number of questions in the survey (MAX = 10).
-templateBody.questions       | Array[Object] | Defines the questions of the survey.
-templateBody.questions.id    | Number        | ID of the question.
-templateBody.questions.title | String        | Title of the question.
+template_id                   | Number        | Defines the template type.
+template_body                 | Object        | Defines the template body.
+template_body.questions_count  | Number        | Defines the number of questions in the survey (MAX = 10).
+template_body.questions       | Array[Object] | Defines the questions of the survey.
+template_body.questions.id    | Number        | ID of the question.
+template_body.questions.title | String        | Title of the question.
 
 ### ENROLL IN A PROJECT
-`templateBody` object, holds the project body.
+`template_body` object, holds the project body.
 
 Parameter      | Type   | Description
 -------------- |--------| -----------------------------------------------
-questionsCount | Number | The number of the questions in the survey
+questions_count | Number | The number of the questions in the survey
 questions      | Object | Holds the id & title of the question
 questions.id   | Number | Defines the ID of the question.
 questions.title| Number | Defines the title of the question.
@@ -279,21 +276,21 @@ questions.title| Number | Defines the title of the question.
 
 Parameter    | Type             | Description                                                 | Required
 ------------ | ---------------- | ----------------------------------------------------------- | --------
-answers      | Array            | Holds IDs of questions and values of their answers(yes/no). | yes
-answers.id   | Number           | ID of the question.                                         | yes
-answers.ans  | String           | Answer of the question.                                     | yes
+answers      | Array            | Holds IDs of questions and values of their answers(yes/no). | YES
+answers.id   | Number           | ID of the question.                                         | YES
+answers.ans  | String           | Answer of the question.                                     | YES
 
 
 ### LIST RESULTS OF PROJECT
-`results` array, holds `id`s of questions, their titles and `yes` & `no` answers percentage for each one.
+`results` array of objects, each has the following fields.
 
 Parameter    | Type     | Description                                  | Required
 ------------ | -------- | -------------------------------------------- | --------
-id           | Number   | ID of question.                              | yes
-title        | text     | title of the question                        | yes
-contributionsCount | Number | count of contrbutions for question | yes
-yes_percent  | Number   | holds `yes` answers percentage of question.  | yes
-no_percent   | Number   | holds `no` answers percentage of question.   | yes
+id           | Number   | Question ID.                              | YES
+title        | text     | Question Title.                        | YES
+contributions_count | Number | count of contributions of question | YES
+yes_percent  | Number   | holds `yes` answers percentage to question.  | YES
+no_percent   | Number   | holds `no` answers percentage to question.   | YES
 
 
 ## Template 4
@@ -302,9 +299,9 @@ no_percent   | Number   | holds `no` answers percentage of question.   | yes
 
 ```json
 {
-  "templateID": 4,
-  "templateBody": {
-    "imageTitle": "Take a photo of road accidents you witness"
+  "template_id":4,
+  "template_body":{
+    "image_title":"_take a photo of road accidents you witness"
   }
 }
 ```
@@ -312,12 +309,12 @@ no_percent   | Number   | holds `no` answers percentage of question.   | yes
 
 ```json
 {
-  "data": {
-    "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    "caption": "Accident in Tahrir Square",
-    "location": {
-      "lat": 4545754,
-      "lng": 4546486
+  "data":{
+    "image":"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "caption":"Accident in Tahrir Square",
+    "location":{
+      "lat":4545754,
+      "lng":4546486
     }
   }
 }
@@ -327,13 +324,13 @@ no_percent   | Number   | holds `no` answers percentage of question.   | yes
 
 ```json
 {
-  "results": [
+  "results":[
     {
-      "imageUrl": "http://www.sengab.com/projects_submissions/31.jpg",
-      "caption": "Accident in Tahrir Square",
+      "image_url":"http://www.sengab.com/projects_uploads/31.jpg",
+      "caption":"Accident in Tahrir Square",
       "location": {
-        "lat": 5568,
-        "lng": 5775
+        "lat":5568,
+        "lng":5775
       }
     }
   ]
@@ -349,9 +346,9 @@ The results will be a combination of the contributions, a map with a marker of t
 
 Parameter                  | Type         | Description
 ---------------------------|--------------|-------------
-templateID                 | Number       | Defines the template type.
-templateBody               | Object       | Defines the template body.
-templateBody.imageTitle    | String       | Defines the description of required image.
+template_id                 | Number       | Defines the template type.
+template_body               | Object       | Defines the template body.
+template_body.imageTitle    | String       | Defines the description of required image.
 
 
 ### SUBMIT CONTRIBUTION
@@ -359,19 +356,19 @@ templateBody.imageTitle    | String       | Defines the description of required 
 
 Parameter    | Type    | Description                                            | Required
 -------------|---------|--------------------------------------------------------|---------
-image        | String  | Base64 value of the image.                             | Yes
-caption      | String  | Contributor's description of his image.                | Yes
-location     | Object  | Holds the value of the location (longitude/latitude).  | Yes
-location.lat | Number  | Holds the value of latitude.                           | Yes
-location.lng | Number  | Holds the value of longitude.                          | Yes
+image        | String  | Base64 value of the image.                             | YES
+caption      | String  | Contributor's description of his image.                | YES
+location     | Object  | Holds the value of the location (longitude/latitude).  | YES
+location.lat | Number  | Holds the value of latitude.                           | YES
+location.lng | Number  | Holds the value of longitude.                          | YES
 
 
 ### LIST RESULTS OF PROJECT
-`result` array, holds processed location data.
+`results` array of objects, each has the following fields.
 
 Parameter      | Type         | Description
 ---------------|--------------|----------------------------------------------------
-imageUrl       | String       | The URL of the photo.
+image_url       | String       | The URL of the photo.
 caption        | String       | Contributor's description of his image.
 contributions_count | Number | count of all contributions for this image
 location       | Object       | Holds the value of the location (longitude/latitude).
@@ -383,18 +380,16 @@ location.lng   | Number       | Holds the value of longitude.
 > Add project
 
 ```json
-{
-  "templateID": 5,
-  "templateBody": {
-    "questionTitle": "Do you see a cat?",
-    "images": [
-      {
-        "image": "R0lGODlhAQABAIAAAAAAAP///
-                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+{  
+  "template_id":5,
+  "template_body":{  
+    "question_title":"_do you see a cat?",
+    "images":[  
+      {  
+        "image":"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       },
-      {
-        "image": "R0lGODlhAQABAIAAAAAAAP///
-                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      {  
+        "image":"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       }
     ]
   }
@@ -403,29 +398,31 @@ location.lng   | Number       | Holds the value of longitude.
 > Enroll
 
 ```json
-{
-  "templateBody": {
-    "questionTitle": "Do you see a cat?",
-     "images": [
-    {
+{  
+  "template_body":{  
+    "question_title":"_do you see a cat?",
+    "images":[  
+      {  
         "id":1,
-        "url": "http://www.lockscreen.com/projects_images/14/41.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/41.jpg"
+      },
+      {  
         "id":2,
-        "url": "http://www.lockscreen.com/projects_images/14/42.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/42.jpg"
+      },
+      {  
         "id":3,
-        "url": "http://www.lockscreen.com/projects_images/14/43.jpg"
-    },{
+        "url":"http://www.sengab.com/projects_uploads/14/43.jpg"
+      },
+      {  
         "id":4,
-        "url": "http://www.lockscreen.com/projects_images/14/44.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/44.jpg"
+      },
+      {  
         "id":5,
-        "url": "http://www.lockscreen.com/projects_images/14/45.jpg"
-    }]
+        "url":"http://www.sengab.com/projects_uploads/14/45.jpg"
+      }
+    ]
   }
 }
 ```
@@ -449,27 +446,29 @@ Content-Type: application/json
 ```
 
 ```json
-{
-    "images": [
-    {
-        "id":6,
-        "url": "http://www.lockscreen.com/projects_images/14/46.jpg"
+{  
+  "images":[  
+    {  
+      "id":6,
+      "url":"http://www.sengab.com/projects_images/14/46.jpg"
     },
-    {
-        "id":7,
-        "url": "http://www.lockscreen.com/projects_images/14/47.jpg"
+    {  
+      "id":7,
+      "url":"http://www.sengab.com/projects_images/14/47.jpg"
     },
-    {
-        "id":8,
-        "url": "http://www.lockscreen.com/projects_images/14/48.jpg"
-    },{
-        "id":9,
-        "url": "http://www.lockscreen.com/projects_images/14/49.jpg"
+    {  
+      "id":8,
+      "url":"http://www.sengab.com/projects_images/14/48.jpg"
     },
-    {
-        "id":10,
-        "url": "http://www.lockscreen.com/projects_images/14/50.jpg"
-    }]
+    {  
+      "id":9,
+      "url":"http://www.sengab.com/projects_images/14/49.jpg"
+    },
+    {  
+      "id":10,
+      "url":"http://www.sengab.com/projects_images/14/50.jpg"
+    }
+  ]
 }
 ```
 
@@ -487,21 +486,21 @@ Content-Type: application/json
 > List results of project
 
 ```json
-{
-  "results": [
-    {
-      "image_id": 1,
-      "image_url": "http://www.lockscreen.com/projects_images/3/1.jpg",
-      "contributions_count" : 454,
-      "yes_percentage": 54,
-      "no_percentage": 46
+{  
+  "results":[  
+    {  
+      "image_id":1,
+      "image_url":"http://www.sengab.com/projects_uploads/3/1.jpg",
+      "contributions_count":454,
+      "yes_percent":54,
+      "no_percent":46
     },
-    {
-      "image_id": 2,
-      "image_url": "http://www.lockscreen.com/projects_images/3/2.jpg",
-      "contributions_count" : 77,
-      "yes_percentage": 30,
-      "no_percentage": 70
+    {  
+      "image_id":2,
+      "image_url":"http://www.sengab.com/projects_uploads/3/2.jpg",
+      "contributions_count":77,
+      "yes_percent":30,
+      "no_percent":70
     }
   ]
 }
@@ -511,33 +510,31 @@ Content-Type: application/json
 
 In this template the project has a large number of photos and we want to know if they are photos of a particular thing or not. e.g you have a 10K photos of some animals and you want to know which photos are photos of cat.
 
-The result of this project will be every photo beside the the percentage of the people says it the thing you want.
+The result of this project will be each photo with the percentage of contributors' answers to the question.
 
 ### ADD PROJECT
-
 Parameter                  | Type           | Description
 ---------------------------|----------------| -----------------------------------------------
-templateID                 | Number         | Defines the template type.
-templateBody               | Object         | Defines the template body.
-templateBody.questionTitle | String         | The question that will be shown with the photos.
-templateBody.images        | Array[String]  | An array of string containing images in Base64.
+template_id                 | Number         | Defines the template type.
+template_body               | Object         | Defines the template body.
+template_body.question_title | String         | The question that will be shown with the photos.
+template_body.images        | Array[String]  | An array of string containing images in Base64.
 
 ### ENROLL IN A PROJECT
-`templateBody` object, holds the project body.
+`template_body` object, holds the project body.
 
 Parameter     | Type   | Description
 --------------|--------| -----------------------------------------------
-questionTitle | String | The question that will be shown with the photos.
+question_title | String | The question that will be shown with the photos.
 image         | Object | Defines the template body.
 image.id      | Number | Server-Side generated ID of the image.
 image.url     | String | URL of the image.
 
 
 ### GET MORE FEED
+This request is sent to get 5 more photos that user can contribute identifying them.
 
-This request is sent to get 5 more photos that user can contribute identifying them
-
-`GET http://api.lockscreen.com/v1/projects/<project-id>/feed`
+`GET http://api.sengab.com/v1/projects/<PROJECT_ID>/feed`
 
 
 ### SUBMIT CONTRIBUTION
@@ -545,18 +542,17 @@ This request is sent to get 5 more photos that user can contribute identifying t
 
 Parameter    | Type    | Description                                            | Required
 -------------|---------| -------------------------------------------------------|---------
-image_id     | Number  | The image ID of the photo that the user had recognized.| yes
-answer       | Boolean | User's answer to the question                          | yes
+image_id     | Number  | The image ID of the photo that the user had recognized.| YES
+answer       | Boolean | User's answer to the question                          | YES
 
 
 ### LIST RESULTS OF PROJECT
-`result` array, holds processed location data.
-
+`results` array of objects, each has the following fields.
 Parameter      | Type    | Description
 ---------------|---------|-------------
 image_id       | Number  | The ID of the photo.
 image_url      | String | URL of the image.
-contributions_count | Number | count of all contributions for this image
+contributions_count | Number | count of all contributions for this image.
 yes_percentage | Number  | The percentage of the positive answer that the photo had received.
 no_percentage  | Number  | The percentage of the negative answer that the photo had received.
 
@@ -567,17 +563,15 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
 
 ```json
 {
-  "templateID": 6,
-  "templateBody": {
-    "questionTitle": "Write what you read",
+  "template_id": 6,
+  "template_body": {
+    "question_title": "Write what you read",
     "images": [
       {
-        "image": "R0lGODlhAQABAIAAAAAAAP///
-                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       },
       {
-        "image": "R0lGODlhAQABAIAAAAAAAP///
-                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       }
     ]
   }
@@ -587,29 +581,31 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
 > Enroll
 
 ```json
-{
-  "templateBody": {
-    "questionTitle": "Write what you read",
-    "images": [
-    {
+{  
+  "template_body":{  
+    "question_title":"Write what you read",
+    "images":[  
+      {  
         "id":1,
-        "url": "http://www.lockscreen.com/projects_images/14/41.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/41.jpg"
+      },
+      {  
         "id":2,
-        "url": "http://www.lockscreen.com/projects_images/14/42.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/42.jpg"
+      },
+      {  
         "id":3,
-        "url": "http://www.lockscreen.com/projects_images/14/43.jpg"
-    },{
+        "url":"http://www.sengab.com/projects_uploads/14/43.jpg"
+      },
+      {  
         "id":4,
-        "url": "http://www.lockscreen.com/projects_images/14/44.jpg"
-    },
-    {
+        "url":"http://www.sengab.com/projects_uploads/14/44.jpg"
+      },
+      {  
         "id":5,
-        "url": "http://www.lockscreen.com/projects_images/14/45.jpg"
-    }]
+        "url":"http://www.sengab.com/projects_uploads/14/45.jpg"
+      }
+    ]
   }
 }
 ```
@@ -632,27 +628,29 @@ Content-Type: application/json
 ```
 
 ```json
-{
-    "images": [
-    {
-        "id":6,
-        "url": "http://www.lockscreen.com/projects_images/14/46.jpg"
+{  
+  "images":[  
+    {  
+      "id":6,
+      "url":"http://www.sengab.com/projects_uploads/14/46.jpg"
     },
-    {
-        "id":7,
-        "url": "http://www.lockscreen.com/projects_images/14/47.jpg"
+    {  
+      "id":7,
+      "url":"http://www.sengab.com/projects_images/14/47.jpg"
     },
-    {
-        "id":8,
-        "url": "http://www.lockscreen.com/projects_images/14/48.jpg"
-    },{
-        "id":9,
-        "url": "http://www.lockscreen.com/projects_images/14/49.jpg"
+    {  
+      "id":8,
+      "url":"http://www.sengab.com/projects_images/14/48.jpg"
     },
-    {
-        "id":10,
-        "url": "http://www.lockscreen.com/projects_images/14/50.jpg"
-    }]
+    {  
+      "id":9,
+      "url":"http://www.sengab.com/projects_images/14/49.jpg"
+    },
+    {  
+      "id":10,
+      "url":"http://www.sengab.com/projects_images/14/50.jpg"
+    }
+  ]
 }
 ```
 
@@ -672,23 +670,23 @@ Content-Type: application/json
 > List results of project
 
 ```json
-{
-  "results": [
-    {
-      "image_id": 1,
-      "image_url": "http://www.lockscreen.com/projects_imags/3/1.jpg",
+{  
+  "results":[  
+    {  
+      "image_id":1,
+      "image_url":"http://www.sengab.com/projects_imags/3/1.jpg",
       "contributions_count":600,
-      "text": [
+      "text":[  
         "Sengab is just awesome!!",
         "sengab is just awesome"
       ]
     },
-    {
-      "id": 2,
-      "image_url": "http://www.lockscreen.com/projects_imags/3/2.jpg",
+    {  
+      "id":2,
+      "image_url":"http://www.sengab.com/projects_imags/3/2.jpg",
       "contributions_count":454,
-      "text": [
-        "GitHub is how people build software."
+      "text":[  
+        "_git_hub is how people build software."
       ]
     }
   ]
@@ -705,17 +703,17 @@ The result of this project will be every photo beside the all the text provided 
 
 Parameter                  | Type         | Description
 ---------------------------|------------- | ------------
-templateID                 | Number       | Defines the template type.
-templateBody               | Object       | Defines the template body.
-templateBody.images        | Array        | An array of objects containing images in Base64 and their IDs.
-templateBody.images.image  | String       | The image represented in Base64.
+template_id                 | Number       | Defines the template type.
+template_body               | Object       | Defines the template body.
+template_body.images        | Array        | An array of objects containing images in Base64 and their IDs.
+template_body.images.image  | String       | The image represented in Base64.
 
 ### ENROLL IN A PROJECT
-`templateBody` object, holds the project body.
+`template_body` object, holds the project body.
 
 Parameter     | Type   | Description
 --------------|--------| -----------------------------------------------
-questionTitle | String | The question that will be shown with the photos.
+question_title | String | The question that will be shown with the photos.
 image         | Object | Defines the template body.
 image.id      | Number | Server-Side generated ID of the image.
 image.url     | String | URL of the image.
@@ -726,7 +724,7 @@ image.url     | String | URL of the image.
 
 This request is sent to get 5 more photos that user can contribute identifying them
 
-`GET http://api.lockscreen.com/v1/projects/<project-id>/feed`
+`GET http://api.sengab.com/v1/projects/<PROJECT_ID>/feed`
 
 
 ### SUBMIT CONTRIBUTION
@@ -734,12 +732,12 @@ This request is sent to get 5 more photos that user can contribute identifying t
 
 Parameter    | Type    | Description                                            | Required
 -------------|---------| -------------------------------------------------------|---------
-image_id     | Number  | The image ID of the photo that the user had recognized.| yes
-text         | String  | User's recognition to the text in the photo            | yes
+image_id     | Number  | The image ID of the photo that the user had recognized.| YES
+text         | String  | User's recognition to the text in the photo            | YES
 
 
 ### LIST RESULTS OF PROJECT
-`result` array, holds processed location data.
+`results` array of objects, each has the following fields.
 
 Parameter      | Type          | Description
 ---------------|---------------|-------------

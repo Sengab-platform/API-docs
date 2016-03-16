@@ -1,14 +1,14 @@
-# - Contributions
+# Contributions
 
-## Add a contribution in a project
+## Submit a contribution in a project
 
 ```http
-POST /projects/<project-id>/results HTTP/1.1
+POST /projects/<PROJECT_ID>/results HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
 
-> The above command returns JSON structured like this:
+> The above command returns JSON structured like this
 
 ```http
 HTTP/1.1 201 Created
@@ -17,23 +17,22 @@ Content-Type: application/json
 
 ```json
 {
-	"url":"http://api.lockscreen.com/v1/projects/<PROJECT_ID>/results/<CONTRIBUTION_ID>"
+	"url":"http://api.sengab.com/v1/projects/<PROJECT_ID>/results/<CONTRIBUTION_ID>"
 }
 ```
 
-This endpoint add a contribution to a project.
+This endpoint submits a contribution to a project.
 
 ### HTTP Request
 
-`POST http://api.lockscreen.com/v1/projects/<project_id>/results`
+`POST http://api.sengab.com/v1/projects/<PROJECT_ID>/results`
 
 ### Request body:
 
-Parameter | Required | Description
---------- | -------- | ------------
-userId | YES | TEMP; SHOULD BE DELETED
-projectId | YES | The ID of the project
-contribution | YES | Object of contribution (see below)
-contribution.createdAt | YES | Date of contribution
-contribution.data | YES | Content of data will be different based on the project template (for more check Templates section)
-
+Parameter              | Description                                                                                     | Required
+---------------------- | ----------------------------------------------------------------------------------------------- | --------
+user_id                 | TEMP; SHOULD BE DELETED                                                                         | YES
+project_id              | The ID of the project.                                                                          | YES
+contribution           | Object of contribution, see below.                                                              | YES
+contribution.created_at | Date of contribution.                                                                           | YES
+contribution.data      | Content of data will be different according to the project template, for more check Templates section. | YES
