@@ -1288,14 +1288,28 @@ This action is paginated. See the pagination documentation for details.
     </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Enroll</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/13/141.jpg"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1305,8 +1319,8 @@ This action is paginated. See the pagination documentation for details.
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="nt">"image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1318,11 +1332,13 @@ This action is paginated. See the pagination documentation for details.
   </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="w">
+      </span><span class="nt">"yes_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">46</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+      </span><span class="nt">"yes_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1356,22 +1372,45 @@ This action is paginated. See the pagination documentation for details.
 <tr>
 <td>templateBody.questionTitle</td>
 <td>String</td>
-<td>The question that will be shown with the photos, must be a y/n question.</td>
+<td>The question that will be shown with the photos.</td>
 </tr>
 <tr>
 <td>templateBody.images</td>
-<td>Array</td>
-<td>An array of objects containing images in Base64 and their IDs.</td>
+<td>Array[String]</td>
+<td>An array of string containing images in Base64.</td>
 </tr>
+</tbody></table>
+
+<h3 id="enroll-in-a-project">ENROLL IN A PROJECT</h3>
+
+<p><code class="prettyprint">templateBody</code> object, holds the project body.</p>
+
+<table><thead>
 <tr>
-<td>templateBody.images.id</td>
-<td>Number</td>
-<td>ID of the image.</td>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>templateBody.images.image</td>
+<td>questionTitle</td>
 <td>String</td>
-<td>The image represented in Base64.</td>
+<td>The question that will be shown with the photos.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>image.id</td>
+<td>Number</td>
+<td>Server-Side generated ID of the image.</td>
+</tr>
+<tr>
+<td>image.url</td>
+<td>String</td>
+<td>URL of the image.</td>
 </tr>
 </tbody></table>
 
@@ -1388,7 +1427,7 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>imageID</td>
+<td>image_id</td>
 <td>Number</td>
 <td>The image ID of the photo that the user had recognized.</td>
 <td>yes</td>
@@ -1413,14 +1452,19 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>imageID</td>
+<td>image_id</td>
 <td>Number</td>
 <td>The ID of the photo.</td>
 </tr>
 <tr>
-<td>percentage</td>
+<td>yes_percentage</td>
 <td>Number</td>
 <td>The percentage of the positive answer that the photo had received.</td>
+</tr>
+<tr>
+<td>no_percentage</td>
+<td>Number</td>
+<td>The percentage of the negative answer that the photo had received.</td>
 </tr>
 </tbody></table>
 
@@ -1432,16 +1476,31 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"templateID"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
   </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Write what you read"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Enroll</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Write what you read"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/41.jpg"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1452,7 +1511,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"imageID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sengab is just awesome!!"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -1512,14 +1571,40 @@ This action is paginated. See the pagination documentation for details.
 <td>An array of objects containing images in Base64 and their IDs.</td>
 </tr>
 <tr>
-<td>templateBody.images.id</td>
-<td>Number</td>
-<td>ID of the image.</td>
-</tr>
-<tr>
 <td>templateBody.images.image</td>
 <td>String</td>
 <td>The image represented in Base64.</td>
+</tr>
+</tbody></table>
+
+<h2 id="enroll-in-a-project">ENROLL IN A PROJECT</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questionTitle</td>
+<td>String</td>
+<td>The question that will be shown with the photos.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Object</td>
+<td>Defines the template body.</td>
+</tr>
+<tr>
+<td>image.id</td>
+<td>Number</td>
+<td>Server-Side generated ID of the image.</td>
+</tr>
+<tr>
+<td>image.url</td>
+<td>String</td>
+<td>URL of the image.</td>
 </tr>
 </tbody></table>
 
@@ -1536,7 +1621,7 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>imageID</td>
+<td>image_id</td>
 <td>Number</td>
 <td>The image ID of the photo that the user had recognized.</td>
 <td>yes</td>
@@ -1561,7 +1646,7 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>imageID</td>
+<td>image_id</td>
 <td>Number</td>
 <td>The ID of the photo.</td>
 </tr>
