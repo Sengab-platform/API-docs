@@ -268,6 +268,7 @@ templateBody.questions.title | String        | Title of the question.
 Parameter      | Type   | Description
 -------------- |--------| -----------------------------------------------
 questionsCount | Number | The number of the questions in the survey
+questions      | Object | Holds the id & title of the question
 questions.id   | Number | Defines the ID of the question.
 questions.title| Number | Defines the title of the question.
 
