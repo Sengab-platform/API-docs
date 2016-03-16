@@ -548,6 +548,7 @@ answer       | Boolean | User's answer to the question                          
 
 ### LIST RESULTS OF PROJECT
 `results` array of objects, each has the following fields.
+
 Parameter      | Type    | Description
 ---------------|---------|-------------
 image_id       | Number  | The ID of the photo.
