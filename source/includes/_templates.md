@@ -537,7 +537,7 @@ templateBody               | Object       | Defines the template body.
 templateBody.images        | Array        | An array of objects containing images in Base64 and their IDs.
 templateBody.images.image  | String       | The image represented in Base64.
 
-## ENROLL IN A PROJECT
+### ENROLL IN A PROJECT
 
 Parameter     | Type   | Description
 --------------|--------| -----------------------------------------------
