@@ -351,14 +351,27 @@ location.lng   | Number       | Holds the value of longitude.
     "questionTitle": "Do you see a cat?",
     "images": [
       {
-        "id": 1,
-        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       },
       {
-        "id": 2,
-        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       }
     ]
+  }
+}
+```
+> Enroll
+
+```json
+{
+  "templateBody": {
+    "questionTitle": "Do you see a cat?",
+    "image": {
+        "id":1,
+        "url": "http://www.lockscreen.com/projects_images/13/141.jpg"
+    }
   }
 }
 ```
@@ -368,8 +381,8 @@ location.lng   | Number       | Holds the value of longitude.
 ```json
 {
   "data": {
-    "imageID": 1,
-    "answer": true
+    "image_id": 1,
+    "answer": "yes"
   }
 }
 ```
@@ -381,11 +394,13 @@ location.lng   | Number       | Holds the value of longitude.
   "results": [
     {
       "id": 1,
-      "percentage": 54
+      "yes_percentage": 54,
+      "no_percentage": 46
     },
     {
       "id": 2,
-      "percentage": 12
+      "yes_percentage": 30,
+      "no_percentage": 70
     }
   ]
 }
@@ -399,32 +414,41 @@ The result of this project will be every photo beside the the percentage of the 
 
 ### ADD PROJECT
 
-Parameter                  | Type   | Description
----------------------------|-------| --------------
-templateID                 | Number | Defines the template type.
-templateBody               | Object | Defines the template body.
-templateBody.questionTitle | String | The question that will be shown with the photos, must be a y/n question.
-templateBody.images        | Array  | An array of objects containing images in Base64 and their IDs.
-templateBody.images.id     | Number | ID of the image.
-templateBody.images.image  | String | The image represented in Base64.
+Parameter                  | Type           | Description
+---------------------------|----------------| -----------------------------------------------
+templateID                 | Number         | Defines the template type.
+templateBody               | Object         | Defines the template body.
+templateBody.questionTitle | String         | The question that will be shown with the photos.
+templateBody.images        | Array[String]  | An array of string containing images in Base64.
 
+### ENROLL IN A PROJECT
+`templateBody` object, holds the project body.
+
+Parameter     | Type   | Description
+--------------|--------| -----------------------------------------------
+questionTitle | String | The question that will be shown with the photos.
+image         | Object | Defines the template body.
+image.id      | Number | Server-Side generated ID of the image.
+image.url     | String | URL of the image.
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
 
 Parameter    | Type    | Description                                            | Required
 -------------|---------| -------------------------------------------------------|---------
-imageID      | Number  | The image ID of the photo that the user had recognized.| yes
+image_id     | Number  | The image ID of the photo that the user had recognized.| yes
 answer       | Boolean | User's answer to the question                          | yes
 
 
 ### LIST RESULTS OF PROJECT
 `result` array, holds processed location data.
 
-Parameter | Type   | Description
-----------|--------|-------------
-imageID    | Number  | The ID of the photo.
-percentage | Number  | The percentage of the positive answer that the photo had received.
+Parameter      | Type    | Description
+---------------|---------|-------------
+image_id       | Number  | The ID of the photo.
+yes_percentage | Number  | The percentage of the positive answer that the photo had received.
+no_percentage  | Number  | The percentage of the negative answer that the photo had received.
+
 
 ## Template 6
 
@@ -434,16 +458,31 @@ percentage | Number  | The percentage of the positive answer that the photo had 
 {
   "templateID": 6,
   "templateBody": {
+    "questionTitle": "Write what you read",
     "images": [
       {
-        "id": 1,
-        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       },
       {
-        "id": 2,
-        "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        "image": "R0lGODlhAQABAIAAAAAAAP///
+                  yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       }
     ]
+  }
+}
+```
+
+> Enroll
+
+```json
+{
+  "templateBody": {
+    "questionTitle": "Write what you read",
+    "image": {
+        "id":1,
+        "url": "http://www.lockscreen.com/projects_images/14/41.jpg"
+    }
   }
 }
 ```
@@ -454,7 +493,7 @@ percentage | Number  | The percentage of the positive answer that the photo had 
 {
   "data": [
     {
-      "imageID": 1,
+      "image_id": 1,
       "text": "Sengab is just awesome!!"
     }
   ]
@@ -496,23 +535,30 @@ Parameter                  | Type         | Description
 templateID                 | Number       | Defines the template type.
 templateBody               | Object       | Defines the template body.
 templateBody.images        | Array        | An array of objects containing images in Base64 and their IDs.
-templateBody.images.id     | Number       | ID of the image.
 templateBody.images.image  | String       | The image represented in Base64.
 
+## ENROLL IN A PROJECT
+
+Parameter     | Type   | Description
+--------------|--------| -----------------------------------------------
+questionTitle | String | The question that will be shown with the photos.
+image         | Object | Defines the template body.
+image.id      | Number | Server-Side generated ID of the image.
+image.url     | String | URL of the image.
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
 
 Parameter    | Type    | Description                                            | Required
 -------------|---------| -------------------------------------------------------|---------
-imageID      | Number  | The image ID of the photo that the user had recognized.| yes
+image_id     | Number  | The image ID of the photo that the user had recognized.| yes
 text         | String  | User's recognition to the text in the photo            | yes
 
 
 ### LIST RESULTS OF PROJECT
 `result` array, holds processed location data.
 
-Parameter      | Type         | Description
----------------|--------------|-------------
-imageID        | Number       | The ID of the photo.
+Parameter      | Type          | Description
+---------------|---------------|-------------
+image_id       | Number        | The ID of the photo.
 text           | Array[String] | A list holds all the text provided from the user for this photo.
