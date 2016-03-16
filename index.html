@@ -661,6 +661,7 @@ e.g if the project collects images the like this:</p>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"contributionsCount"</span><span class="p">:</span><span class="mi">2210</span><span class="p">,</span><span class="w">
     </span><span class="nt">"results"</span><span class="p">:</span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1022,12 +1023,14 @@ This action is paginated. See the pagination documentation for details.
       </span><span class="p">{</span><span class="w">  
         </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="nt">"title"</span><span class="p">:</span><span class="s2">"You are a teenager ?"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributionsCount"</span><span class="p">:</span><span class="mi">454</span><span class="p">,</span><span class="w">
         </span><span class="nt">"yes_percent"</span><span class="p">:</span><span class="mf">45.6</span><span class="p">,</span><span class="w">
         </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="mf">55.4</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">  
         </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
         </span><span class="nt">"title"</span><span class="p">:</span><span class="s2">"Do you think you are social ?"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"contributionsCount"</span><span class="p">:</span><span class="mi">454</span><span class="p">,</span><span class="w">
         </span><span class="nt">"yes_percent"</span><span class="p">:</span><span class="mi">68</span><span class="p">,</span><span class="w">
         </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="mi">32</span><span class="w">
       </span><span class="p">}</span><span class="w">
@@ -1170,6 +1173,12 @@ This action is paginated. See the pagination documentation for details.
 <td>title</td>
 <td>text</td>
 <td>title of the question</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>contributionsCount</td>
+<td>Number</td>
+<td>count of contrbutions for question</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -1329,6 +1338,11 @@ This action is paginated. See the pagination documentation for details.
 <td>Contributor&rsquo;s description of his image.</td>
 </tr>
 <tr>
+<td>contributions_count</td>
+<td>Number</td>
+<td>count of all contributions for this image</td>
+</tr>
+<tr>
 <td>location</td>
 <td>Object</td>
 <td>Holds the value of the location (longitude/latitude).</td>
@@ -1452,12 +1466,14 @@ This action is paginated. See the pagination documentation for details.
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="nt">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/3/1.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contributions_count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">454</span><span class="p">,</span><span class="w">
       </span><span class="nt">"yes_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w">
       </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">46</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="nt">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/3/2.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contributions_count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">77</span><span class="p">,</span><span class="w">
       </span><span class="nt">"yes_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
       </span><span class="nt">"no_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -1589,6 +1605,11 @@ This action is paginated. See the pagination documentation for details.
 <td>URL of the image.</td>
 </tr>
 <tr>
+<td>contributions_count</td>
+<td>Number</td>
+<td>count of all contributions for this image</td>
+</tr>
+<tr>
 <td>yes_percentage</td>
 <td>Number</td>
 <td>The percentage of the positive answer that the photo had received.</td>
@@ -1709,6 +1730,7 @@ This action is paginated. See the pagination documentation for details.
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="nt">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_imags/3/1.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="mi">600</span><span class="p">,</span><span class="w">
       </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"Sengab is just awesome!!"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"sengab is just awesome"</span><span class="w">
@@ -1717,6 +1739,7 @@ This action is paginated. See the pagination documentation for details.
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="nt">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_imags/3/2.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="mi">454</span><span class="p">,</span><span class="w">
       </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"GitHub is how people build software."</span><span class="w">
       </span><span class="p">]</span><span class="w">
