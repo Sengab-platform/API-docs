@@ -1374,11 +1374,62 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
         </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/13/141.jpg"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/41.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/42.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/43.jpg"</span><span class="w">
+    </span><span class="p">},{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/44.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/45.jpg"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Get more feed</p>
+</blockquote>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/15214/feed</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+</code></pre>
+<pre class="highlight plaintext"><code>Respone :
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/46.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/47.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/48.jpg"</span><span class="w">
+    </span><span class="p">},{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/49.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/50.jpg"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1484,6 +1535,12 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </tbody></table>
 
+<h3 id="get-more-feed">GET MORE FEED</h3>
+
+<p>This request is sent to get 5 more photos that user can contribute identifying them</p>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects/&lt;project-id&gt;/feed</code></p>
+
 <h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
 
 <p><code class="prettyprint">data</code> object, holds contribution data (response).</p>
@@ -1572,11 +1629,62 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"templateBody"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"questionTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Write what you read"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
         </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/41.jpg"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/42.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/43.jpg"</span><span class="w">
+    </span><span class="p">},{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/44.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/45.jpg"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Get more feed</p>
+</blockquote>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/15214/feed</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+</code></pre>
+<pre class="highlight plaintext"><code>Respone :
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/46.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/47.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/48.jpg"</span><span class="w">
+    </span><span class="p">},{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/49.jpg"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.lockscreen.com/projects_images/14/50.jpg"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1686,6 +1794,12 @@ This action is paginated. See the pagination documentation for details.
 <td>URL of the image.</td>
 </tr>
 </tbody></table>
+
+<h3 id="get-more-feed">GET MORE FEED</h3>
+
+<p>This request is sent to get 5 more photos that user can contribute identifying them</p>
+
+<p><code class="prettyprint">GET http://api.lockscreen.com/v1/projects/&lt;project-id&gt;/feed</code></p>
 
 <h3 id="submit-contribution">SUBMIT CONTRIBUTION</h3>
 
