@@ -402,11 +402,70 @@ location.lng   | Number       | Holds the value of longitude.
 {
   "templateBody": {
     "questionTitle": "Do you see a cat?",
-    "image": {
+     "images": [
+    {
         "id":1,
-        "url": "http://www.lockscreen.com/projects_images/13/141.jpg"
-    }
+        "url": "http://www.lockscreen.com/projects_images/14/41.jpg"
+    },
+    {
+        "id":2,
+        "url": "http://www.lockscreen.com/projects_images/14/42.jpg"
+    },
+    {
+        "id":3,
+        "url": "http://www.lockscreen.com/projects_images/14/43.jpg"
+    },{
+        "id":4,
+        "url": "http://www.lockscreen.com/projects_images/14/44.jpg"
+    },
+    {
+        "id":5,
+        "url": "http://www.lockscreen.com/projects_images/14/45.jpg"
+    }]
   }
+}
+```
+
+
+> Get more feed
+
+
+```http
+GET /projects/15214/feed HTTP/1.1
+Content-Type: application/json; charset=utf-8
+```
+
+```text
+Respone :
+```
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+```
+
+```json
+{
+    "images": [
+    {
+        "id":6,
+        "url": "http://www.lockscreen.com/projects_images/14/46.jpg"
+    },
+    {
+        "id":7,
+        "url": "http://www.lockscreen.com/projects_images/14/47.jpg"
+    },
+    {
+        "id":8,
+        "url": "http://www.lockscreen.com/projects_images/14/48.jpg"
+    },{
+        "id":9,
+        "url": "http://www.lockscreen.com/projects_images/14/49.jpg"
+    },
+    {
+        "id":10,
+        "url": "http://www.lockscreen.com/projects_images/14/50.jpg"
+    }]
 }
 ```
 
@@ -467,6 +526,14 @@ image         | Object | Defines the template body.
 image.id      | Number | Server-Side generated ID of the image.
 image.url     | String | URL of the image.
 
+
+### GET MORE FEED
+
+This request is sent to get 5 more photos that user can contribute identifying them
+
+`GET http://api.lockscreen.com/v1/projects/<project-id>/feed`
+
+
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
 
@@ -516,11 +583,69 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
 {
   "templateBody": {
     "questionTitle": "Write what you read",
-    "image": {
+    "images": [
+    {
         "id":1,
         "url": "http://www.lockscreen.com/projects_images/14/41.jpg"
-    }
+    },
+    {
+        "id":2,
+        "url": "http://www.lockscreen.com/projects_images/14/42.jpg"
+    },
+    {
+        "id":3,
+        "url": "http://www.lockscreen.com/projects_images/14/43.jpg"
+    },{
+        "id":4,
+        "url": "http://www.lockscreen.com/projects_images/14/44.jpg"
+    },
+    {
+        "id":5,
+        "url": "http://www.lockscreen.com/projects_images/14/45.jpg"
+    }]
   }
+}
+```
+
+> Get more feed
+
+
+```http
+GET /projects/15214/feed HTTP/1.1
+Content-Type: application/json; charset=utf-8
+```
+
+```text
+Respone :
+```
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+```
+
+```json
+{
+    "images": [
+    {
+        "id":6,
+        "url": "http://www.lockscreen.com/projects_images/14/46.jpg"
+    },
+    {
+        "id":7,
+        "url": "http://www.lockscreen.com/projects_images/14/47.jpg"
+    },
+    {
+        "id":8,
+        "url": "http://www.lockscreen.com/projects_images/14/48.jpg"
+    },{
+        "id":9,
+        "url": "http://www.lockscreen.com/projects_images/14/49.jpg"
+    },
+    {
+        "id":10,
+        "url": "http://www.lockscreen.com/projects_images/14/50.jpg"
+    }]
 }
 ```
 
@@ -585,6 +710,15 @@ questionTitle | String | The question that will be shown with the photos.
 image         | Object | Defines the template body.
 image.id      | Number | Server-Side generated ID of the image.
 image.url     | String | URL of the image.
+
+
+
+### GET MORE FEED
+
+This request is sent to get 5 more photos that user can contribute identifying them
+
+`GET http://api.lockscreen.com/v1/projects/<project-id>/feed`
+
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
