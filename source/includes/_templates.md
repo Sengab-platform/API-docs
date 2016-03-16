@@ -108,7 +108,8 @@ no        | Array  | Lists all location contributions with answer `no`
 ```json
 {
   "data": {
-    "imgString": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "image": "R0lGODlhAQABAIAAAAAAAP///
+              yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
     "caption": "My cat lily"
   }
 }
@@ -120,11 +121,11 @@ no        | Array  | Lists all location contributions with answer `no`
 {
   "results": [
     {
-      "imgUrl": "http://www.sengab.com/uploads/56842.jpg",
+      "image_url": "http://www.sengab.com/uploads/56842.jpg",
       "caption": "My cat lily"
     },
     {
-      "imgUrl": "http://www.sengab.com/uploads/41242.jpg",
+      "image_url": "http://www.sengab.com/uploads/41242.jpg",
       "caption": "Dory, my fish"
     }
   ]
@@ -148,10 +149,10 @@ templateBody.imgTitle      | String | Defines the description of required image.
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
 
-Parameter    | Type             | Description                                   | Required
--------------|------------------|-----------------------------------------------|---------
-imgString    | String (Base64)  | Base64 value of the image.                    | yes
-caption      | String           | Contributor's description of his image.       | yes
+Parameter    | Type   | Description                             | Required
+-------------|--------|-----------------------------------------|---------
+image        | String | Base64 value of the image.              | yes
+caption      | String | Contributor's description of his image. | yes
 
 
 ### LIST RESULTS OF PROJECT
@@ -159,7 +160,7 @@ caption      | String           | Contributor's description of his image.       
 
 Parameter | Type   | Description
 ----------|--------|-------------
-imgUrl    | String | Contribution image url.
+image_url | String | Contribution image url.
 caption   | String | Contributor's description of his submitted image.
 
 ## Template 3
@@ -173,11 +174,29 @@ caption   | String | Contributor's description of his submitted image.
     "questionsCount":2,
     "questions":[  
       {  
-        "id":1,
         "title":"You are a teenager ?"
       },
       {  
-        "id":2,
+        "title":"Do you think you are social ?"
+      }
+    ]
+  }
+}
+```
+
+>Enroll
+
+```json
+{  
+  "templateBody":{  
+    "questionsCount":2,
+    "questions":[  
+      {  
+        "id": 1,
+        "title":"You are a teenager ?"
+      },
+      {  
+        "id": 2,
         "title":"Do you think you are social ?"
       }
     ]
@@ -212,11 +231,15 @@ caption   | String | Contributor's description of his submitted image.
     "answers":[  
       {  
         "id":1,
-        "yesPercent":45.6
+        "title":"You are a teenager ?",
+        "yes_percent":45.6,
+        "no_percentage":55.4
       },
       {  
         "id":2,
-        "yesPercent":68
+        "title":"Do you think you are social ?",
+        "yes_percent":68,
+        "no_percentage":32
       }
     ]
   }
@@ -239,6 +262,14 @@ templateBody.questions       | Array[Object] | Defines the questions of the surv
 templateBody.questions.id    | Number        | ID of the question.
 templateBody.questions.title | String        | Title of the question.
 
+### ENROLL IN A PROJECT
+`templateBody` object, holds the project body.
+
+Parameter      | Type   | Description
+-------------- |--------| -----------------------------------------------
+questionsCount | Number | The number of the questions in the survey
+questions.id   | Number | Defines the ID of the question.
+questions.title| Number | Defines the title of the question.
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
@@ -251,12 +282,14 @@ answers.ans  | String           | Answer of the question.                       
 
 
 ### LIST RESULTS OF PROJECT
-`results` array, holds `id`s of questions and `yes` answers percentage for each one.
+`results` array, holds `id`s of questions, their titles and `yes` & `no` answers percentage for each one.
 
 Parameter    | Type     | Description                                  | Required
 ------------ | -------- | -------------------------------------------- | --------
 id           | Number   | ID of question.                              | yes
-yesPercent   | Number   | holds `yes` answers percentage of question.  | yes
+title        | text     | title of the question                        | yes
+yes_percent  | Number   | holds `yes` answers percentage of question.  | yes
+no_percent   | Number   | holds `no` answers percentage of question.   | yes
 
 
 ## Template 4
@@ -544,6 +577,7 @@ templateBody.images        | Array        | An array of objects containing image
 templateBody.images.image  | String       | The image represented in Base64.
 
 ### ENROLL IN A PROJECT
+`templateBody` object, holds the project body.
 
 Parameter     | Type   | Description
 --------------|--------| -----------------------------------------------
