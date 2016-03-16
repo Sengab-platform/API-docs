@@ -531,7 +531,6 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
   "data": [
     {
       "image_id": 1,
-      "image_url":"http://www.lockscreen.com/projects_imags/4/1.jpg",
       "text": "Sengab is just awesome!!"
     }
   ]
