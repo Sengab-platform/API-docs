@@ -1,6 +1,6 @@
 LockScreen Documentation:
 -------------------------
-- Browse : http://lock-screen.github.io/Our-Awesome-API/
+- Browse : http://sengab-platform.github.io/API-docs/
 - Develop : 
 
 ```shell
