@@ -262,6 +262,7 @@ Content-Type: application/json
 
 ```json
 {
+	"contributionsCount":2210,
 	"results":""
 }
 ```

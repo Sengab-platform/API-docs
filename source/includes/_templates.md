@@ -232,12 +232,14 @@ caption   | String | Contributor's description of his submitted image.
       {  
         "id":1,
         "title":"You are a teenager ?",
+        "contributionsCount":454,
         "yes_percent":45.6,
         "no_percentage":55.4
       },
       {  
         "id":2,
         "title":"Do you think you are social ?",
+        "contributionsCount":454,
         "yes_percent":68,
         "no_percentage":32
       }
@@ -289,6 +291,7 @@ Parameter    | Type     | Description                                  | Require
 ------------ | -------- | -------------------------------------------- | --------
 id           | Number   | ID of question.                              | yes
 title        | text     | title of the question                        | yes
+contributionsCount | Number | count of contrbutions for question | yes
 yes_percent  | Number   | holds `yes` answers percentage of question.  | yes
 no_percent   | Number   | holds `no` answers percentage of question.   | yes
 
@@ -370,6 +373,7 @@ Parameter      | Type         | Description
 ---------------|--------------|----------------------------------------------------
 imageUrl       | String       | The URL of the photo.
 caption        | String       | Contributor's description of his image.
+contributions_count | Number | count of all contributions for this image
 location       | Object       | Holds the value of the location (longitude/latitude).
 location.lat   | Number       | Holds the value of latitude.
 location.lng   | Number       | Holds the value of longitude.
@@ -488,12 +492,14 @@ Content-Type: application/json
     {
       "image_id": 1,
       "image_url": "http://www.lockscreen.com/projects_images/3/1.jpg",
+      "contributions_count" : 454,
       "yes_percentage": 54,
       "no_percentage": 46
     },
     {
       "image_id": 2,
       "image_url": "http://www.lockscreen.com/projects_images/3/2.jpg",
+      "contributions_count" : 77,
       "yes_percentage": 30,
       "no_percentage": 70
     }
@@ -550,6 +556,7 @@ Parameter      | Type    | Description
 ---------------|---------|-------------
 image_id       | Number  | The ID of the photo.
 image_url      | String | URL of the image.
+contributions_count | Number | count of all contributions for this image
 yes_percentage | Number  | The percentage of the positive answer that the photo had received.
 no_percentage  | Number  | The percentage of the negative answer that the photo had received.
 
@@ -670,6 +677,7 @@ Content-Type: application/json
     {
       "image_id": 1,
       "image_url": "http://www.lockscreen.com/projects_imags/3/1.jpg",
+      "contributions_count":600,
       "text": [
         "Sengab is just awesome!!",
         "sengab is just awesome"
@@ -678,6 +686,7 @@ Content-Type: application/json
     {
       "id": 2,
       "image_url": "http://www.lockscreen.com/projects_imags/3/2.jpg",
+      "contributions_count":454,
       "text": [
         "GitHub is how people build software."
       ]
