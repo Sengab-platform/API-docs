@@ -9,7 +9,7 @@ Currently, we provide 6 static templates for projects, we will illustrate their 
 {
   "template_id":1,
   "template_body":{
-    "question_title":"_are you happy today?"
+    "question_title":"Are you happy today?"
   }
 }
 ```
@@ -142,7 +142,7 @@ Parameter                  | Type   | Description
 ---------------------------|------- | --------------
 template_id                 | Number | Defines the template type.
 template_body               | Object | Defines the template body.
-template_body.imageTitle      | String | Defines the description of required image.
+template_body.image_title      | String | Defines the description of required image.
 
 
 ### SUBMIT CONTRIBUTION
@@ -301,7 +301,7 @@ no_percent   | Number   | holds `no` answers percentage to question.   | YES
 {
   "template_id":4,
   "template_body":{
-    "image_title":"_take a photo of road accidents you witness"
+    "image_title":"Take a photo of road accidents you witness"
   }
 }
 ```
@@ -348,7 +348,7 @@ Parameter                  | Type         | Description
 ---------------------------|--------------|-------------
 template_id                 | Number       | Defines the template type.
 template_body               | Object       | Defines the template body.
-template_body.imageTitle    | String       | Defines the description of required image.
+template_body.image_title    | String       | Defines the description of required image.
 
 
 ### SUBMIT CONTRIBUTION
@@ -383,7 +383,7 @@ location.lng   | Number       | Holds the value of longitude.
 {  
   "template_id":5,
   "template_body":{  
-    "question_title":"_do you see a cat?",
+    "question_title":"Do you see a cat?",
     "images":[  
       {  
         "image":"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -400,7 +400,7 @@ location.lng   | Number       | Holds the value of longitude.
 ```json
 {  
   "template_body":{  
-    "question_title":"_do you see a cat?",
+    "question_title":"Do you see a cat?",
     "images":[  
       {  
         "id":1,
@@ -687,7 +687,7 @@ Content-Type: application/json
       "image_url":"http://www.sengab.com/projects_imags/3/2.jpg",
       "contributions_count":454,
       "text":[  
-        "_git_hub is how people build software."
+        "GitHub is how people build software."
       ]
     }
   ]
