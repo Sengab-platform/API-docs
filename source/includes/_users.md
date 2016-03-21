@@ -3,7 +3,7 @@
 ## Get user profile
 
 ```http
-GET /users/<ID>/activities HTTP/1.1
+GET /users/<ID> HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 

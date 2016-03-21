@@ -3,7 +3,7 @@
 ## Enroll in a project
 
 ```http
-POST /users/<USER_ID>/enrolled-projects HTTP/1.1
+POST /me/enrollments/ HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
@@ -29,7 +29,7 @@ This endpoint enrolls a user in a project.
 
 ### HTTP Request
 
-`POST http://api.sengab.com/v1/projects`
+`POST http://api.sengab.com/v1/me/enrollments`
 
 Parameter | Required
 --------- | --------
@@ -38,7 +38,7 @@ project_id | YES
 ## Withdraw from project
 
 ```http
-DELETE /users/<USER_ID>/enrolled-projects HTTP/1.1
+DELETE /me/enrollments HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
@@ -59,7 +59,7 @@ This endpoint withdraws a user from a project.
 
 ### HTTP Request
 
-`DELETE http://api.sengab.com/v1/users/<USER_ID>/enrolled_projects`
+`DELETE http://api.sengab.com/v1/me/enrollments`
 
 Parameter | Description
 --------- | -----------
