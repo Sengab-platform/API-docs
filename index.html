@@ -689,7 +689,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"template_id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nt">"template_body"</span><span class="p">:{</span><span class="w">
-    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"_are you happy today?"</span><span class="w">
+    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"Are you happy today?"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -897,7 +897,7 @@ This action is paginated. See the pagination documentation for details.
 <td>Defines the template body.</td>
 </tr>
 <tr>
-<td>template_body.imageTitle</td>
+<td>template_body.image_title</td>
 <td>String</td>
 <td>Defines the description of required image.</td>
 </tr>
@@ -1199,7 +1199,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"template_id"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
   </span><span class="nt">"template_body"</span><span class="p">:{</span><span class="w">
-    </span><span class="nt">"image_title"</span><span class="p">:</span><span class="s2">"_take a photo of road accidents you witness"</span><span class="w">
+    </span><span class="nt">"image_title"</span><span class="p">:</span><span class="s2">"Take a photo of road accidents you witness"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1262,7 +1262,7 @@ This action is paginated. See the pagination documentation for details.
 <td>Defines the template body.</td>
 </tr>
 <tr>
-<td>template_body.imageTitle</td>
+<td>template_body.image_title</td>
 <td>String</td>
 <td>Defines the description of required image.</td>
 </tr>
@@ -1363,7 +1363,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">  
   </span><span class="nt">"template_id"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
   </span><span class="nt">"template_body"</span><span class="p">:{</span><span class="w">  
-    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"_do you see a cat?"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"images"</span><span class="p">:[</span><span class="w">  
       </span><span class="p">{</span><span class="w">  
         </span><span class="nt">"image"</span><span class="p">:</span><span class="s2">"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span><span class="w">
@@ -1381,7 +1381,7 @@ This action is paginated. See the pagination documentation for details.
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">  
   </span><span class="nt">"template_body"</span><span class="p">:{</span><span class="w">  
-    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"_do you see a cat?"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"question_title"</span><span class="p">:</span><span class="s2">"Do you see a cat?"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"images"</span><span class="p">:[</span><span class="w">  
       </span><span class="p">{</span><span class="w">  
         </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -1741,7 +1741,7 @@ This action is paginated. See the pagination documentation for details.
       </span><span class="nt">"image_url"</span><span class="p">:</span><span class="s2">"http://www.sengab.com/projects_imags/3/2.jpg"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="mi">454</span><span class="p">,</span><span class="w">
       </span><span class="nt">"text"</span><span class="p">:[</span><span class="w">  
-        </span><span class="s2">"_git_hub is how people build software."</span><span class="w">
+        </span><span class="s2">"GitHub is how people build software."</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -2395,6 +2395,380 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <tr>
 <td>503</td>
 <td>Service Unavailable &ndash; We&rsquo;re temporarily offline for maintenance, Please try again later.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="db-entities">DB Entities</h1>
+
+<h2 id="user">User</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format : user::Google user Id</td>
+<td>user::12348756</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td>user</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>URL for user object</td>
+<td></td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>image</td>
+<td>String</td>
+<td>Url for user avatar</td>
+<td></td>
+</tr>
+<tr>
+<td>about</td>
+<td>object</td>
+<td>Holds location which is the user country, email and bio short description of the user.</td>
+<td></td>
+</tr>
+<tr>
+<td>stats</td>
+<td>object</td>
+<td>Count of created projects and contributions of user.</td>
+<td></td>
+</tr>
+<tr>
+<td>projects</td>
+<td>String</td>
+<td>URL for created projects by the user.</td>
+<td><code class="prettyprint">http://api.sengab.com/v1/users/1411414/created_projects</code></td>
+</tr>
+<tr>
+<td>contributions</td>
+<td>String</td>
+<td>URL for the user contributions.</td>
+<td><code class="prettyprint">http://api.sengab.com/v1/users/1411414/contributions</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>String</td>
+<td>Profile created date.</td>
+<td>ISO 8601 format.</td>
+</tr>
+<tr>
+<td>activity</td>
+<td>String</td>
+<td>URL for User Activity</td>
+<td><code class="prettyprint">http://api.sengab.com/v1/users/1411414/activities</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="activity">Activity</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format : activity::userID</td>
+<td>activity::1411414</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td>activity</td>
+</tr>
+<tr>
+<td>activity</td>
+<td>object</td>
+<td>Entry for user’s activity. contains activity_id, activity_type, project which is the project related to this activity and created_at.</td>
+<td></td>
+</tr>
+<tr>
+<td>activity.project</td>
+<td>object</td>
+<td>Entry for the project related to this activity. Contains project_id,project_url,project_name</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="category">Category</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format: category::UUID</td>
+<td></td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>URL for category</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Category name</td>
+<td></td>
+</tr>
+<tr>
+<td>image</td>
+<td>String</td>
+<td>URL for category image</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Description of the category</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="project">Project</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format : project::UUID</td>
+<td></td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>URL for the project</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Name of the project</td>
+<td></td>
+</tr>
+<tr>
+<td>image</td>
+<td>String</td>
+<td>URL for the project image</td>
+<td></td>
+</tr>
+<tr>
+<td>owner</td>
+<td>object</td>
+<td>Project creator. contains the user_id, url and name</td>
+<td><code class="prettyprint">&quot;owner&quot; : { &quot;id&quot;:11, &quot;url&quot;:&quot;http://api.sengab.com/v1/users/11&quot; , &quot;name&quot;:&quot;Galileo Galileo&quot; }</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>String</td>
+<td>Project created date</td>
+<td>ISO 8601 format</td>
+</tr>
+<tr>
+<td>enrollments _count</td>
+<td>int</td>
+<td>Count of enrolled users to this project.</td>
+<td></td>
+</tr>
+<tr>
+<td>contributions _count</td>
+<td>int</td>
+<td>Count of contributions to this project.</td>
+<td></td>
+</tr>
+<tr>
+<td>is_featured</td>
+<td>boolean</td>
+<td>True for sponsored projects</td>
+<td></td>
+</tr>
+<tr>
+<td>brief_description</td>
+<td>String</td>
+<td>Short project description.</td>
+<td></td>
+</tr>
+<tr>
+<td>detailed_descrption</td>
+<td>String</td>
+<td>Detailed project description.</td>
+<td></td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>Document id for the category this project belongs to.</td>
+<td>category::15894238</td>
+</tr>
+<tr>
+<td>results</td>
+<td>String</td>
+<td>Document id for the results of this project. Format: result::project_id</td>
+<td>result::548621</td>
+</tr>
+<tr>
+<td>stats</td>
+<td>String</td>
+<td>Document id for the stats of this project. Format: stats::project_id</td>
+<td>stats::548621</td>
+</tr>
+<tr>
+<td>template</td>
+<td>object</td>
+<td>The project’s template. Contains the template_id (String) and the template_body(object).</td>
+<td><code class="prettyprint">{ &quot;template_id&quot;:1,&quot;template_body&quot;:{&quot;question_title&quot;:&quot;_are you happy today?&quot; }</code>  }</td>
+</tr>
+</tbody></table>
+
+<h2 id="stats">Stats</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>contributors_count</td>
+<td>int</td>
+<td>Count of contributors to this project.</td>
+<td></td>
+</tr>
+<tr>
+<td>contributions_count</td>
+<td>int</td>
+<td>Count of contributions to this project.</td>
+<td></td>
+</tr>
+<tr>
+<td>contributors_gender</td>
+<td>object</td>
+<td>Count of the gender of contributors. Contains: male(int) and female(int).</td>
+<td>“contributors_gender”:{“male”:8,”female”:7}</td>
+</tr>
+<tr>
+<td>contributors_location</td>
+<td>object</td>
+<td>Count of the countries of the contributors. Contains: country_name(int)</td>
+<td>“contributors_location”:{“Egypt”:8,”USA”:7}</td>
+</tr>
+</tbody></table>
+
+<h2 id="result">Result</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format: result::project_id</td>
+<td></td>
+</tr>
+<tr>
+<td>result</td>
+<td>object</td>
+<td>Contains anonymous contribution info that differs from one template to the other</td>
+<td><code class="prettyprint">{“result”:{&quot;image_url&quot;:&quot;http://www.sengab.com/projects_uploads/56842.jpg&quot;, &quot;caption&quot;:&quot;My cat lily&quot;}</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="contributions">Contributions</h2>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>Format: contributions::project_id::user_id</td>
+<td></td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>URL of the contribution</td>
+<td></td>
+</tr>
+<tr>
+<td>project</td>
+<td>String</td>
+<td>Document ID for the related project.</td>
+<td>project::159845</td>
+</tr>
+<tr>
+<td>contributer</td>
+<td>String</td>
+<td>Document ID for the contributor.</td>
+<td>user::715628</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>String</td>
+<td>Generated by the client</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>Content of contribution data will be different according to the project template.</td>
+<td>&ldquo;data&rdquo;:{ &ldquo;first_name&rdquo;: &ldquo;Emma&rdquo;, &ldquo;last_name&rdquo;: &ldquo;Watson&rdquo; }</td>
 </tr>
 </tbody></table>
 
