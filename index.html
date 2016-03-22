@@ -144,10 +144,22 @@
 <td></td>
 </tr>
 <tr>
-<td>name</td>
+<td>first_name</td>
 <td>String</td>
-<td>Username shown in his profile.</td>
+<td>User&rsquo;s first name.</td>
 <td></td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>String</td>
+<td>User&rsquo;s last name.</td>
+<td></td>
+</tr>
+<tr>
+<td>gender</td>
+<td>String</td>
+<td>User&rsquo;s gender.</td>
+<td><code class="prettyprint">&quot;gender&quot;: &quot;M&quot;</code></td>
 </tr>
 <tr>
 <td>image</td>
@@ -158,8 +170,8 @@
 <tr>
 <td>about</td>
 <td>Object</td>
-<td>Holds <code class="prettyprint">location</code> which is the user country, <code class="prettyprint">email</code> and <code class="prettyprint">bio</code> short description of the user.</td>
-<td><code class="prettyprint">&quot;about&quot;:{ &quot;location&quot;:&quot;Egypt&quot;, &quot;Email&quot;:&quot;ali@allam.com&quot;, &quot;bio&quot;:null }</code></td>
+<td>Holds <code class="prettyprint">email</code> and <code class="prettyprint">bio</code> short description of the user.</td>
+<td><code class="prettyprint">&quot;about&quot;:{ &quot;Email&quot;:&quot;ali@allam.com&quot;, &quot;bio&quot;:null }</code></td>
 </tr>
 <tr>
 <td>stats</td>
@@ -169,13 +181,13 @@
 </tr>
 <tr>
 <td>projects</td>
-<td>Object</td>
+<td>String</td>
 <td>URL for created projects by the user.</td>
 <td><code class="prettyprint">http://api.sengab.com/v1/users/1411414/created_projects</code></td>
 </tr>
 <tr>
 <td>contributions</td>
-<td>Object</td>
+<td>String</td>
 <td>URL for the user contributions.</td>
 <td><code class="prettyprint">http://api.sengab.com/v1/users/1411414/contributions</code></td>
 </tr>
@@ -224,13 +236,25 @@
 <tr>
 <td>owner</td>
 <td>Object</td>
-<td>Project creator, contains the User <code class="prettyprint">id</code>, <code class="prettyprint">url</code> and <code class="prettyprint">name</code></td>
-<td><code class="prettyprint">&quot;owner&quot;:{ &quot;id&quot;:11, &quot;url&quot;:&quot;http://api.sengab.com/v1/users/11&quot;, &quot;name&quot;:&quot;Galileo Galileo&quot; }</code></td>
+<td>Project creator, contains the User <code class="prettyprint">id</code>, <code class="prettyprint">url</code>, <code class="prettyprint">first_name</code> and <code class="prettyprint">last_name</code></td>
+<td><code class="prettyprint">&quot;owner&quot;:{ &quot;id&quot;:11, &quot;url&quot;:&quot;http://api.sengab.com/v1/users/11&quot;, &quot;first_name&quot;:&quot;Galileo&quot;, &quot;last_name&quot;:&quot;Galileo&quot; }</code></td>
+</tr>
+<tr>
+<td>goal</td>
+<td>Number</td>
+<td>Project contributions count goal, when to declare the project as completed.</td>
+<td></td>
+</tr>
+<tr>
+<td>template_body</td>
+<td>Object</td>
+<td>Project content.</td>
+<td><code class="prettyprint">&quot;template_body&quot;:{ &quot;image_title&quot;:&quot;Take a photo of your pet.&quot;}</code></td>
 </tr>
 <tr>
 <td>created_at</td>
 <td>String</td>
-<td>Project created date.</td>
+<td>Project creation date.</td>
 <td>We Use ISO 8601 format.</td>
 </tr>
 <tr>
@@ -242,7 +266,7 @@
 <tr>
 <td>contributions_count</td>
 <td>Number</td>
-<td>Count of contributors.</td>
+<td>Count of contributions.</td>
 <td></td>
 </tr>
 <tr>
@@ -260,7 +284,7 @@
 <tr>
 <td>template_id</td>
 <td>Number</td>
-<td>Template number of project.</td>
+<td>Project Template.</td>
 <td></td>
 </tr>
 <tr>
@@ -363,7 +387,7 @@
 <td>contributor</td>
 <td>Object</td>
 <td></td>
-<td><code class="prettyprint">&quot;user&quot;:{ &quot;id&quot;:12, &quot;url&quot;:&quot;http://api.sengab.com/v1/users/12&quot;, &quot;name&quot;:&quot;Emma Watson&quot;, &quot;image&quot;:&quot;http://www.sengab.com/projects_images/12.jpg&quot; }</code></td>
+<td><code class="prettyprint">&quot;user&quot;:{ &quot;id&quot;:12, &quot;url&quot;:&quot;http://api.sengab.com/v1/users/12&quot;, &quot;first_name&quot;:&quot;Emma&quot;, &quot;last_name&quot;:&quot;Watson&quot;, &quot;image&quot;:&quot;http://www.sengab.com/projects_images/12.jpg&quot; }</code></td>
 </tr>
 <tr>
 <td>created_at</td>
@@ -401,7 +425,8 @@
         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
             </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/11"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="w">
+            </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"brief_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This a brief description about this project"</span><span class="p">,</span><span class="w">
@@ -422,7 +447,8 @@
         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
             </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/41"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="w">
+            </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Einstein"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"brief_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This a brief description about this project"</span><span class="p">,</span><span class="w">
@@ -488,7 +514,8 @@ This action is paginated. See the pagination documentation for details.
     </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
         </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/41"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Einstein"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/profiles_images/41.jpg"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
@@ -546,7 +573,7 @@ This action is paginated. See the pagination documentation for details.
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>project name</td>
+<td>Project name</td>
 </tr>
 <tr>
 <td>brief_description</td>
@@ -591,7 +618,7 @@ This action is paginated. See the pagination documentation for details.
 </code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above command returns JSON structured like this</p>
 </blockquote>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">206</span> <span class="ne">Partial Content</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
@@ -605,7 +632,8 @@ This action is paginated. See the pagination documentation for details.
         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
             </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/41"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="w">
+            </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Einstein"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"brief_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This a brief description about this project"</span><span class="p">,</span><span class="w">
@@ -648,8 +676,70 @@ This action is paginated. See the pagination documentation for details.
 This action is paginated. See the pagination documentation for details.
 </aside>
 
+<h2 id="list-stats-of-a-project">List stats of a project</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/&lt;PROJECT_ID&gt;/stats</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this</p>
+</blockquote>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"goal"</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"contributions_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">721</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"contributors_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">685</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"contributors_gender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"males"</span><span class="p">:</span><span class="w"> </span><span class="mi">458</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"females"</span><span class="p">:</span><span class="w"> </span><span class="mi">227</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves statistics of a project.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.sengab.com/v1/projects/&lt;PROJECT_ID&gt;/stats</code></p>
+
+<h3 id="response-body">Response body</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>goal</td>
+<td>Project contributions count goal.</td>
+</tr>
+<tr>
+<td>contributions_count</td>
+<td>Contributions count of the project.</td>
+</tr>
+<tr>
+<td>contributors_count</td>
+<td>Contributors count of the project.</td>
+</tr>
+<tr>
+<td>contributors_gender</td>
+<td>Object of contributors gender.</td>
+</tr>
+<tr>
+<td>contributors_gender.males</td>
+<td>Male contributors count.</td>
+</tr>
+<tr>
+<td>contributors_gender.females</td>
+<td>Female contributors count.</td>
+</tr>
+</tbody></table>
+
 <h2 id="list-results-of-a-project">List results of a project</h2>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/&lt;ID&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/projects/&lt;PROJECT_ID&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 </code></pre>
 
@@ -667,7 +757,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight plaintext"><code>"results" field differs according to the project template
 </code></pre>
 
-<p>This endpoint retrieves the contributions in a project.</p>
+<p>This endpoint retrieves results of a project.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -838,7 +928,7 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">  
   </span><span class="nt">"template_id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
   </span><span class="nt">"template_body"</span><span class="p">:{</span><span class="w">  
-    </span><span class="nt">"image_title"</span><span class="p">:</span><span class="s2">"_take a photo of your pet."</span><span class="w">
+    </span><span class="nt">"image_title"</span><span class="p">:</span><span class="s2">"Take a photo of your pet."</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1894,11 +1984,12 @@ This action is paginated. See the pagination documentation for details.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4545445</span><span class="p">,</span><span class="w">
     </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/1411414"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ali Allam"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ali"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allam"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/profiles_images/1411414.jpg"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Egypt"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ali@allam.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ali@allam.com"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"bio"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1954,7 +2045,7 @@ This action is paginated. Check the pagination documentation for details.
 </aside>
 
 <h2 id="list-all-projects-that-the-user-enrolled-in">List all projects that the user enrolled in</h2>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;user-id&gt;/enrolled_projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;USER_ID&gt;/enrolled_projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 </code></pre>
 
@@ -1972,7 +2063,8 @@ This action is paginated. Check the pagination documentation for details.
         </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.sengab.com/projects_images/1.jpg"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo Galilei"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Galileo"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/11"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-01-14T04:33:35Z"</span><span class="p">,</span><span class="w">
@@ -2022,7 +2114,8 @@ This action is paginated. Check the pagination documentation for details.
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Einstein"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Einstein"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.sengab.com/v1/users/41"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}]</span><span class="w">
@@ -2033,7 +2126,7 @@ This action is paginated. Check the pagination documentation for details.
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.sengab.com/v1/users/&lt;user-id&gt;/enrolled_projects/</code></p>
+<p><code class="prettyprint">GET http://api.sengab.com/v1/users/&lt;USER_ID&gt;/enrolled_projects/</code></p>
 
 <aside class="notice">
 This action is paginated. Check the pagination documentation for details.
@@ -2250,18 +2343,18 @@ This action is paginated. See the pagination documentation for details.
 </tr>
 </thead><tbody>
 <tr>
-<td>user_id</td>
-<td>TEMP; SHOULD BE DELETED</td>
+<td>user_gender</td>
+<td>Contributor&rsquo;s gender.</td>
 <td>YES</td>
 </tr>
 <tr>
 <td>project_id</td>
-<td>The ID of the project.</td>
+<td>Project ID.</td>
 <td>YES</td>
 </tr>
 <tr>
 <td>contribution</td>
-<td>Object of contribution, see below.</td>
+<td>Contribution object, see below.</td>
 <td>YES</td>
 </tr>
 <tr>
