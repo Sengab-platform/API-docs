@@ -11,6 +11,7 @@ includes:
   - contributions
   - pagination
   - errors
+  - db
 
 search: true
 ---

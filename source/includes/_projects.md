@@ -189,7 +189,7 @@ Content-Type: application/json
 ## Search in projects
 
 ```http
-GET /projects?search="pet" HTTP/1.1
+GET /projects/search/recognize HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 > The above command returns JSON structured like this:
@@ -232,7 +232,7 @@ This endpoint retrieves projects with titles including the value of the `search`
 
 ### HTTP Request
 
-`GET http://api.sengab.com/v1/projects/search?<keyword>`
+`GET http://api.sengab.com/v1/projects/search/<keyword>`
 
 ### URL Parameters
 
