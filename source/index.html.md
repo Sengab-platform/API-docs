@@ -12,6 +12,7 @@ includes:
   - pagination
   - errors
   - db
+  - actors
 
 search: true
 ---
