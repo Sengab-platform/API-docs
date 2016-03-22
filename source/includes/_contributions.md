@@ -31,8 +31,8 @@ This endpoint submits a contribution to a project.
 
 Parameter              | Description                                                                                     | Required
 ---------------------- | ----------------------------------------------------------------------------------------------- | --------
-user_id                 | TEMP; SHOULD BE DELETED                                                                         | YES
-project_id              | The ID of the project.                                                                          | YES
-contribution           | Object of contribution, see below.                                                              | YES
+user_gender             | Contributor's gender.                                                                         | YES
+project_id              | Project ID.                                                                                  | YES
+contribution           | Contribution object, see below.                                                              | YES
 contribution.created_at | Date of contribution.                                                                           | YES
 contribution.data      | Content of data will be different according to the project template, for more check Templates section. | YES

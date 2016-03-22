@@ -98,7 +98,7 @@ no        | Array  | Lists all location contributions with answer `no`
 {  
   "template_id":2,
   "template_body":{  
-    "image_title":"_take a photo of your pet."
+    "image_title":"Take a photo of your pet."
   }
 }
 ```

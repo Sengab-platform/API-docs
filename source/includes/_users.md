@@ -18,11 +18,12 @@ Content-Type: application/json
 {
 	"id": 4545445,
 	"url": "http://api.sengab.com/v1/users/1411414",
-	"name": "Ali Allam",
+	"first_name": "Ali",
+	"last_name": "Allam",
 	"image": "http://www.sengab.com/profiles_images/1411414.jpg",
 	"about": {
 		"location": "Egypt",
-		"Email": "ali@allam.com",
+		"email": "ali@allam.com",
 		"bio": null
 	},
 	"stats": {
@@ -84,7 +85,7 @@ This action is paginated. Check the pagination documentation for details.
 ## List all projects that the user enrolled in
 
 ```http
-GET /users/<user-id>/enrolled_projects HTTP/1.1
+GET /users/<USER_ID>/enrolled_projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 > The above command returns JSON structured like this
@@ -102,7 +103,8 @@ Content-Type: application/json
 		"image": "http://www.sengab.com/projects_images/1.jpg",
 		"owner": {
 			"id": 11,
-			"name": "Galileo Galilei",
+			"first_name": "Galileo",
+			"last_name": "Galileo",
 			"url": "http://api.sengab.com/v1/users/11"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
@@ -156,7 +158,8 @@ Content-Type: application/json
 		},
 		"owner": {
 			"id": 41,
-			"name": "Albert Einstein",
+			"first_name": "Albert",
+			"last_name": "Einstein",
 			"url": "http://api.sengab.com/v1/users/41"
 		}
 	}]
@@ -167,7 +170,7 @@ This endpoint retrieves all projects that the user enrolled in.
 
 ### HTTP Request
 
-`GET http://api.sengab.com/v1/users/<user-id>/enrolled_projects/`
+`GET http://api.sengab.com/v1/users/<USER_ID>/enrolled_projects/`
 
 <aside class="notice">
 This action is paginated. Check the pagination documentation for details.

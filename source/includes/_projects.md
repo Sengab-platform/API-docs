@@ -24,7 +24,8 @@ Content-Type: application/json
 		"owner": {
 			"id": 11,
 			"url": "http://api.sengab.com/v1/users/11",
-			"name": "Galileo Galilei"
+			"first_name": "Galileo",
+			"last_name": "Galileo"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -45,7 +46,8 @@ Content-Type: application/json
 		"owner": {
 			"id": 41,
 			"url": "http://api.sengab.com/v1/users/41",
-			"name": "Albert Einstein"
+			"first_name": "Albert",
+			"last_name": "Einstein"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -105,7 +107,8 @@ Content-Type: application/json
 	"owner": {
 		"id": 41,
 		"url": "http://api.sengab.com/v1/users/41",
-		"name": "Albert Einstein",
+		"first_name": "Albert",
+		"last_name": "Einstein",
 		"image": "http://www.sengab.com/profiles_images/41.jpg"
 	},
 	"created_at": "2008-01-14T04:33:35Z",
@@ -161,7 +164,7 @@ This endpoint adds a new project.
 
 Parameter | Description
 --------- | -----------
-name |project name
+name |Project name
 brief_description | Short project description.
 detailed_description | Detailed project description.
 goal | Project contributions count goal.
@@ -192,7 +195,7 @@ Content-Type: application/json
 GET /projects/search/recognize HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
-> The above command returns JSON structured like this:
+> The above command returns JSON structured like this
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -209,7 +212,8 @@ Content-Type: application/json
 		"owner": {
 			"id": 41,
 			"url": "http://api.sengab.com/v1/users/41",
-			"name": "Albert Einstein"
+			"first_name": "Albert",
+			"last_name": "Einstein"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -244,11 +248,53 @@ keyword | The keyword that you search for in projects' titles.
 This action is paginated. See the pagination documentation for details.
 </aside>
 
+## List stats of a project
+
+```http
+GET /projects/<PROJECT_ID>/stats HTTP/1.1
+Content-Type: application/json; charset=utf-8
+```
+> The above command returns JSON structured like this
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+```json
+{
+	"goal": 900,
+	"contributions_count": 721,
+	"contributors_count": 685,
+	"contributors_gender": {
+		"males": 458,
+		"females": 227
+		}
+}
+```
+
+This endpoint retrieves statistics of a project.
+
+### HTTP Request
+
+`GET http://api.sengab.com/v1/projects/<PROJECT_ID>/stats`
+
+### Response body
+
+Parameter | Description
+--------- | -----------
+goal | Project contributions count goal.
+contributions_count | Contributions count of the project.
+contributors_count | Contributors count of the project.
+contributors_gender | Object of contributors gender.
+contributors_gender.males | Male contributors count.
+contributors_gender.females | Female contributors count.
+
 
 ## List results of a project
 
 ```http
-GET /projects/<ID>/results HTTP/1.1
+GET /projects/<PROJECT_ID>/results HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 
@@ -269,7 +315,7 @@ Content-Type: application/json
 ```
 "results" field differs according to the project template
 ```
-This endpoint retrieves the contributions in a project.
+This endpoint retrieves results of a project.
 
 ### HTTP Request
 
