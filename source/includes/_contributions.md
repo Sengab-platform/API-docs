@@ -3,7 +3,7 @@
 ## Submit a contribution in a project
 
 ```http
-POST /me/enrollments/submissions HTTP/1.1
+POST /me/submissions HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 ```
@@ -25,7 +25,7 @@ This endpoint submits a contribution to a project.
 
 ### HTTP Request
 
-`POST http://api.sengab.com/v1/me/enrollments/submissions`
+`POST http://api.sengab.com/v1/me/submissions`
 
 ### Request body:
 
