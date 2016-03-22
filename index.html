@@ -1881,7 +1881,7 @@ This action is paginated. See the pagination documentation for details.
           <h1 id="users">Users</h1>
 
 <h2 id="get-user-profile">Get user profile</h2>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;ID&gt;/activities</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/users/&lt;ID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 </code></pre>
 
@@ -2042,7 +2042,7 @@ This action is paginated. Check the pagination documentation for details.
           <h1 id="enrollment">Enrollment</h1>
 
 <h2 id="enroll-in-a-project">Enroll in a project</h2>
-<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/users/&lt;USER_ID&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/me/enrollments/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
@@ -2069,7 +2069,7 @@ This action is paginated. Check the pagination documentation for details.
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.sengab.com/v1/projects</code></p>
+<p><code class="prettyprint">POST http://api.sengab.com/v1/me/enrollments</code></p>
 
 <table><thead>
 <tr>
@@ -2084,7 +2084,7 @@ This action is paginated. Check the pagination documentation for details.
 </tbody></table>
 
 <h2 id="withdraw-from-project">Withdraw from project</h2>
-<pre class="highlight http"><code><span class="nf">DELETE</span> <span class="nn">/users/&lt;USER_ID&gt;/enrolled-projects</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">DELETE</span> <span class="nn">/me/enrollments</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
@@ -2104,7 +2104,7 @@ This action is paginated. Check the pagination documentation for details.
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://api.sengab.com/v1/users/&lt;USER_ID&gt;/enrolled_projects</code></p>
+<p><code class="prettyprint">DELETE http://api.sengab.com/v1/me/enrollments</code></p>
 
 <table><thead>
 <tr>
@@ -2218,7 +2218,7 @@ This action is paginated. See the pagination documentation for details.
           <h1 id="contributions">Contributions</h1>
 
 <h2 id="submit-a-contribution-in-a-project">Submit a contribution in a project</h2>
-<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/projects/&lt;PROJECT_ID&gt;/results</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/me/enrollments/submissions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">X-Auth-Token YOUR_ACCESS_TOKEN</span>
 </code></pre>
@@ -2238,7 +2238,7 @@ This action is paginated. See the pagination documentation for details.
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.sengab.com/v1/projects/&lt;PROJECT_ID&gt;/results</code></p>
+<p><code class="prettyprint">POST http://api.sengab.com/v1/me/enrollments/submissions</code></p>
 
 <h3 id="request-body">Request body:</h3>
 
