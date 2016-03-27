@@ -24,8 +24,7 @@ Content-Type: application/json
 		"owner": {
 			"id": 11,
 			"url": "http://api.sengab.com/v1/users/11",
-			"first_name": "Galileo",
-			"last_name": "Galileo"
+			"name": "Galileo Galilei"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -46,8 +45,7 @@ Content-Type: application/json
 		"owner": {
 			"id": 41,
 			"url": "http://api.sengab.com/v1/users/41",
-			"first_name": "Albert",
-			"last_name": "Einstein"
+			"name": "Albert Einstein"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -107,8 +105,7 @@ Content-Type: application/json
 	"owner": {
 		"id": 41,
 		"url": "http://api.sengab.com/v1/users/41",
-		"first_name": "Albert",
-		"last_name": "Einstein",
+		"name": "Albert Einstein",
 		"image": "http://www.sengab.com/profiles_images/41.jpg"
 	},
 	"created_at": "2008-01-14T04:33:35Z",
@@ -150,7 +147,9 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 	"detailed_description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 	"template_id": 1,
 	"template_body": {},
-	"goal": 5000
+	"goal": 5000,
+	"category_id":1,
+	"created_at":"1997-07-16T19:20:30+01:00"
 }
 ```
 
@@ -164,12 +163,14 @@ This endpoint adds a new project.
 
 Parameter | Description
 --------- | -----------
-name |Project name
+name |project name
 brief_description | Short project description.
 detailed_description | Detailed project description.
 goal | Project contributions count goal.
 template_id | Defines the project template, for more check Templates section.
 template_body | Defines the template body for a project. It differs according to template_id, for more check Templates section.
+category_id | Defines category id that project belongs to
+created_at | Project creation time
 
 
 > The above command returns JSON structured like this
@@ -195,7 +196,7 @@ Content-Type: application/json
 GET /projects/search/recognize HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
-> The above command returns JSON structured like this
+> The above command returns JSON structured like this:
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -212,8 +213,7 @@ Content-Type: application/json
 		"owner": {
 			"id": 41,
 			"url": "http://api.sengab.com/v1/users/41",
-			"first_name": "Albert",
-			"last_name": "Einstein"
+			"name": "Albert Einstein"
 		},
 		"created_at": "2008-01-14T04:33:35Z",
 		"brief_description": "This a brief description about this project",
@@ -248,53 +248,11 @@ keyword | The keyword that you search for in projects' titles.
 This action is paginated. See the pagination documentation for details.
 </aside>
 
-## List stats of a project
-
-```http
-GET /projects/<PROJECT_ID>/stats HTTP/1.1
-Content-Type: application/json; charset=utf-8
-```
-> The above command returns JSON structured like this
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-```
-
-```json
-{
-	"goal": 900,
-	"contributions_count": 721,
-	"contributors_count": 685,
-	"contributors_gender": {
-		"males": 458,
-		"females": 227
-		}
-}
-```
-
-This endpoint retrieves statistics of a project.
-
-### HTTP Request
-
-`GET http://api.sengab.com/v1/projects/<PROJECT_ID>/stats`
-
-### Response body
-
-Parameter | Description
---------- | -----------
-goal | Project contributions count goal.
-contributions_count | Contributions count of the project.
-contributors_count | Contributors count of the project.
-contributors_gender | Object of contributors gender.
-contributors_gender.males | Male contributors count.
-contributors_gender.females | Female contributors count.
-
 
 ## List results of a project
 
 ```http
-GET /projects/<PROJECT_ID>/results HTTP/1.1
+GET /projects/<ID>/results HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 
@@ -315,7 +273,7 @@ Content-Type: application/json
 ```
 "results" field differs according to the project template
 ```
-This endpoint retrieves results of a project.
+This endpoint retrieves the contributions in a project.
 
 ### HTTP Request
 
