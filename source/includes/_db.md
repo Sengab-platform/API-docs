@@ -5,7 +5,7 @@
 Parameter | Type | Description | Example
 --------- | ---- | ----------- | -------
 ID | String | Format : user::Google user Id  | `user::12348756`
-type | String |  The type of the document  |  `user`
+entityType | String |  The type of the document  |  `user`
 first_name | String |    |   
 last_name | String |    |   
 image | String |  Url for user avatar  |   
@@ -19,7 +19,7 @@ created_at | String |  Profile created date. |  ISO 8601 format.
 Parameter | Type | Description | Example
 ----------|------|-------------|--------
 ID | String |Format : activity::userID | `activity::1411414`
-type | String | The type of the document | `activity`
+entityType | String | The type of the document | `activity`
 activity | object | Entry for user’s activity. contains activity_id, activity_type, project which is the project related to this activity and created_at. |
 activity.project | object | Entry for the project related to this activity. Contains project_id,project_url,project_name |
 
