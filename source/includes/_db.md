@@ -5,7 +5,7 @@
 Parameter | Type | Description | Example
 --------- | ---- | ----------- | -------
 ID | String | Format : user::Google user Id  | `user::12348756`
-entityType | String |  The type of the document  |  `user`
+entity_type | String |  The type of the document  |  `user`
 first_name | String |    |   
 last_name | String |    |   
 image | String |  Url for user avatar  |   
@@ -19,7 +19,7 @@ created_at | String |  Profile created date. |  ISO 8601 format.
 Parameter | Type | Description | Example
 ----------|------|-------------|--------
 ID | String |Format : activity::userID | `activity::1411414`
-entityType | String | The type of the document | `activity`
+entity_type | String | The type of the document | `activity`
 activity | object | Entry for user’s activity. contains activity_id, activity_type, project which is the project related to this activity and created_at. |
 activity.project | object | Entry for the project related to this activity. Contains project_id,project_url,project_name |
 
@@ -28,6 +28,7 @@ activity.project | object | Entry for the project related to this activity. Cont
 Parameter | Type | Description | Example
 ----------|------|-------------|--------
 ID | String | Format: category::UUID
+entity_type | String |  The type of the document  |  `category`
 url | String | URL for category
 name | String | Category name
 image | String | URL for category image
@@ -38,13 +39,14 @@ description  | String | Description of the category
 Parameter | Type | Description | Example
 ----------|------|-------------|--------
 ID | String | Format : project::UUID |  
+entity_type | String |  The type of the document  |  `project`
 url | String | URL for the project |  
 name | String | Name of the project |  
 image | String | URL for the project image |  
 owner | object | Project creator. contains the user_id, url and name | `"owner" : { "id":11, "url":"http://api.sengab.com/v1/users/11" , "name":"Galileo Galileo" }`
 created_at | String | Project created date | ISO 8601 format
-enrollments _count | int | Count of enrolled users to this project. |  
-contributions _count | int | Count of contributions to this project. |  
+enrollments_count | int | Count of enrolled users to this project. |  
+contributions_count | int | Count of contributions to this project. |  
 is_featured | boolean | True for sponsored projects |  
 brief_description | String | Short project description. |  
 detailed_descrption | String | Detailed project description. |  
@@ -57,6 +59,7 @@ template | object | The project’s template. Contains the template_id (String) 
 
 Parameter | Type | Description | Example
 ----------|----- | ----------- | --------
+entity_type | String |  The type of the document  |  `stats`
 contributors_count  | int | Count of contributors to this project. |
 contributions_count | int | Count of contributions to this project. |
 contributors_gender | object | Count of the gender of contributors. Contains: male(int) and female(int).  | `"contributors_gender":{"male":8,"female":7}`
@@ -67,6 +70,7 @@ contributors_location | object | Count of the countries of the contributors. Con
 Parameter | Type | Description | Example
 ----------|----- | ----------- | --------
 ID | String | Format: result::project_id
+entity_type | String |  The type of the document  |  `result`
 result | object | Contains anonymous contribution info that differs from one template to the other | `{"result":{"image_url":"http://www.sengab.com/projects_uploads/56842.jpg", "caption":"My cat lily"}`
 
 ## Contributions
@@ -74,6 +78,7 @@ result | object | Contains anonymous contribution info that differs from one tem
 Parameter | Type | Description | Example
 ----------|----- | ----------- | --------
 ID | String | Format: contributions::project_id::user_id |
+entity_type | String |  The type of the document  |  `contribution`
 url | String | URL of the contribution |
 project | String | Document ID for the related project. | `project::159845`
 contributer | String | Document ID for the contributor. | `user::715628`
