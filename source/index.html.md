@@ -1,5 +1,5 @@
 ---
-title: Lockscreen API Reference
+title: Sengab REST API Reference
 
 includes:
   - entities
