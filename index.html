@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Lockscreen API Reference</title>
+    <title>Sengab REST API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -2454,7 +2454,7 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td><code class="prettyprint">user::12348756</code></td>
 </tr>
 <tr>
-<td>entityType</td>
+<td>entity_type</td>
 <td>String</td>
 <td>The type of the document</td>
 <td><code class="prettyprint">user</code></td>
@@ -2514,7 +2514,7 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td><code class="prettyprint">activity::1411414</code></td>
 </tr>
 <tr>
-<td>entityType</td>
+<td>entity_type</td>
 <td>String</td>
 <td>The type of the document</td>
 <td><code class="prettyprint">activity</code></td>
@@ -2548,6 +2548,12 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td>String</td>
 <td>Format: category::UUID</td>
 <td></td>
+</tr>
+<tr>
+<td>entity_type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td><code class="prettyprint">category</code></td>
 </tr>
 <tr>
 <td>url</td>
@@ -2592,6 +2598,12 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td></td>
 </tr>
 <tr>
+<td>entity_type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td><code class="prettyprint">project</code></td>
+</tr>
+<tr>
 <td>url</td>
 <td>String</td>
 <td>URL for the project</td>
@@ -2622,13 +2634,13 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td>ISO 8601 format</td>
 </tr>
 <tr>
-<td>enrollments _count</td>
+<td>enrollments_count</td>
 <td>int</td>
 <td>Count of enrolled users to this project.</td>
 <td></td>
 </tr>
 <tr>
-<td>contributions _count</td>
+<td>contributions_count</td>
 <td>int</td>
 <td>Count of contributions to this project.</td>
 <td></td>
@@ -2688,6 +2700,12 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 </tr>
 </thead><tbody>
 <tr>
+<td>entity_type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td><code class="prettyprint">stats</code></td>
+</tr>
+<tr>
 <td>contributors_count</td>
 <td>int</td>
 <td>Count of contributors to this project.</td>
@@ -2730,6 +2748,12 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td></td>
 </tr>
 <tr>
+<td>entity_type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td><code class="prettyprint">result</code></td>
+</tr>
+<tr>
 <td>result</td>
 <td>object</td>
 <td>Contains anonymous contribution info that differs from one template to the other</td>
@@ -2752,6 +2776,12 @@ Offset refers to starts at and defaults to 1, limit can be any value between 0 a
 <td>String</td>
 <td>Format: contributions::project_id::user_id</td>
 <td></td>
+</tr>
+<tr>
+<td>entity_type</td>
+<td>String</td>
+<td>The type of the document</td>
+<td><code class="prettyprint">contribution</code></td>
 </tr>
 <tr>
 <td>url</td>
