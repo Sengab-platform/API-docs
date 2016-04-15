@@ -60,10 +60,9 @@ template | object | The project’s template. Contains the template_id (String) 
 Parameter | Type | Description | Example
 ----------|----- | ----------- | --------
 entity_type | String |  The type of the document  |  `stats`
-contributors_count  | int | Count of contributors to this project. |
+enrollments_count  | int | Count of enrollments to this project. |
 contributions_count | int | Count of contributions to this project. |
 contributors_gender | object | Count of the gender of contributors. Contains: male(int) and female(int).  | `"contributors_gender":{"male":8,"female":7}`
-contributors_location | object | Count of the countries of the contributors. Contains: country_name(int) | `"contributors_location":{"Egypt":8,"USA":7}`
 
 ## Result
 
