@@ -248,6 +248,37 @@ keyword | The keyword that you search for in projects' titles.
 This action is paginated. See the pagination documentation for details.
 </aside>
 
+## List stats of a project
+
+```http
+GET /projects/<ID>/stats HTTP/1.1
+Content-Type: application/json; charset=utf-8
+```
+
+> The above command returns various JSON structured, based on the project type
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+```json
+{
+  "enrollments_count": 4866,
+  "contributions_count": 1343,
+  "contributors_gender": {
+    "male": 1000,
+    "female": 340,
+    "unknown": 3
+  }
+}
+```
+
+This endpoint retrieves the stats of a project.
+
+### HTTP Request
+
+`GET http://api.sengab.com/v1/projects/<PROJECT_ID>/stats`
 
 ## List results of a project
 
