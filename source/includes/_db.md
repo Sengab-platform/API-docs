@@ -6,11 +6,12 @@ Parameter | Type | Description | Example
 --------- | ---- | ----------- | -------
 ID | String | Format : user::Google user Id  | `user::12348756`
 entity_type | String |  The type of the document  |  `user`
-first_name | String |    |   
-last_name | String |    |   
-image | String |  Url for user avatar  |   
-about | object |  Holds location which is the user country, email and bio short description of the user.  |   
-stats | object |  Count of created projects and contributions of user.  |   
+first_name | String |    |
+last_name | String |    |
+gender | String| |
+image | String |  Url for user avatar  |
+about | object |  Holds location which is the user country, email and bio short description of the user.  |
+stats | object |  Count of created projects and contributions of user.  |
 created_at | String |  Profile created date. |  ISO 8601 format.
 
 
