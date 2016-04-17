@@ -172,10 +172,12 @@ caption   | String | Contributor's description of his submitted image.
   "template_body":{  
     "questions_count":2,
     "questions":[  
-      {  
+      { 
+        "id":"1",
         "title":"You are a teenager ?"
       },
       {  
+        "id":"2",
         "title":"Do you think you are social ?"
       }
     ]
