@@ -16,53 +16,56 @@ Content-Type: application/json
 
 ```json
 {
-	"projects": [{
-		"id": 1,
-		"url": "http://api.sengab.com/v1/projects/1",
-		"name": "Say what you see",
-		"image": "http://www.sengab.com/projects_images/1.jpg",
-		"owner": {
-			"id": 11,
-			"url": "http://api.sengab.com/v1/users/11",
-			"name": "Galileo Galilei"
-		},
-		"created_at": "2008-01-14T04:33:35Z",
-		"brief_description": "This a brief description about this project",
-		"enrollments_count": 700,
-		"contributions_count": 510,
-		"is_featured": true,
-		"template_id": 1,
-		"category": {
-			"id": 210,
-			"url": "http://api.sengab.com/v1/categories/210",
-			"name": "social"
-		}
-	}, {
-		"id": 7,
-		"name": "Show me a pet",
-		"url": "http://api.sengab.com/v1/projects/7",
-		"image": "http://www.sengab.com/projects_images/7.jpg",
-		"owner": {
-			"id": 41,
-			"url": "http://api.sengab.com/v1/users/41",
-			"name": "Albert Einstein"
-		},
-		"created_at": "2008-01-14T04:33:35Z",
-		"brief_description": "This a brief description about this project",
-		"enrollments_count": 1730,
-		"contributions_count": 1542,
-		"goal": 4000,
-		"progress": 38.55,
-		"is_featured": true,
-		"template_id": 2,
-		"category": {
-			"id": 584,
-			"url": "http://api.sengab.com/v1/categories/584",
-			"name": "science"
-		}
-	}],
-	"next_id": -1,
-	"total": 2
+  "projects": [
+    {
+      "id": 1,
+      "url": "http://api.sengab.com/v1/projects/1",
+      "name": "Say what you see",
+      "image": "http://www.sengab.com/projects_images/1.jpg",
+      "owner": {
+        "id": 11,
+        "url": "http://api.sengab.com/v1/users/11",
+        "name": "Galileo Galilei",
+        "image": "http://www.sengab.com/profiles_images/78951.jpg"
+      },
+      "created_at": "2008-01-14T04:33:35Z",
+      "brief_description": "This a brief description about this project",
+      "enrollments_count": 700,
+      "contributions_count": 510,
+      "goal": 500,
+      "is_featured": true,
+      "template_id": 1,
+      "category": {
+        "category_id": 210,
+        "url": "http://api.sengab.com/v1/categories/210",
+        "name": "social"
+      }
+    },
+    {
+      "id": 1,
+      "url": "http://api.sengab.com/v1/projects/1",
+      "name": "Say what you see",
+      "image": "http://www.sengab.com/projects_images/1.jpg",
+      "owner": {
+        "id": 11,
+        "url": "http://api.sengab.com/v1/users/11",
+        "name": "Galileo Galilei",
+        "image": "http://www.sengab.com/profiles_images/78951.jpg"
+      },
+      "created_at": "2008-01-14T04:33:35Z",
+      "brief_description": "This a brief description about this project",
+      "enrollments_count": 700,
+      "contributions_count": 510,
+      "goal": 500,
+      "is_featured": true,
+      "template_id": 1,
+      "category": {
+        "category_id": 210,
+        "url": "http://api.sengab.com/v1/categories/210",
+        "name": "social"
+      }
+    }
+  ]
 }
 ```
 
@@ -76,7 +79,7 @@ This endpoint retrieves all projects.
 
 Parameter | Type | Value
 --------- | ---- | -----
-filter | string | `popular` / `latest`
+filter | string | `popular` / `latest` / `featured`
 
 <aside class="notice">
 This action is paginated. See the pagination documentation for details.
@@ -98,31 +101,31 @@ Content-Type: application/json
 
 ```json
 {
-	"id": 7,
-	"url": "http://api.sengab.com/v1/projects/7",
-	"name": "Show me a pet",
-	"image": "http://www.sengab.com/projects_images/7.jpg",
-	"owner": {
-		"id": 41,
-		"url": "http://api.sengab.com/v1/users/41",
-		"name": "Albert Einstein",
-		"image": "http://www.sengab.com/profiles_images/41.jpg"
-	},
-	"created_at": "2008-01-14T04:33:35Z",
-	"brief_description": "This a brief description about this project",
-	"detailed_description": "This is a detailed description about this project",
-	"enrollments_count": 1730,
-	"contributions_count": 1542,
-	"is_featured": true,
-	"template_id": 1,
-	"category": {
-		"id": 584,
-		"url": "http://api.sengab.com/v1/categories/584",
-		"name": "science"
-	},
-	"description": "Take a photo for any pet you",
-	"results": "http://api.sengab.com/v1/projects/7/results",
-	"stats": "http://api.sengab.com/v1/projects/7/stats"
+  "id": "project::ac50cddd",
+  "url": "http://api.sengab.com/v1/projects/project::ac50cddd",
+  "name": "Show me a pet",
+  "image": "http://www.sengab.com/projects_images/7.jpg",
+  "owner": {
+    "id": 41,
+    "url": "http://api.sengab.com/v1/users/41",
+    "name": "Albert Einstein",
+    "image": "http://www.sengab.com/profiles_images/41.jpg"
+  },
+  "created_at": "2008-01-14T04:33:35Z",
+  "brief_description": "This a brief description about this project",
+  "detailed_description": "This is a detailed description about this project",
+  "enrollments_count": 1730,
+  "contributions_count": 1542,
+  "is_featured": true,
+  "template_id": 1,
+  "goal": 500,
+  "category": {
+    "id": 584,
+    "url": "http://api.sengab.com/v1/categories/category::a584",
+    "name": "science"
+  },
+  "results": "http://api.sengab.com/v1/projects/project::ac50cddd/results",
+  "stats": "http://api.sengab.com/v1/projects/project::ac50cddd/stats"
 }
 ```
 
@@ -142,14 +145,16 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 
 ```json
 {
-	"name": "Recognize image",
-	"brief_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-	"detailed_description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-	"template_id": 1,
-	"template_body": {},
-	"goal": 5000,
-	"category_id":1,
-	"created_at":"1997-07-16T19:20:30+01:00"
+  "name": "Recognize image",
+  "brief_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  "detailed_description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  "template_id": 1,
+  "template_body": {},
+  "goal": 5000,
+  "is_featured": true,
+  "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+  "category_id": 1,
+  "created_at": "1997-07-16T19:20:30+01:00"
 }
 ```
 
@@ -169,6 +174,8 @@ detailed_description | Detailed project description.
 goal | Project contributions count goal.
 template_id | Defines the project template, for more check Templates section.
 template_body | Defines the template body for a project. It differs according to template_id, for more check Templates section.
+goal | The number of contributions that is needed to the projects.
+image | Image of the project.
 category_id | Defines category id that project belongs to
 created_at | Project creation time
 
@@ -182,10 +189,10 @@ Content-Type: application/json
 
 ```json
 {
-	"id": 4545454,
-	"url": "http://www.sengab.com/projects/45454",
+	"id": "project::43fx",
+	"url": "http://www.sengab.com/projects/project::43fx",
 	"name": "Recognize Image",
-	"image": "http://www.sengab.com/projects_thumbnails/15454545.jpg",
+	"image": "http://www.sengab.com/projects_thumbnails/15.jpg",
 	"created_at": "2016-02-12T03:21:55Z"
 }
 ```
@@ -205,30 +212,56 @@ Content-Type: application/json
 
 ```json
 {
-	"projects": [{
-		"id": 7,
-		"url": "http://api.sengab.com/v1/projects/7",
-		"name": "Show me a pet",
-		"image": "http://www.sengab.com/projects_imags/7.jpg",
-		"owner": {
-			"id": 41,
-			"url": "http://api.sengab.com/v1/users/41",
-			"name": "Albert Einstein"
-		},
-		"created_at": "2008-01-14T04:33:35Z",
-		"brief_description": "This a brief description about this project",
-		"enrollments_count": 1730,
-		"contributions_count": 1542,
-		"is_featured": true,
-		"template_id": 1,
-		"category": {
-			"id": 584,
-			"url": "http://api.sengab.com/v1/categories/584",
-			"name": "science"
-		}
-	}],
-	"next_id": -1,
-	"total": 1
+  "projects": [
+    {
+      "id": 1,
+      "url": "http://api.sengab.com/v1/projects/1",
+      "name": "Say what you see",
+      "image": "http://www.sengab.com/projects_images/1.jpg",
+      "owner": {
+        "id": 11,
+        "url": "http://api.sengab.com/v1/users/11",
+        "name": "Galileo Galilei",
+        "image": "http://www.sengab.com/profiles_images/78951.jpg"
+      },
+      "created_at": "2008-01-14T04:33:35Z",
+      "brief_description": "This a brief description about this project",
+      "enrollments_count": 700,
+      "contributions_count": 510,
+      "goal": 500,
+      "is_featured": true,
+      "template_id": 1,
+      "category": {
+        "category_id": 210,
+        "url": "http://api.sengab.com/v1/categories/210",
+        "name": "social"
+      }
+    },
+    {
+      "id": 1,
+      "url": "http://api.sengab.com/v1/projects/1",
+      "name": "Say what you see",
+      "image": "http://www.sengab.com/projects_images/1.jpg",
+      "owner": {
+        "id": 11,
+        "url": "http://api.sengab.com/v1/users/11",
+        "name": "Galileo Galilei",
+        "image": "http://www.sengab.com/profiles_images/78951.jpg"
+      },
+      "created_at": "2008-01-14T04:33:35Z",
+      "brief_description": "This a brief description about this project",
+      "enrollments_count": 700,
+      "contributions_count": 510,
+      "goal": 500,
+      "is_featured": true,
+      "template_id": 1,
+      "category": {
+        "category_id": 210,
+        "url": "http://api.sengab.com/v1/categories/210",
+        "name": "social"
+      }
+    }
+  ]
 }
 ```
 
