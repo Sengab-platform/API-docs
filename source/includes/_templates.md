@@ -172,12 +172,10 @@ caption   | String | Contributor's description of his submitted image.
   "template_body":{  
     "questions_count":2,
     "questions":[  
-      { 
-        "id":"1",
+      {  
         "title":"You are a teenager ?"
       },
       {  
-        "id":"2",
         "title":"Do you think you are social ?"
       }
     ]
@@ -233,15 +231,15 @@ caption   | String | Contributor's description of his submitted image.
       "id":1,
       "title":"You are a teenager ?",
       "contributions_count":454,
-      "yes_count":45,
-      "no_count":55
+      "yes_percent":45.6,
+      "no_percent":55.4
     },
     {  
       "id":2,
       "title":"Do you think you are social ?",
       "contributions_count":454,
-      "yes_count":68,
-      "no_count":32
+      "yes_percent":68,
+      "no_percent":32
     }
   ]
 }
@@ -494,15 +492,15 @@ Content-Type: application/json
       "image_id":1,
       "image_url":"http://www.sengab.com/projects_uploads/3/1.jpg",
       "contributions_count":454,
-      "yes_count":54,
-      "no_count":46
+      "yes_percent":54,
+      "no_percent":46
     },
     {  
       "image_id":2,
       "image_url":"http://www.sengab.com/projects_uploads/3/2.jpg",
       "contributions_count":77,
-      "yes_count":30,
-      "no_count":70
+      "yes_percent":30,
+      "no_percent":70
     }
   ]
 }

@@ -29,10 +29,10 @@ This endpoint submits a contribution to a project.
 
 ### Request body:
 
-Parameter              | Description                                                                   | Required
+Parameter              | Description                                                                                     | Required
 ---------------------- | ----------------------------------------------------------------------------------------------- | --------
 user_gender             | Contributor's gender.                                                                         | YES
 project_id              | Project ID.                                                                                  | YES
 contribution           | Contribution object, see below.                                                              | YES
-created_at | Date of contribution.                                                                           | YES
-data      | Content of data will be different according to the project template, for more check Templates section. | YES
+contribution.created_at | Date of contribution.                                                                           | YES
+contribution.data      | Content of data will be different according to the project template, for more check Templates section. | YES

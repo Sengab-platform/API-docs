@@ -56,20 +56,16 @@ Content-Type: application/json
 ```
 
 ```json
-{
-	"activities": [{
-		"id": "125",
+[{
+		"id": "activity::125",
 		"project": {
-			"id": 56565,
+			"id": "project::56565",
 			"image": "http://www.sengab.com/projects_images/15454545.jpg",
 			"name": "Recognize",
-			"url": "http://api.sengab.com/v1/projects/56565"
+			"url": "http://api.sengab.com/v1/projects/project::56565"
 		},
 		"created_at": "2016-02-12T03:21:55Z"
-	}],
-	"next_id": -1,
-	"total": 1
-}
+	}]
 ```
 
 This endpoint retrieves all user's activities.
@@ -82,7 +78,7 @@ This endpoint retrieves all user's activities.
 This action is paginated. Check the pagination documentation for details.
 </aside>
 
-## List all projects that the user enrolled in
+## List enrolled projects
 
 ```http
 GET /users/<USER_ID>/enrolled_projects HTTP/1.1
@@ -94,40 +90,48 @@ Content-Type: application/json; charset=utf-8
 HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
-```json
-{
-	"projects": [{
-		"id": 1,
-		"name": "Say what you see",
-		"url": "http://api.sengab.com/v1/projects/1",
-		"image": "http://www.sengab.com/projects_images/1.jpg",
-		"owner": {
-			"id": 11,
-			"first_name": "Galileo",
-			"last_name": "Galileo",
-			"url": "http://api.sengab.com/v1/users/11"
-		},
-		"created_at": "2008-01-14T04:33:35Z",
-		"brief_description": "This a brief description about this project",
-		"enrollment_count": 700,
-		"contributions_count": 510,
-		"is_featured": false,
-    "template_id": 3,
-		"category": {
-			"id": 210,
-			"name": "Visual",
-			"url": "http://api.sengab.com/v1/categories/4"
-		}
-	}],
-	"next_id": -1,
-	"total": 1
-}
-```
 
-## List projects created by a specific user
+```json
+[
+  {
+    "id": "project::5",
+    "name": "Say what you see",
+    "url": "http://api.sengab.com/v1/projects/project::5",
+    "image": "http://www.sengab.com/projects_images/1.jpg",
+    "owner": {
+      "id": "user::8",
+      "name": "Amr El-Masry",
+      "url": "http://api.sengab.com/v1/users/user::8",
+      "image": "http://Sengab.com/users_images/user_5.png"
+    },
+    "created_at": "2008-01-14T04:33:35Z",
+    "brief_description": "This a brief description about this project",
+    "enrollments_count": 700,
+    "contributions_count": 510,
+    "is_featured": false,
+    "template_id": 3,
+    "category": {
+      "id": "category::2",
+      "name": "Visual",
+      "url": "http://api.sengab.com/v1/categories/category::2"
+    }
+  }
+]
+```
+This endpoint retrieves all projects that the user enrolled in.
+
+### HTTP Request
+
+`GET http://api.sengab.com/v1/users/<USER_ID>/enrolled_projects/`
+
+<aside class="notice">
+This action is paginated. Check the pagination documentation for details.
+</aside>
+
+## List created projects
 
 ```http
-GET /users/<user-id>/created-projects HTTP/1.1
+GET /users/<user-id>/created_projects HTTP/1.1
 Content-Type: application/json; charset=utf-8
 ```
 
@@ -137,40 +141,39 @@ Content-Type: application/json; charset=utf-8
 HTTP/1.1 206 Partial Content
 Content-Type: application/json
 ```
-
 ```json
-{
-	"projects": [{
-		"id": 1,
-		"name": "Say what you see",
-		"url": "http://api.sengab.com/v1/projects/1",
-		"image": "http://www.sengab.com/projects_images/1.jpg",
-		"brief_description": "This a brief description about this project",
-		"created_at": "2008-01-14T04:33:35Z",
-		"enrollment_count": 700,
-		"contributions_count": 510,
-		"is_featured": true,
+[
+  {
+    "id": "project::5",
+    "name": "Say what you see",
+    "url": "http://api.sengab.com/v1/projects/project::5",
+    "image": "http://www.sengab.com/projects_images/1.jpg",
+    "owner": {
+      "id": "user::8",
+      "name": "Amr El-Masry",
+      "url": "http://api.sengab.com/v1/users/user::8",
+      "image": "http://Sengab.com/users_images/user_5.png"
+    },
+    "created_at": "2008-01-14T04:33:35Z",
+    "brief_description": "This a brief description about this project",
+    "enrollments_count": 700,
+    "contributions_count": 510,
+    "is_featured": false,
     "template_id": 3,
-		"category": {
-			"id": 210,
-			"name": "Visual",
-			"url": "http://api.sengab.com/v1/categories/4"
-		},
-		"owner": {
-			"id": 41,
-			"first_name": "Albert",
-			"last_name": "Einstein",
-			"url": "http://api.sengab.com/v1/users/41"
-		}
-	}]
-}
+    "category": {
+      "id": "category::2",
+      "name": "Visual",
+      "url": "http://api.sengab.com/v1/categories/category::2"
+    }
+  }
+]
 ```
 
-This endpoint retrieves all projects that the user enrolled in.
+This endpoint retrieves all projects created by the user.
 
 ### HTTP Request
 
-`GET http://api.sengab.com/v1/users/<USER_ID>/enrolled_projects/`
+`GET http://api.sengab.com/v1/users/<USER_ID>/created_projects/`
 
 <aside class="notice">
 This action is paginated. Check the pagination documentation for details.

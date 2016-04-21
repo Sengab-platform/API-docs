@@ -13,13 +13,10 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
-
 ```json
 {
-	"url": "http://api.sengab.com/v1/projects/156445",
-	"project_id": 156445,
-    "template_id":2,
-    "template_body": ""
+  "project_id": "project::3",
+  "url": "http://api.sengab.com/v1/projects/project::3"
 }
 ```
 
@@ -49,10 +46,10 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
-
 ```json
 {
-	"project_id": 454545
+  "project_id": "project::3",
+  "url": "http://api.sengab.com/v1/projects/project::3"
 }
 ```
 This endpoint withdraws a user from a project.
@@ -61,6 +58,6 @@ This endpoint withdraws a user from a project.
 
 `DELETE http://api.sengab.com/v1/me/enrollments`
 
-Parameter | Description
---------- | -----------
-project_id | The id of the project the user wants to withdraw from.
+Parameter | Required
+--------- | --------
+project_id | YES
