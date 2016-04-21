@@ -16,15 +16,15 @@ Content-Type: application/json
 
 ```json
 {
-	"id": 4545445,
-	"url": "http://api.sengab.com/v1/users/1411414",
+	"id": "user::1231",
+	"url": "http://api.sengab.com/v1/users/user::1231",
 	"first_name": "Ali",
 	"last_name": "Allam",
-	"image": "http://www.sengab.com/profiles_images/1411414.jpg",
+	"image": "http://www.sengab.com/profiles_images/14.jpg",
 	"about": {
 		"location": "Egypt",
 		"email": "ali@allam.com",
-		"bio": null
+		"bio": "this is my bio"
 	},
 	"stats": {
 		"projects": 0,
@@ -57,7 +57,7 @@ Content-Type: application/json
 
 ```json
 [{
-		"id": "activity::125",
+		"id": 1,
 		"project": {
 			"id": "project::56565",
 			"image": "http://www.sengab.com/projects_images/15454545.jpg",
@@ -108,7 +108,6 @@ Content-Type: application/json
     "brief_description": "This a brief description about this project",
     "enrollments_count": 700,
     "contributions_count": 510,
-    "is_featured": false,
     "template_id": 3,
     "category": {
       "id": "category::2",
@@ -158,7 +157,6 @@ Content-Type: application/json
     "brief_description": "This a brief description about this project",
     "enrollments_count": 700,
     "contributions_count": 510,
-    "is_featured": false,
     "template_id": 3,
     "category": {
       "id": "category::2",

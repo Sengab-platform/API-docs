@@ -170,7 +170,6 @@ caption   | String | Contributor's description of his submitted image.
 {  
   "template_id":3,
   "template_body":{  
-    "questions_count":2,
     "questions":[  
       {  
         "title":"You are a teenager ?"
@@ -231,15 +230,15 @@ caption   | String | Contributor's description of his submitted image.
       "id":1,
       "title":"You are a teenager ?",
       "contributions_count":454,
-      "yes_percent":45.6,
-      "no_percent":55.4
+      "yes_count":400,
+      "no_count":54
     },
     {  
       "id":2,
       "title":"Do you think you are social ?",
       "contributions_count":454,
-      "yes_percent":68,
-      "no_percent":32
+      "yes_count":100,
+      "no_count":354
     }
   ]
 }
@@ -256,7 +255,6 @@ Parameter                    | Type          | Description
 -----------------------------| --------------| --------------
 template_id                   | Number        | Defines the template type.
 template_body                 | Object        | Defines the template body.
-template_body.questions_count  | Number        | Defines the number of questions in the survey (MAX = 10).
 template_body.questions       | Array[Object] | Defines the questions of the survey.
 template_body.questions.id    | Number        | ID of the question.
 template_body.questions.title | String        | Title of the question.
@@ -289,8 +287,8 @@ Parameter    | Type     | Description                                  | Require
 id           | Number   | Question ID.                              | YES
 title        | text     | Question Title.                        | YES
 contributions_count | Number | count of contributions of question | YES
-yes_percent  | Number   | holds `yes` answers percentage to question.  | YES
-no_percent   | Number   | holds `no` answers percentage to question.   | YES
+yes_count  | Number   | holds number of `yes` answers to question.  | YES
+no_count   | Number   | holds number of `no` answers to question.   | YES
 
 
 ## Template 4

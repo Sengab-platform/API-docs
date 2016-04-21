@@ -31,7 +31,6 @@ Content-Type: application/json
 		"brief_description": "This a brief description about this project",
 		"enrollments_count": 700,
 		"contributions_count": 510,
-		"is_featured": true,
 		"template_id": 1,
 		"category": {
 			"id": 210,
@@ -55,7 +54,6 @@ Content-Type: application/json
 		"contributions_count": 1542,
 		"goal": 4000,
 		"progress": 38.55,
-		"is_featured": true,
 		"template_id": 2,
 		"category": {
 			"id": 584,
@@ -116,7 +114,6 @@ Content-Type: application/json
 	"detailed_description": "This is a detailed description about this project",
 	"enrollments_count": 1730,
 	"contributions_count": 1542,
-	"is_featured": true,
 	"template_id": 1,
 	"category": {
 		"id": 584,
@@ -219,7 +216,6 @@ Content-Type: application/json
 		"brief_description": "This a brief description about this project",
 		"enrollments_count": 1730,
 		"contributions_count": 1542,
-		"is_featured": true,
 		"template_id": 1,
 		"category": {
 			"id": 584,
