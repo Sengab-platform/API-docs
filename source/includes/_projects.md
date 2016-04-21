@@ -269,7 +269,7 @@ Content-Type: application/json
 	"contributors_gender": {
 		"males": 358,
 		"females": 227,
-		"other": 100
+		"unknown": 100
 		}
 }
 ```
@@ -290,7 +290,7 @@ contributors_count | Contributors count of the project.
 contributors_gender | Object of contributors gender.
 contributors_gender.males | Male contributors count.
 contributors_gender.females | Female contributors count.
-contributors_gender.other | Other contributors count.
+contributors_gender.unknown | Unknown contributors count.
 
 
 
