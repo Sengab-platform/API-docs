@@ -182,25 +182,6 @@ caption   | String | Contributor's description of his submitted image.
 }
 ```
 
-> Enroll
-
-```json
-{  
-  "template_body":{  
-    "questions_count":2,
-    "questions":[  
-      {  
-        "id":1,
-        "title":"You are a teenager ?"
-      },
-      {  
-        "id":2,
-        "title":"Do you think you are social ?"
-      }
-    ]
-  }
-}
-```
 
 > Submit contribution
 
@@ -258,16 +239,6 @@ template_body                 | Object        | Defines the template body.
 template_body.questions       | Array[Object] | Defines the questions of the survey.
 template_body.questions.id    | Number        | ID of the question.
 template_body.questions.title | String        | Title of the question.
-
-### ENROLL IN A PROJECT
-`template_body` object, holds the project body.
-
-Parameter      | Type   | Description
--------------- |--------| -----------------------------------------------
-questions_count | Number | The number of the questions in the survey
-questions      | Object | Holds the id & title of the question
-questions.id   | Number | Defines the ID of the question.
-questions.title| Number | Defines the title of the question.
 
 ### SUBMIT CONTRIBUTION
 `data` object, holds contribution data (response).
@@ -393,38 +364,6 @@ location.lng   | Number       | Holds the value of longitude.
   }
 }
 ```
-> Enroll
-
-```json
-{  
-  "template_body":{  
-    "question_title":"Do you see a cat?",
-    "images":[  
-      {  
-        "id":1,
-        "url":"http://www.sengab.com/projects_uploads/14/41.jpg"
-      },
-      {  
-        "id":2,
-        "url":"http://www.sengab.com/projects_uploads/14/42.jpg"
-      },
-      {  
-        "id":3,
-        "url":"http://www.sengab.com/projects_uploads/14/43.jpg"
-      },
-      {  
-        "id":4,
-        "url":"http://www.sengab.com/projects_uploads/14/44.jpg"
-      },
-      {  
-        "id":5,
-        "url":"http://www.sengab.com/projects_uploads/14/45.jpg"
-      }
-    ]
-  }
-}
-```
-
 
 > Get more feed
 
@@ -518,16 +457,6 @@ template_body               | Object         | Defines the template body.
 template_body.question_title | String         | The question that will be shown with the photos.
 template_body.images        | Array[String]  | An array of string containing images in Base64.
 
-### ENROLL IN A PROJECT
-`template_body` object, holds the project body.
-
-Parameter     | Type   | Description
---------------|--------| -----------------------------------------------
-question_title | String | The question that will be shown with the photos.
-image         | Object | Defines the template body.
-image.id      | Number | Server-Side generated ID of the image.
-image.url     | String | URL of the image.
-
 
 ### GET MORE FEED
 This request is sent to get 5 more photos that user can contribute identifying them.
@@ -571,38 +500,6 @@ no_percentage  | Number  | The percentage of the negative answer that the photo 
       },
       {
         "image": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-      }
-    ]
-  }
-}
-```
-
-> Enroll
-
-```json
-{  
-  "template_body":{  
-    "question_title":"Write what you read",
-    "images":[  
-      {  
-        "id":1,
-        "url":"http://www.sengab.com/projects_uploads/14/41.jpg"
-      },
-      {  
-        "id":2,
-        "url":"http://www.sengab.com/projects_uploads/14/42.jpg"
-      },
-      {  
-        "id":3,
-        "url":"http://www.sengab.com/projects_uploads/14/43.jpg"
-      },
-      {  
-        "id":4,
-        "url":"http://www.sengab.com/projects_uploads/14/44.jpg"
-      },
-      {  
-        "id":5,
-        "url":"http://www.sengab.com/projects_uploads/14/45.jpg"
       }
     ]
   }
@@ -706,18 +603,6 @@ template_id                 | Number       | Defines the template type.
 template_body               | Object       | Defines the template body.
 template_body.images        | Array        | An array of objects containing images in Base64 and their IDs.
 template_body.images.image  | String       | The image represented in Base64.
-
-### ENROLL IN A PROJECT
-`template_body` object, holds the project body.
-
-Parameter     | Type   | Description
---------------|--------| -----------------------------------------------
-question_title | String | The question that will be shown with the photos.
-image         | Object | Defines the template body.
-image.id      | Number | Server-Side generated ID of the image.
-image.url     | String | URL of the image.
-
-
 
 ### GET MORE FEED
 

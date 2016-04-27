@@ -20,8 +20,6 @@ Content-Type: application/json
 }
 ```
 
-> NOTE : "template_body" differs according to the project template type
-
 This endpoint enrolls a user in a project.
 
 ### HTTP Request

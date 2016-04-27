@@ -16,22 +16,29 @@ Content-Type: application/json
 
 ```json
 {
-	"id": "user::1231",
-	"url": "http://api.sengab.com/v1/users/user::1231",
-	"first_name": "Ali",
-	"last_name": "Allam",
-	"image": "http://www.sengab.com/profiles_images/14.jpg",
-	"about": {
-		"location": "Egypt",
-		"email": "ali@allam.com",
-		"bio": "this is my bio"
-	},
-	"stats": {
-		"projects": 0,
-		"contributions": 5
-	},
-	"projects": "http://api.sengab.com/v1/users/1411414/created_projects",
-	"contributions": "http://api.sengab.com/v1/users/1411414/contributions"
+  "id": "user::11",
+  "first_name": "Ahmad",
+  "last_name": "El-Melegy",
+  "gender": "male",
+  "image": "https://lh3.googleusercontent.com/.../photo.jpg",
+  "about": {
+    "email": "ahmad.melegy@gmail.com",
+    "bio": "GEEK , CSE student, CAT Reloaded Member"
+  },
+  "stats": {
+    "projects": 0,
+    "contributions": 26
+  },
+  "projects": "http://api.sengab.com/v1/users/user::11/created_projects",
+  "contributions": "http://api.sengab.com/v1/users/user::11/contributions",
+  "url": "http://api.sengab.com/v1/users/user::11",
+  "enrolled_projects": [
+    "project::1",
+    "project::2",
+    "project::3",
+    "project::4",
+    "project::5"
+  ]
 }
 ```
 
@@ -56,16 +63,28 @@ Content-Type: application/json
 ```
 
 ```json
-[{
-		"id": 1,
-		"project": {
-			"id": "project::56565",
-			"image": "http://www.sengab.com/projects_images/15454545.jpg",
-			"name": "Recognize",
-			"url": "http://api.sengab.com/v1/projects/project::56565"
-		},
-		"created_at": "2016-02-12T03:21:55Z"
-	}]
+[
+  {
+    "id": 1,
+    "activity_type": "contribution",
+    "created_at": "2016-02-12T03:21:55Z",
+    "project": {
+      "id": "project::1",
+      "name": "Project of template 1",
+      "url": "http://api.sengab.com/v1/projects/project::1"
+    }
+  },
+  {
+    "id": 2,
+    "activity_type": "contribution",
+    "created_at": "2016-02-12T03:21:55Z",
+    "project": {
+      "id": "project::2",
+      "name": "Project of template 2",
+      "url": "http://api.sengab.com/v1/projects/project::2"
+    }
+  }
+]
 ```
 
 This endpoint retrieves all user's activities.
@@ -153,7 +172,7 @@ Content-Type: application/json
       "url": "http://api.sengab.com/v1/users/user::8",
       "image": "http://Sengab.com/users_images/user_5.png"
     },
-    "created_at": "2008-01-14T04:33:35Z",
+    "created_at": "2016-02-12T03:21:55Z",
     "brief_description": "This a brief description about this project",
     "enrollments_count": 700,
     "contributions_count": 510,

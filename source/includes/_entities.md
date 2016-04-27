@@ -12,8 +12,8 @@ gender | String | User's gender. | `"gender": "M"`
 image | String | User profile picture. |
 about | Object | Holds `email` and `bio` short description of the user. |  `"about":{ "Email":"ali@allam.com", "bio":null }`
 stats | Object |Count of created `projects` and contributions of user. |  `"stats":{ "projects":0, "contributions":5 }`
-projects | String | URL for created projects by the user. |   `http://api.sengab.com/v1/users/1411414/created_projects`
-contributions | String | URL for the user contributions. |  `http://api.sengab.com/v1/users/1411414/contributions`
+projects | String | URL for created projects by the user. |   `http://api.sengab.com/v1/users/user::14/created_projects`
+contributions | String | URL for the user contributions. |  `http://api.sengab.com/v1/users/user::14/contributions`
 created_at | String | Profile created date. | We Use ISO 8601 format.
 
 ## Project

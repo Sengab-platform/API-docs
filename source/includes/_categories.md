@@ -31,8 +31,29 @@ Content-Type: application/json
     "description": "This category contains all projects related to heath"
   },
   {
+    "id": "category::1",
+    "url": "http://api.sengab.com/v1/categories/category::1",
+    "name": "health",
+    "image": "http://www.sengab.com/categories_images/458.jpg",
+    "description": "This category contains all projects related to heath"
+  },
+  {
+    "id": "category::4",
+    "url": "http://api.sengab.com/v1/categories/category::4",
+    "name": "sports",
+    "image": "http://www.sengab.com/categories_images/495.jpg",
+    "description": "This category contains all projects related to sports"
+  },
+  {
     "id": "category::3",
     "url": "http://api.sengab.com/v1/categories/category::3",
+    "name": "sports",
+    "image": "http://www.sengab.com/categories_images/495.jpg",
+    "description": "This category contains all projects related to sports"
+  },
+  {
+    "id": "category::2",
+    "url": "http://api.sengab.com/v1/categories/category::2",
     "name": "sports",
     "image": "http://www.sengab.com/categories_images/495.jpg",
     "description": "This category contains all projects related to sports"

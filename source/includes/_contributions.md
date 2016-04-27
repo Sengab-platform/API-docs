@@ -14,12 +14,14 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
 HTTP/1.1 201 Created
 Content-Type: application/json
 ```
-
 ```json
 {
-	"url":"http://api.sengab.com/v1/projects/<PROJECT_ID>/results/<CONTRIBUTION_ID>"
+    "id": "contribution::1::5",
+    "url": "http://api.sengab.com/v1/contributions/contribution::1::5"
 }
 ```
+
+> The above response is for a contribution to project with `id` equals `project::1` submitted by user with `id` equals `user::5`
 
 This endpoint submits a contribution to a project.
 
