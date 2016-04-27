@@ -1,7 +1,7 @@
 # Templates
 Currently, we provide 6 static templates for projects, we will illustrate their structure through the following examples.
 
-## Template 1
+## Template 1 : Y/N question with geolocation
 
 > Add project
 
@@ -90,7 +90,7 @@ yes       | Array  | Lists all location contributions with answer `yes`
 no        | Array  | Lists all location contributions with answer `no`
 
 
-## Template 2
+## Template 2 : Image collector
 
 > Add project
 
@@ -162,7 +162,7 @@ Parameter | Type   | Description
 image_url | String | Contribution image URL.
 caption   | String | Contributor's description of his submitted image.
 
-## Template 3
+## Template 3 : Survey
 
 > Add Project
 
@@ -262,7 +262,7 @@ yes_count  | Number   | holds number of `yes` answers to question.  | YES
 no_count   | Number   | holds number of `no` answers to question.   | YES
 
 
-## Template 4
+## Template 4 : Image collector with geolocation
 
 > Add Project :
 
