@@ -240,7 +240,7 @@ Authorization: X-Auth-Token YOUR_ACCESS_TOKEN
     "created_at": "2016-02-12T03:21:55Z",
     "category_id": "category::5",
     "template_id": 1,
-    "templateBody": {}
+    "template_body": {}
 }
 ```
 
