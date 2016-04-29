@@ -29,7 +29,6 @@ template_body | Object | Project content. | `"template_body":{ "image_title":"Ta
 created_at | String | Project creation date. | We Use ISO 8601 format.
 enrollments_count | Number | Count of enrolled users.|  
 contributions_count | Number | Count of contributions.|
-is_featured | boolean | True for sponsored projects. |
 category | Object | Indicates the project category, contains `id`,`url`,and `name` |`"category":{ "id":210, "url":"http://api.sengab.com/v1/categories/210", "name":"social" }`
 template_id | Number | Project Template. |
 brief_description | String | Short project description. |

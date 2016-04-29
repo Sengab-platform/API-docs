@@ -49,9 +49,8 @@ owner | object | Project creator. contains the user_id, url and name | `"owner" 
 created_at | String | Project created date | ISO 8601 format
 enrollments _count | int | Count of enrolled users to this project. |  
 contributions _count | int | Count of contributions to this project. |  
-is_featured | boolean | True for sponsored projects |  
 brief_description | String | Short project description. |  
-detailed_descrption | String | Detailed project description. |  
+detailed_description | String | Detailed project description. |  
 category | String | Document id for the category this project belongs to. | category::15894238
 results | String | Document id for the results of this project. Format: result::project_id | result::548621
 stats | String | Document id for the stats of this project. Format: stats::project_id | stats::548621
